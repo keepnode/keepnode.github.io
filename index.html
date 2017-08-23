@@ -169,6 +169,79 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-node/querystring" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="node-js系列-01-querystring查询字符串"><a href="#node-js系列-01-querystring查询字符串" class="headerlink" title="node.js系列(01)-querystring查询字符串"></a>node.js系列(01)-querystring查询字符串</h1><h2 id="querystring-查询字符串"><a href="#querystring-查询字符串" class="headerlink" title="querystring 查询字符串"></a>querystring 查询字符串</h2><p><code>querystring</code> 模块提供了一些实用工具，用于解析与格式化 URL 查询字符串。它可以通过以下方式被使用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> querystring = <span class="built_in">require</span>(<span class="string">'querystring'</span>);</div></pre></td></tr></table></figure>
+<h3 id="querystring-escape-str"><a href="#querystring-escape-str" class="headerlink" title="querystring.escape(str)"></a>querystring.escape(str)</h3><blockquote>
+<p>对URL字符串进行编码</p>
+</blockquote>
+<p>eg:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> strParams=<span class="string">'q=中文&amp;oq=中文&amp;aqs=chrome..69i57j69i61l3j69i65l2.5370j0j1&amp;sourceid=chrome&amp;ie=UTF-8'</span></div><div class="line"><span class="keyword">const</span> result=querystring.escape(strParams);</div><div class="line"><span class="comment">//q=%E4%B8%AD%E6%96%87&amp;oq=%E4%B8%AD%E6%96%87&amp;aqs=chrome..69i57j69i61l3j69i65l2.5370j0j1&amp;sourceid=chrome&amp;ie=UTF-8</span></div></pre></td></tr></table></figure>
+<h3 id="querystring-parse-str-sep-eq-options"><a href="#querystring-parse-str-sep-eq-options" class="headerlink" title="querystring.parse(str[, sep[, eq[, options]]])"></a>querystring.parse(str[, sep[, eq[, options]]])</h3><ul>
+<li><p><code>str</code> <string> 要解析的 URL 查询字符串。</string></p>
+</li>
+<li><p><code>sep</code> <string> 用于界定查询字符串中的键值对的子字符串。默认为 <code>&#39;&amp;&#39;</code>。</string></p>
+</li>
+<li><p><code>eq</code> <string> 用于界定查询字符串中的键与值的子字符串。默认为 <code>&#39;=&#39;</code>。</string></p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">options &lt;Object&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>decodeURIComponent</code> <function> 当解码查询字符串中百分号编码的字符时使用的函数。默认为 <code>querystring.unescape()</code>。</function></li>
+<li><code>maxKeys</code> <number> 指定要解析的键的最大数量。默认为 <code>1000</code>。指定为 <code>0</code> 则移除键数的限制。</number></li>
+</ul>
+</li>
+</ul>
+<p><code>querystring.parse()</code> 方法能把一个 URL 查询字符串（<code>str</code>）解析成一个键值对的集合。</p>
+<p>e.g.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> strParams = <span class="string">'foo=bar&amp;abc=xyz&amp;abc=123'</span>;</div><div class="line"><span class="keyword">const</span> result = querystring.parse(strParams);</div></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  foo: 'bar',</div><div class="line">  abc: ['xyz', '123']</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/23/node/querystring/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-TCP:UDP常用端口汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -305,6 +378,7 @@ var _hmt = _hmt || [];
       
         <p>Node js学习</p>
 <p>网站</p>
+<p><a href="http://nodejs.cn/api/" target="_blank" rel="external">node 中文API文档</a></p>
 <p><a href="https://cnodejs.org/?tab=good" target="_blank" rel="external">cnode社区</a></p>
 <p><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014344991049250a2c80ec84cb4861bbd1d9b2c0c2850e000" target="_blank" rel="external">JavaScript简介（廖雪峰大神）</a></p>
 <p><a href="https://www.npmjs.com/" target="_blank" rel="external">TOP12 npm package</a></p>

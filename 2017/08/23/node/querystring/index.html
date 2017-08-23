@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.cnblogs.com/woaic">
-  <title>Archives: 2017/8 | keep node,keep thinking!</title>
+  <title>keep node,keep thinking!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="node.js系列(01)-querystring查询字符串querystring 查询字符串querystring 模块提供了一些实用工具，用于解析与格式化 URL 查询字符串。它可以通过以下方式被使用： 1const querystring = require(&apos;querystring&apos;); querystring.escape(str) 对URL字符串进行编码  eg: 123const s">
+<meta property="og:type" content="article">
 <meta property="og:title" content="keep node,keep thinking!">
-<meta property="og:url" content="http://www.cnblogs.com/woaic/archives/2017/08/index.html">
+<meta property="og:url" content="http://www.cnblogs.com/woaic/2017/08/23/node/querystring/index.html">
 <meta property="og:site_name" content="keep node,keep thinking!">
+<meta property="og:description" content="node.js系列(01)-querystring查询字符串querystring 查询字符串querystring 模块提供了一些实用工具，用于解析与格式化 URL 查询字符串。它可以通过以下方式被使用： 1const querystring = require(&apos;querystring&apos;); querystring.escape(str) 对URL字符串进行编码  eg: 123const s">
+<meta property="og:updated_time" content="2017-08-23T08:21:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="keep node,keep thinking!">
+<meta name="twitter:description" content="node.js系列(01)-querystring查询字符串querystring 查询字符串querystring 模块提供了一些实用工具，用于解析与格式化 URL 查询字符串。它可以通过以下方式被使用： 1const querystring = require(&apos;querystring&apos;); querystring.escape(str) 对URL字符串进行编码  eg: 123const s">
   
     <link rel="alternative" href="/atom.xml" title="keep node,keep thinking!" type="application/atom+xml">
   
@@ -167,106 +171,174 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-node/querystring" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="node-js系列-01-querystring查询字符串"><a href="#node-js系列-01-querystring查询字符串" class="headerlink" title="node.js系列(01)-querystring查询字符串"></a>node.js系列(01)-querystring查询字符串</h1><h2 id="querystring-查询字符串"><a href="#querystring-查询字符串" class="headerlink" title="querystring 查询字符串"></a>querystring 查询字符串</h2><p><code>querystring</code> 模块提供了一些实用工具，用于解析与格式化 URL 查询字符串。它可以通过以下方式被使用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> querystring = <span class="built_in">require</span>(<span class="string">'querystring'</span>);</div></pre></td></tr></table></figure>
+<h3 id="querystring-escape-str"><a href="#querystring-escape-str" class="headerlink" title="querystring.escape(str)"></a>querystring.escape(str)</h3><blockquote>
+<p>对URL字符串进行编码</p>
+</blockquote>
+<p>eg:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> strParams=<span class="string">'q=中文&amp;oq=中文&amp;aqs=chrome..69i57j69i61l3j69i65l2.5370j0j1&amp;sourceid=chrome&amp;ie=UTF-8'</span></div><div class="line"><span class="keyword">const</span> result=querystring.escape(strParams);</div><div class="line"><span class="comment">//q=%E4%B8%AD%E6%96%87&amp;oq=%E4%B8%AD%E6%96%87&amp;aqs=chrome..69i57j69i61l3j69i65l2.5370j0j1&amp;sourceid=chrome&amp;ie=UTF-8</span></div></pre></td></tr></table></figure>
+<h3 id="querystring-parse-str-sep-eq-options"><a href="#querystring-parse-str-sep-eq-options" class="headerlink" title="querystring.parse(str[, sep[, eq[, options]]])"></a>querystring.parse(str[, sep[, eq[, options]]])</h3><ul>
+<li><p><code>str</code> <string> 要解析的 URL 查询字符串。</string></p>
+</li>
+<li><p><code>sep</code> <string> 用于界定查询字符串中的键值对的子字符串。默认为 <code>&#39;&amp;&#39;</code>。</string></p>
+</li>
+<li><p><code>eq</code> <string> 用于界定查询字符串中的键与值的子字符串。默认为 <code>&#39;=&#39;</code>。</string></p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">options &lt;Object&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>decodeURIComponent</code> <function> 当解码查询字符串中百分号编码的字符时使用的函数。默认为 <code>querystring.unescape()</code>。</function></li>
+<li><code>maxKeys</code> <number> 指定要解析的键的最大数量。默认为 <code>1000</code>。指定为 <code>0</code> 则移除键数的限制。</number></li>
+</ul>
+</li>
+</ul>
+<p><code>querystring.parse()</code> 方法能把一个 URL 查询字符串（<code>str</code>）解析成一个键值对的集合。</p>
+<p>e.g.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> strParams = <span class="string">'foo=bar&amp;abc=xyz&amp;abc=123'</span>;</div><div class="line"><span class="keyword">const</span> result = querystring.parse(strParams);</div></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  foo: 'bar',</div><div class="line">  abc: ['xyz', '123']</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://images.cnblogs.com/cnblogs_com/woaic/834220/o_1488286170055.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://images.cnblogs.com/cnblogs_com/woaic/834220/o_mm_facetoface_collect_qrcode_1488098229014.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/23/node/querystring/" class="archive-article-date">
-  	<time datetime="2017-08-23T03:51:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-23</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.cnblogs.com/woaic/2017/08/23/node/querystring/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/23/TCP:UDP常用端口汇总/" class="archive-article-date">
-  	<time datetime="2017-08-23T03:07:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-23</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/23/Node js学习/" class="archive-article-date">
-  	<time datetime="2017-08-23T02:08:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-23</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/23/TCP:UDP常用端口汇总/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/19/全栈知识汇总/" class="archive-article-date">
-  	<time datetime="2017-08-19T05:04:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-19</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -289,8 +361,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
