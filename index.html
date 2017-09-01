@@ -660,6 +660,195 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-js/ES6 Array map用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ES6-Array-map用法"><a href="#ES6-Array-map用法" class="headerlink" title="ES6 Array map用法"></a>ES6 Array map用法</h2><p>map() 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用三个参数</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</div><div class="line"></div><div class="line"><span class="keyword">let</span> arr = numbers.map(<span class="function">(<span class="params">currentValue, index, array</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`currentValue = `</span>, currentValue);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`index = `</span>, index);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`array= `</span>, array);</div><div class="line">    <span class="keyword">return</span> currentValue * <span class="number">2</span>;</div><div class="line">&#125;, numbers);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">`arr `</span>, arr);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">let</span> numbers = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">15</span>];</div><div class="line"><span class="keyword">let</span> doubles = numbers.map(<span class="function">(<span class="params">x</span>) =&gt;</span> &#123;</div><div class="line">   <span class="keyword">return</span> x * <span class="number">2</span>;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// doubles is now [2, 10, 20, 30]</span></div><div class="line"><span class="comment">// numbers is still [1, 5, 10, 15]</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">let</span> numbers = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>];</div><div class="line"><span class="keyword">let</span> roots = numbers.map(<span class="built_in">Math</span>.sqrt);</div><div class="line"></div><div class="line"><span class="comment">// roots is now [1, 2, 3]</span></div><div class="line"><span class="comment">// numbers is still [1, 4, 9]</span></div></pre></td></tr></table></figure>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt; <span class="keyword">let</span> array = arr.map(<span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">currentValue, index, array</span>) </span>&#123; </div><div class="line">&gt;     <span class="comment">// Return element for new_array </span></div><div class="line">&gt; &#125;[, thisArg])</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p><code>callback</code></p>
+<ul>
+<li><p><code>currentValue</code></p>
+<p><code>callback</code> 的第一个参数，数组中正在处理的当前元素。</p>
+</li>
+<li><p><code>index</code></p>
+<p><code>callback</code> 的第二个参数，数组中正在处理的当前元素的索引。</p>
+</li>
+<li><p><code>array</code></p>
+<p><code>callback</code> 的第三个参数，<code>map</code> 方法被调用的数组。</p>
+</li>
+</ul>
+<p><code>thisArg</code></p>
+<p>可选的。执行 <code>callback</code> 函数时 使用的<code>this</code> 值。</p>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>一个新数组，每个元素都是回调函数的结果。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/17/js/ES6 Array map用法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-TypeScript/greeter3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        //类
+var Student = (function () {
+    function Student(firstName, middleInitial, lastName) {
+        this.firstName = firstName;
+        this.middleInitial = middleInitial;
+        this.lastName = lastName;
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
+    return Student;
+}());
+function greeter(person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+var user = new Student("Jane", "M.", "User");
+document.body.innerHTML = greeter(user);
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-TypeScript/index" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script src="greeter3.js"></script>
+</body>
+</html>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/TypeScript/index/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -751,6 +940,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">mac,技巧</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
