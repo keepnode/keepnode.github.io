@@ -169,17 +169,86 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-tools/webstorm/webstorm中添加智能提示" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-node/pm2/PM2 Node.js服务监控神器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="webstorm中添加智能提示"><a href="#webstorm中添加智能提示" class="headerlink" title="webstorm中添加智能提示"></a>webstorm中添加智能提示</h1><p>webstorm在Settings里有个神奇的地方，点进去，在下方的Languages &amp; Frameworks–&gt;JavaScript–&gt;Libraries,这里就是为各种库提供提示的设置部分。</p>
-<p>那怎么添加你想要的库呢。</p>
-<p>看下图：</p>
-<p><img src="../../img/webstorm提示库设置.png" alt="设置提示库的方法"></p>
-<p>选择你需要的智能提示的库的名字，然后，点击<code>download and install</code> 就可以了</p>
-<p>这样子就能爽快的使用提示啦~~~~</p>
+        <h1 id="PM2-Node-js服务监控神器"><a href="#PM2-Node-js服务监控神器" class="headerlink" title="PM2 Node.js服务监控神器"></a>PM2 Node.js服务监控神器</h1><p>pm2 是一个高性能，并带有负载均衡Node应用的进程管理器。</p>
+<p>当你要把你的独立代码利用全部的服务器上的所有CPU，并保证进程永远都活着，0秒的重载， PM2是完美的。它非常适合IaaS结构，但不要把它用于PaaS方案（随后将开发Paas的解决方案）。</p>
+<h4 id="备注："><a href="#备注：" class="headerlink" title="备注："></a>备注：</h4><p>SaaS、PaaS和IaaS是云服务模式。<br>        SaaS 软件即服务，例如Google的 Gmail 邮箱服务.面向应用型用户.<br>        PaaS 平台即服务.例如Google的GAE,面向开发型用户<br>        IaaS  基础架构即服务,例如亚马逊的AWS，IaaS对于不知道新推出的应用程序/网站会有多成功的创业公司来说非常有用<br>      请参考 <a href="http://cloud.51cto.com/art/201107/278903.htm" target="_blank" rel="external">云服务模式：SaaS、PaaS和IaaS，哪一种适合你？</a></p>
+<h3 id="主要特性："><a href="#主要特性：" class="headerlink" title="主要特性："></a>主要特性：</h3><p>内建负载均衡（使用Node cluster 集群模块）<br>后台运行<br>0秒停机重载，我理解大概意思是维护升级的时候不需要停机.<br>具有Ubuntu和CentOS 的启动脚本<br>停止不稳定的进程（避免无限循环）<br>控制台检测<br>提供 HTTP API<br>远程控制和实时的接口API ( Nodejs 模块,允许和PM2进程管理器交互 )</p>
+<p>测试过Nodejs v0.11 v0.10 v0.8版本，兼容CoffeeScript,基于Linux 和MacOS.</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g pm2</div></pre></td></tr></table></figure>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pm2 list</td>
+<td>显示所有进程状态</td>
+</tr>
+<tr>
+<td>pm2 monit</td>
+<td>监视所有进程</td>
+</tr>
+<tr>
+<td>pm2 logs</td>
+<td>显示所有进程日志</td>
+</tr>
+<tr>
+<td>pm2 stop all</td>
+<td>停止所有进程</td>
+</tr>
+<tr>
+<td>pm2 restart all</td>
+<td>重启所有进程</td>
+</tr>
+<tr>
+<td>pm2 reload all</td>
+<td>0秒停机重载进程 (用于 NETWORKED 进程)</td>
+</tr>
+<tr>
+<td>pm2 stop 0</td>
+<td>停止指定的进程</td>
+</tr>
+<tr>
+<td>pm2 restart 0</td>
+<td>重启指定的进程</td>
+</tr>
+<tr>
+<td>pm2 startup</td>
+<td>产生 init 脚本 保持进程活着</td>
+</tr>
+<tr>
+<td>pm2 delete 0</td>
+<td>杀死指定的进程</td>
+</tr>
+<tr>
+<td>pm2 delete all</td>
+<td>杀死全部进程</td>
+</tr>
+<tr>
+<td>pm2 web</td>
+<td>运行健壮的 computer API endpoint (<a href="http://localhost:9615/" target="_blank" rel="external">http://localhost:9615</a>)</td>
+</tr>
+<tr>
+<td>pm2 flush</td>
+<td>刷新日志</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>延迟配置</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pm2 start app.js --kill-timeout <span class="number">3000</span></div></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$ pm2 deploy &lt;configuration_file&gt; &lt;environment&gt; &lt;command&gt;</div><div class="line"></div><div class="line">  Commands:</div><div class="line">    setup                run remote setup commands</div><div class="line">    update               update deploy to the latest release</div><div class="line">    revert [n]           revert to [n]th last deployment or <span class="number">1</span></div><div class="line">    curr[ent]            output current release commit</div><div class="line">    prev[ious]           output previous release commit</div><div class="line">    exec|run &lt;cmd&gt;       execute the given &lt;cmd&gt;</div><div class="line">    list                 list previous deploy commits</div><div class="line">    [ref]                deploy to [ref], the <span class="string">"ref"</span> setting, or latest tag</div></pre></td></tr></table></figure>
+<p>后台项目需要操作的命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">pm2 delete all</div><div class="line">git pull</div><div class="line">pm2 deploy ecosystem.json prod</div><div class="line">pm2 restart all</div><div class="line">pm2 list</div></pre></td></tr></table></figure>
 
       
 
@@ -192,7 +261,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/tools/webstorm/webstorm中添加智能提示/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/node/pm2/PM2 Node.js服务监控神器/">展开全文 >></a>
         </p>
       
 
@@ -222,15 +291,12 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-tools/webstorm/ssh登录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-node/request/模拟http请求node插件——request" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>ssh登录</p>
-<p>客户端远程连接</p>
-<p>输入命令：</p>
-<p><code>ssh root@192.168.2.188</code></p>
+        <h1 id="模拟http请求node插件——request"><a href="#模拟http请求node插件——request" class="headerlink" title="模拟http请求node插件——request"></a>模拟http请求node插件——request</h1><p>github地址：<a href="https://github.com/request/request" target="_blank" rel="external">查看详细</a></p>
 
       
 
@@ -243,7 +309,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/tools/webstorm/ssh登录/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/node/request/模拟http请求node插件——request/">展开全文 >></a>
         </p>
       
 
@@ -273,14 +339,27 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-expreience/mac/mac下免费好用的电脑清理工具——腾讯电脑管家" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-node/sequelize/Node开发——Sequelize-auto 快速生成数据库实体工具" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="mac下免费好用的电脑清理工具——腾讯电脑管家"><a href="#mac下免费好用的电脑清理工具——腾讯电脑管家" class="headerlink" title="mac下免费好用的电脑清理工具——腾讯电脑管家"></a>mac下免费好用的电脑清理工具——腾讯电脑管家</h1><p>mac电脑用的时间长了，有好多垃圾，想着怎么清理下。网上推荐的工具是：cleanmymac，这个工具体验了下，确实挺好用的。但是是收费的，找破解版找了1个小时，全部都是假的。。。（虽然我也不想找破解版的，但是正版确实有点贵，我感觉我清理电脑的频率还没有到我要付费的地步。。。）</p>
-<p>最后发现还是腾讯电脑管家好用啊！！！</p>
-<p>我比较了下，腾讯电脑管家和cleanmymac功能有80%左右都是相同的，这太方便了。强烈推荐啊！</p>
+        <h1 id="Node开发——Sequelize-auto-快速生成数据库实体工具"><a href="#Node开发——Sequelize-auto-快速生成数据库实体工具" class="headerlink" title="Node开发——Sequelize-auto 快速生成数据库实体工具"></a>Node开发——Sequelize-auto 快速生成数据库实体工具</h1><p>sequelize-auto 是一个快速生成实体的工具。github地址为：<a href="https://github.com/sequelize/sequelize-auto" target="_blank" rel="external">查看详细</a></p>
+<p>安装命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g sequelize-auto</div></pre></td></tr></table></figure>
+<h3 id="请确保安装前已经安装数据库："><a href="#请确保安装前已经安装数据库：" class="headerlink" title="请确保安装前已经安装数据库："></a>请确保安装前已经安装数据库：</h3><p>mysql数据库安装命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g mysql</div></pre></td></tr></table></figure>
+<p>Postgres数据库安装命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g pg pg-hstore</div></pre></td></tr></table></figure>
+<p>Sqlite3数据库安装命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g sqlite</div></pre></td></tr></table></figure>
+<p>MSSQL数据库安装命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g tedious</div></pre></td></tr></table></figure>
+<p>用法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">[node] sequelize-auto -h &lt;host&gt; -d &lt;database&gt; -u &lt;user&gt; -x [password] -p [port]  --dialect [dialect] -c [/path/to/config] -o [/path/to/models] -t [tableName] -C</div><div class="line"></div><div class="line">Options:</div><div class="line">  -h, --host        IP/Hostname for the database.   [required]</div><div class="line">  -d, --database    Database name.                  [required]</div><div class="line">  -u, --user        Username for database.</div><div class="line">  -x, --pass        Password for database.</div><div class="line">  -p, --port        Port number for database.</div><div class="line">  -c, --config      JSON file for Sequelize&apos;s constructor &quot;options&quot; flag object as defined here: https://sequelize.readthedocs.org/en/latest/api/sequelize/</div><div class="line">  -o, --output      What directory to place the models.</div><div class="line">  -e, --dialect     The dialect/engine that you&apos;re using: postgres, mysql, sqlite</div><div class="line">  -a, --additional  Path to a json file containing model definitions (for all tables) which are to be defined within a model&apos;s configuration parameter. For more info: https://sequelize.readthedocs.org/en/latest/docs/models-definition/#configuration</div><div class="line">  -t, --tables      Comma-separated names of tables to import</div><div class="line">  -C, --camel       Use camel case to name models and fields</div></pre></td></tr></table></figure>
+<p>生成数据库实体命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sequelize-auto -o &quot;./models&quot; -d sequelize_auto_test -h localhost -u my_username -p 5432 -x my_password -e postgres</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sequelize-auto -o &quot;./models&quot; -d easecom_sms -h 192.168.199.101 -u root -p 3306 -x heihei -e mysql</div></pre></td></tr></table></figure>
 
       
 
@@ -293,7 +372,56 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac下免费好用的电脑清理工具——腾讯电脑管家/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/node/sequelize/Node开发——Sequelize-auto 快速生成数据库实体工具/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-expreience/mac/mac 删除目录命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="mac-删除目录命令"><a href="#mac-删除目录命令" class="headerlink" title="mac 删除目录命令"></a>mac 删除目录命令</h1><p>mac 删除非空目录命令</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -r 目录名</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac 删除目录命令/">展开全文 >></a>
         </p>
       
 

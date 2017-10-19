@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://www.cnblogs.com/woaic">
   <title>keep node,keep thinking!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="mysql in子查询效率慢问题今天发现一个奇葩的问题，我写了一个批量更新的sql。发现好坑爹，就10000多条数据，使用in查询，耗时2分钟都没有查出来。。 我的原始sql: 123456789101112update sms_user1_batch_content set success_count=1,wait_count=0where create_time BETWEEN &amp;apos;2">
+  <meta name="description" content="touch命令-创建文件 touch 创建文件命令。 eg:  touch gen.js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="keep node,keep thinking!">
-<meta property="og:url" content="http://www.cnblogs.com/woaic/2017/07/16/mysql/mysql in子查询效率慢问题/index.html">
+<meta property="og:url" content="http://www.cnblogs.com/woaic/2017/10/18/command/touch命令/index.html">
 <meta property="og:site_name" content="keep node,keep thinking!">
-<meta property="og:description" content="mysql in子查询效率慢问题今天发现一个奇葩的问题，我写了一个批量更新的sql。发现好坑爹，就10000多条数据，使用in查询，耗时2分钟都没有查出来。。 我的原始sql: 123456789101112update sms_user1_batch_content set success_count=1,wait_count=0where create_time BETWEEN &amp;apos;2">
-<meta property="og:updated_time" content="2017-07-16T15:21:31.000Z">
+<meta property="og:description" content="touch命令-创建文件 touch 创建文件命令。 eg:  touch gen.js">
+<meta property="og:updated_time" content="2017-10-18T12:54:37.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="keep node,keep thinking!">
-<meta name="twitter:description" content="mysql in子查询效率慢问题今天发现一个奇葩的问题，我写了一个批量更新的sql。发现好坑爹，就10000多条数据，使用in查询，耗时2分钟都没有查出来。。 我的原始sql: 123456789101112update sms_user1_batch_content set success_count=1,wait_count=0where create_time BETWEEN &amp;apos;2">
+<meta name="twitter:description" content="touch命令-创建文件 touch 创建文件命令。 eg:  touch gen.js">
   
     <link rel="alternative" href="/atom.xml" title="keep node,keep thinking!" type="application/atom+xml">
   
@@ -171,18 +171,17 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-mysql/mysql in子查询效率慢问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-command/touch命令" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="mysql-in子查询效率慢问题"><a href="#mysql-in子查询效率慢问题" class="headerlink" title="mysql in子查询效率慢问题"></a>mysql in子查询效率慢问题</h1><p>今天发现一个奇葩的问题，我写了一个批量更新的sql。发现好坑爹，就10000多条数据，使用in查询，耗时2分钟都没有查出来。。</p>
-<p>我的原始sql:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">update sms_user1_batch_content set </div><div class="line">success_count=1,wait_count=0</div><div class="line"></div><div class="line">where</div><div class="line"> create_time BETWEEN &apos;2016-12-12&apos; and &apos;2016-12-13&apos;</div><div class="line">and success_count=0 and wait_count=1</div><div class="line">and id in (</div><div class="line">select content_id from sms_user1_batch_number </div><div class="line">where create_time BETWEEN &apos;2016-12-12&apos; and &apos;2016-12-13&apos;</div><div class="line"> and receive_status=1 </div><div class="line">and receive_time BETWEEN &apos;2016-12-14 10:44&apos; and &apos;2016-12-14 10:45&apos;</div><div class="line">)</div></pre></td></tr></table></figure>
-<p>我发现原始sql执行2分钟以上没有结果。。。</p>
-<p>更改后的sql:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">update sms_user1_batch_content set </div><div class="line">success_count=1,wait_count=0</div><div class="line"></div><div class="line">where</div><div class="line"> create_time BETWEEN &apos;2016-12-12&apos; and &apos;2016-12-13&apos;</div><div class="line">and success_count=0 and wait_count=1</div><div class="line">and id in (</div><div class="line"></div><div class="line">select content_id from (</div><div class="line"></div><div class="line">select content_id from sms_user1_batch_number </div><div class="line">where create_time BETWEEN &apos;2016-12-12&apos; and &apos;2016-12-13&apos;</div><div class="line"> and receive_status=1 </div><div class="line">and receive_time BETWEEN &apos;2016-12-14 10:44&apos; and &apos;2016-12-14 10:45&apos;</div><div class="line">) a</div><div class="line">)</div></pre></td></tr></table></figure>
-<p>更改后，只需要9秒就执行完成了。。。</p>
+        <p>touch命令-创建文件</p>
+<p>touch 创建文件命令。</p>
+<p>eg:</p>
+<blockquote>
+<p>touch gen.js</p>
+</blockquote>
 
       
 
@@ -272,7 +271,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.cnblogs.com/woaic/2017/07/16/mysql/mysql in子查询效率慢问题/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.cnblogs.com/woaic/2017/10/18/command/touch命令/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -286,17 +285,8 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/07/16/js/【转】JavaScript代码优化指南/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/07/16/TypeScript/greeter/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/08/28/interview/summary/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>

@@ -223,6 +223,58 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-TypeScript/greeter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        function greeter(person) {
+    return "Hello, " + person;
+}
+var user = "NeoLu";
+document.body.innerHTML = greeter(user);
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-TypeScript/greeter2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -657,55 +709,6 @@ document.body.innerHTML = greeter(user);
 
 
   
-    <article id="post-expreience/mac/mac chrome检查元素快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>mac chrome检查元素快捷键</p>
-<p>command+option+i</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac chrome检查元素快捷键/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-expreience/docker/docker学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -757,26 +760,13 @@ document.body.innerHTML = greeter(user);
 
 
   
-    <article id="post-TypeScript/basic" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-expreience/mac/mac chrome检查元素快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        //布尔类型
-var isDone = false;
-//数字
-var decLiteral = 6;
-//字符串
-// let name:string="bob";
-// name="smith";
-/**
- * 模板字符串
- * 它可以定义多行文本或内嵌表达式。
- * 这种字符串是被反引号包围（`）,并且以${expr}这种形式嵌入表达式
-*/
-var names = "Gene";
-var age = 37;
-var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years old next month.";
+        <p>mac chrome检查元素快捷键</p>
+<p>command+option+i</p>
 
       
 
@@ -789,7 +779,7 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/TypeScript/basic/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac chrome检查元素快捷键/">展开全文 >></a>
         </p>
       
 
@@ -819,13 +809,26 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
 
 
   
-    <article id="post-expreience/mac/mac 删除目录命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-TypeScript/greeter3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="mac-删除目录命令"><a href="#mac-删除目录命令" class="headerlink" title="mac 删除目录命令"></a>mac 删除目录命令</h1><p>mac 删除非空目录命令</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -r 目录名</div></pre></td></tr></table></figure>
+        //类
+var Student = (function () {
+    function Student(firstName, middleInitial, lastName) {
+        this.firstName = firstName;
+        this.middleInitial = middleInitial;
+        this.lastName = lastName;
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
+    return Student;
+}());
+function greeter(person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+var user = new Student("Jane", "M.", "User");
+document.body.innerHTML = greeter(user);
 
       
 
@@ -838,7 +841,7 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac 删除目录命令/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter3/">展开全文 >></a>
         </p>
       
 
@@ -919,27 +922,14 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
 
 
   
-    <article id="post-expreience/mac/mac同一个应用之间切换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-expreience/mac/mac下免费好用的电脑清理工具——腾讯电脑管家" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/16/expreience/mac/mac同一个应用之间切换/">mac同一个应用之间切换</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/16/expreience/mac/mac同一个应用之间切换/" class="archive-article-date">
-  	<time datetime="2017-07-16T15:21:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-16</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>不同应用之间切换，mac的快捷键是：cmd+tab<br>同一个应用之间切换的快捷键是：cmd+~</p>
+        <h1 id="mac下免费好用的电脑清理工具——腾讯电脑管家"><a href="#mac下免费好用的电脑清理工具——腾讯电脑管家" class="headerlink" title="mac下免费好用的电脑清理工具——腾讯电脑管家"></a>mac下免费好用的电脑清理工具——腾讯电脑管家</h1><p>mac电脑用的时间长了，有好多垃圾，想着怎么清理下。网上推荐的工具是：cleanmymac，这个工具体验了下，确实挺好用的。但是是收费的，找破解版找了1个小时，全部都是假的。。。（虽然我也不想找破解版的，但是正版确实有点贵，我感觉我清理电脑的频率还没有到我要付费的地步。。。）</p>
+<p>最后发现还是腾讯电脑管家好用啊！！！</p>
+<p>我比较了下，腾讯电脑管家和cleanmymac功能有80%左右都是相同的，这太方便了。强烈推荐啊！</p>
 
       
 
@@ -948,22 +938,11 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">mac,技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac同一个应用之间切换/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac下免费好用的电脑清理工具——腾讯电脑管家/">展开全文 >></a>
         </p>
       
 
