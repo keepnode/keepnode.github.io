@@ -250,17 +250,21 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-TypeScript/greeter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-TypeScript/index" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        function greeter(person) {
-    return "Hello, " + person;
-}
-var user = "NeoLu";
-document.body.innerHTML = greeter(user);
-
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script src="greeter3.js"></script>
+</body>
+</html>
       
 
       
@@ -272,7 +276,7 @@ document.body.innerHTML = greeter(user);
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/TypeScript/index/">展开全文 >></a>
         </p>
       
 
@@ -302,18 +306,16 @@ document.body.innerHTML = greeter(user);
 
 
   
-    <article id="post-mysql/mysql in子查询效率慢问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-TypeScript/greeter2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="mysql-in子查询效率慢问题"><a href="#mysql-in子查询效率慢问题" class="headerlink" title="mysql in子查询效率慢问题"></a>mysql in子查询效率慢问题</h1><p>今天发现一个奇葩的问题，我写了一个批量更新的sql。发现好坑爹，就10000多条数据，使用in查询，耗时2分钟都没有查出来。。</p>
-<p>我的原始sql:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">update sms_user1_batch_content set </div><div class="line">success_count=1,wait_count=0</div><div class="line"></div><div class="line">where</div><div class="line"> create_time BETWEEN &apos;2016-12-12&apos; and &apos;2016-12-13&apos;</div><div class="line">and success_count=0 and wait_count=1</div><div class="line">and id in (</div><div class="line">select content_id from sms_user1_batch_number </div><div class="line">where create_time BETWEEN &apos;2016-12-12&apos; and &apos;2016-12-13&apos;</div><div class="line"> and receive_status=1 </div><div class="line">and receive_time BETWEEN &apos;2016-12-14 10:44&apos; and &apos;2016-12-14 10:45&apos;</div><div class="line">)</div></pre></td></tr></table></figure>
-<p>我发现原始sql执行2分钟以上没有结果。。。</p>
-<p>更改后的sql:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">update sms_user1_batch_content set </div><div class="line">success_count=1,wait_count=0</div><div class="line"></div><div class="line">where</div><div class="line"> create_time BETWEEN &apos;2016-12-12&apos; and &apos;2016-12-13&apos;</div><div class="line">and success_count=0 and wait_count=1</div><div class="line">and id in (</div><div class="line"></div><div class="line">select content_id from (</div><div class="line"></div><div class="line">select content_id from sms_user1_batch_number </div><div class="line">where create_time BETWEEN &apos;2016-12-12&apos; and &apos;2016-12-13&apos;</div><div class="line"> and receive_status=1 </div><div class="line">and receive_time BETWEEN &apos;2016-12-14 10:44&apos; and &apos;2016-12-14 10:45&apos;</div><div class="line">) a</div><div class="line">)</div></pre></td></tr></table></figure>
-<p>更改后，只需要9秒就执行完成了。。。</p>
+        function greeter(person) {
+    return "Hello," + person.firstName + " " + person.lastName;
+}
+var user = { firstName: "嘿嘿", lastName: "李四" };
+document.body.innerHTML = greeter(user);
 
       
 
@@ -326,7 +328,7 @@ document.body.innerHTML = greeter(user);
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/mysql/mysql in子查询效率慢问题/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter2/">展开全文 >></a>
         </p>
       
 
@@ -738,55 +740,6 @@ document.body.innerHTML = greeter(user);
 
 
   
-    <article id="post-expreience/mac/mac chrome检查元素快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>mac chrome检查元素快捷键</p>
-<p>command+option+i</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac chrome检查元素快捷键/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-expreience/docker/docker学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -809,68 +762,6 @@ document.body.innerHTML = greeter(user);
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/07/16/expreience/docker/docker学习笔记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-TypeScript/basic" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        //布尔类型
-var isDone = false;
-//数字
-var decLiteral = 6;
-//字符串
-// let name:string="bob";
-// name="smith";
-/**
- * 模板字符串
- * 它可以定义多行文本或内嵌表达式。
- * 这种字符串是被反引号包围（`）,并且以${expr}这种形式嵌入表达式
-*/
-var names = "Gene";
-var age = 37;
-var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years old next month.";
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/TypeScript/basic/">展开全文 >></a>
         </p>
       
 
@@ -949,6 +840,68 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
 
 
   
+    <article id="post-TypeScript/greeter3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        //类
+var Student = (function () {
+    function Student(firstName, middleInitial, lastName) {
+        this.firstName = firstName;
+        this.middleInitial = middleInitial;
+        this.lastName = lastName;
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
+    return Student;
+}());
+function greeter(person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+var user = new Student("Jane", "M.", "User");
+document.body.innerHTML = greeter(user);
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-expreience/mac/mac 剪切快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -971,6 +924,80 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/07/16/expreience/mac/mac 剪切快捷键/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-expreience/mac/mac同一个应用之间切换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/16/expreience/mac/mac同一个应用之间切换/">mac同一个应用之间切换</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/16/expreience/mac/mac同一个应用之间切换/" class="archive-article-date">
+  	<time datetime="2017-07-16T15:21:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>不同应用之间切换，mac的快捷键是：cmd+tab<br>同一个应用之间切换的快捷键是：cmd+~</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">mac,技巧</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac同一个应用之间切换/">展开全文 >></a>
         </p>
       
 
