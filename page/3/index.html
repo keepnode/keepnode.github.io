@@ -169,45 +169,18 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-html/浏览器内核控制 meta标签" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-mysql/mysql in子查询效率慢问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="浏览器内核控制-meta标签"><a href="#浏览器内核控制-meta标签" class="headerlink" title="浏览器内核控制 meta标签"></a>浏览器内核控制 meta标签</h1><p>国内的浏览器普遍是用的双核浏览器。但是页面一般在IE下呈现效果较弱，国内的360出了一个解决方案。具体<a href="http://se.360.cn/v6/help/meta.html" target="_blank" rel="external">查看详情</a></p>
-<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><p>在head标签中添加一行代码：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit|ie-comp|ie-stand"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>content的取值为webkit,ie-comp,ie-stand之一，区分大小写，分别代表用webkit内核，IE兼容内核，IE标准内核。<br>若页面需默认用极速核，增加标签：<meta name="renderer" content="webkit"><br>若页面需默认用ie兼容内核，增加标签：<meta name="renderer" content="ie-comp"><br>若页面需默认用ie标准内核，增加标签：<meta name="renderer" content="ie-stand"></p>
-<h3 id="各渲染内核的技术细节"><a href="#各渲染内核的技术细节" class="headerlink" title="各渲染内核的技术细节"></a>各渲染内核的技术细节</h3><table>
-<thead>
-<tr>
-<th>内核</th>
-<th>Webkit</th>
-<th>IE兼容</th>
-<th>IE标准</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>文档模式</td>
-<td>Chrome 21</td>
-<td>IE6/7</td>
-<td>IE9/IE10/IE11(取决于用户的IE)</td>
-</tr>
-<tr>
-<td>HTML5支持</td>
-<td>YES</td>
-<td>NO</td>
-<td>YES</td>
-</tr>
-<tr>
-<td>ActiveX控件支持</td>
-<td>NO</td>
-<td>YES</td>
-<td>YES</td>
-</tr>
-</tbody>
-</table>
+        <h1 id="mysql-in子查询效率慢问题"><a href="#mysql-in子查询效率慢问题" class="headerlink" title="mysql in子查询效率慢问题"></a>mysql in子查询效率慢问题</h1><p>今天发现一个奇葩的问题，我写了一个批量更新的sql。发现好坑爹，就10000多条数据，使用in查询，耗时2分钟都没有查出来。。</p>
+<p>我的原始sql:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">update sms_user1_batch_content set </div><div class="line">success_count=1,wait_count=0</div><div class="line"></div><div class="line">where</div><div class="line"> create_time BETWEEN &apos;2016-12-12&apos; and &apos;2016-12-13&apos;</div><div class="line">and success_count=0 and wait_count=1</div><div class="line">and id in (</div><div class="line">select content_id from sms_user1_batch_number </div><div class="line">where create_time BETWEEN &apos;2016-12-12&apos; and &apos;2016-12-13&apos;</div><div class="line"> and receive_status=1 </div><div class="line">and receive_time BETWEEN &apos;2016-12-14 10:44&apos; and &apos;2016-12-14 10:45&apos;</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>我发现原始sql执行2分钟以上没有结果。。。</p>
+<p>更改后的sql:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">update sms_user1_batch_content set </div><div class="line">success_count=1,wait_count=0</div><div class="line"></div><div class="line">where</div><div class="line"> create_time BETWEEN &apos;2016-12-12&apos; and &apos;2016-12-13&apos;</div><div class="line">and success_count=0 and wait_count=1</div><div class="line">and id in (</div><div class="line"></div><div class="line">select content_id from (</div><div class="line"></div><div class="line">select content_id from sms_user1_batch_number </div><div class="line">where create_time BETWEEN &apos;2016-12-12&apos; and &apos;2016-12-13&apos;</div><div class="line"> and receive_status=1 </div><div class="line">and receive_time BETWEEN &apos;2016-12-14 10:44&apos; and &apos;2016-12-14 10:45&apos;</div><div class="line">) a</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>更改后，只需要9秒就执行完成了。。。</p>
 
       
 
@@ -220,7 +193,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/html/浏览器内核控制 meta标签/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/mysql/mysql in子查询效率慢问题/">展开全文 >></a>
         </p>
       
 
@@ -250,21 +223,17 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-TypeScript/index" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-TypeScript/greeter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <script src="greeter3.js"></script>
-</body>
-</html>
+        function greeter(person) {
+    return "Hello, " + person;
+}
+var user = "NeoLu";
+document.body.innerHTML = greeter(user);
+
       
 
       
@@ -276,7 +245,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/TypeScript/index/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter/">展开全文 >></a>
         </p>
       
 
@@ -689,15 +658,15 @@ document.body.innerHTML = greeter(user);
 
 
   
-    <article id="post-expreience/mac/Mac 编写sh脚本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-expreience/other/awesome 学习前端正确姿势" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Mac-编写sh脚本"><a href="#Mac-编写sh脚本" class="headerlink" title="Mac 编写sh脚本"></a>Mac 编写sh脚本</h1><p>由于经常调用一些命令，每次都手写，太麻烦了。于是今天摸索了下，怎么写脚本，发现还是蛮简单的。</p>
-<p>1.在文件下直接创建xxx.sh文件，然后把你常用的命令拷贝进去。</p>
-<p>2.在命令行下，通过cd进入创建xxx.sh的目录，输入 . xxx.sh 即可调用命令。</p>
-<p>非常方便。这样总算是解放出来啦！！！</p>
+        <h1 id="awesome-学习前端正确姿势"><a href="#awesome-学习前端正确姿势" class="headerlink" title="awesome 学习前端正确姿势"></a>awesome 学习前端正确姿势</h1><p>由于现在技术基本上都会选择github上开源，想要方便了解一门技术，就要充分利用前端的一个小知识点，准确的来说，是关键词：<strong>awesome</strong></p>
+<p>比如我现在学习vue，我想搜vue相关的资料，直接就在github上搜：awesome-vue</p>
+<p>就是vue相关资料的汇总信息。</p>
+<p>这样可以方便快捷的获取到一手的好货，十分高效。简直就是程序员必备。</p>
 
       
 
@@ -710,7 +679,7 @@ document.body.innerHTML = greeter(user);
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/Mac 编写sh脚本/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/expreience/other/awesome 学习前端正确姿势/">展开全文 >></a>
         </p>
       
 
@@ -791,13 +760,15 @@ document.body.innerHTML = greeter(user);
 
 
   
-    <article id="post-expreience/mac/mac 删除目录命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-expreience/mac/Mac 编写sh脚本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="mac-删除目录命令"><a href="#mac-删除目录命令" class="headerlink" title="mac 删除目录命令"></a>mac 删除目录命令</h1><p>mac 删除非空目录命令</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -r 目录名</div></pre></td></tr></table></figure>
+        <h1 id="Mac-编写sh脚本"><a href="#Mac-编写sh脚本" class="headerlink" title="Mac 编写sh脚本"></a>Mac 编写sh脚本</h1><p>由于经常调用一些命令，每次都手写，太麻烦了。于是今天摸索了下，怎么写脚本，发现还是蛮简单的。</p>
+<p>1.在文件下直接创建xxx.sh文件，然后把你常用的命令拷贝进去。</p>
+<p>2.在命令行下，通过cd进入创建xxx.sh的目录，输入 . xxx.sh 即可调用命令。</p>
+<p>非常方便。这样总算是解放出来啦！！！</p>
 
       
 
@@ -810,7 +781,7 @@ document.body.innerHTML = greeter(user);
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac 删除目录命令/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/expreience/mac/Mac 编写sh脚本/">展开全文 >></a>
         </p>
       
 
@@ -840,26 +811,69 @@ document.body.innerHTML = greeter(user);
 
 
   
-    <article id="post-TypeScript/greeter3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-TypeScript/index" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        //类
-var Student = (function () {
-    function Student(firstName, middleInitial, lastName) {
-        this.firstName = firstName;
-        this.middleInitial = middleInitial;
-        this.lastName = lastName;
-        this.fullName = firstName + " " + middleInitial + " " + lastName;
-    }
-    return Student;
-}());
-function greeter(person) {
-    return "Hello, " + person.firstName + " " + person.lastName;
-}
-var user = new Student("Jane", "M.", "User");
-document.body.innerHTML = greeter(user);
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script src="greeter3.js"></script>
+</body>
+</html>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/TypeScript/index/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-expreience/mac/mac 删除目录命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="mac-删除目录命令"><a href="#mac-删除目录命令" class="headerlink" title="mac 删除目录命令"></a>mac 删除目录命令</h1><p>mac 删除非空目录命令</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -r 目录名</div></pre></td></tr></table></figure>
 
       
 
@@ -872,7 +886,7 @@ document.body.innerHTML = greeter(user);
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter3/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac 删除目录命令/">展开全文 >></a>
         </p>
       
 
@@ -924,80 +938,6 @@ document.body.innerHTML = greeter(user);
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/07/16/expreience/mac/mac 剪切快捷键/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-expreience/mac/mac同一个应用之间切换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/16/expreience/mac/mac同一个应用之间切换/">mac同一个应用之间切换</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/16/expreience/mac/mac同一个应用之间切换/" class="archive-article-date">
-  	<time datetime="2017-07-16T15:21:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>不同应用之间切换，mac的快捷键是：cmd+tab<br>同一个应用之间切换的快捷键是：cmd+~</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">mac,技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac同一个应用之间切换/">展开全文 >></a>
         </p>
       
 

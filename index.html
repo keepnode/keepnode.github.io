@@ -784,14 +784,26 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-node/sequelize/sequelize学习总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-TypeScript/greeter3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="sequelize学习总结"><a href="#sequelize学习总结" class="headerlink" title="sequelize学习总结"></a>sequelize学习总结</h1><h3 id="raw-true"><a href="#raw-true" class="headerlink" title="raw: true"></a>raw: true</h3><blockquote>
-<p>设置获取列表的简单数据类型</p>
-</blockquote>
+        //类
+var Student = (function () {
+    function Student(firstName, middleInitial, lastName) {
+        this.firstName = firstName;
+        this.middleInitial = middleInitial;
+        this.lastName = lastName;
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
+    return Student;
+}());
+function greeter(person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+var user = new Student("Jane", "M.", "User");
+document.body.innerHTML = greeter(user);
 
       
 
@@ -804,7 +816,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/node/sequelize/sequelize学习总结/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter3/">展开全文 >></a>
         </p>
       
 
