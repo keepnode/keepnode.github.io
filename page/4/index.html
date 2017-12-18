@@ -169,14 +169,17 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-expreience/mac/mac下免费好用的电脑清理工具——腾讯电脑管家" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-js/公司react项目开发流程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="mac下免费好用的电脑清理工具——腾讯电脑管家"><a href="#mac下免费好用的电脑清理工具——腾讯电脑管家" class="headerlink" title="mac下免费好用的电脑清理工具——腾讯电脑管家"></a>mac下免费好用的电脑清理工具——腾讯电脑管家</h1><p>mac电脑用的时间长了，有好多垃圾，想着怎么清理下。网上推荐的工具是：cleanmymac，这个工具体验了下，确实挺好用的。但是是收费的，找破解版找了1个小时，全部都是假的。。。（虽然我也不想找破解版的，但是正版确实有点贵，我感觉我清理电脑的频率还没有到我要付费的地步。。。）</p>
-<p>最后发现还是腾讯电脑管家好用啊！！！</p>
-<p>我比较了下，腾讯电脑管家和cleanmymac功能有80%左右都是相同的，这太方便了。强烈推荐啊！</p>
+        <h1 id="公司react项目开发流程"><a href="#公司react项目开发流程" class="headerlink" title="公司react项目开发流程"></a>公司react项目开发流程</h1><h3 id="1-服务接口封装"><a href="#1-服务接口封装" class="headerlink" title="1.服务接口封装"></a>1.服务接口封装</h3><p>在目录services里，按照功能目录，在相应目录下创建相应的js,并写下相应的方法</p>
+<p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; request &#125; <span class="keyword">from</span> <span class="string">'../../utils'</span></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 所有</div><div class="line"> * @returns &#123;Promise.&lt;*&gt;&#125;</div><div class="line"> */</div><div class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">list</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> request(<span class="string">'role/list'</span>, &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'get'</span></div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="2-调用服务接口数据封装"><a href="#2-调用服务接口数据封装" class="headerlink" title="2.调用服务接口数据封装"></a>2.调用服务接口数据封装</h3><p>在models目录里，按照功能目录，在相应目录下创建相应的js，并写下相应的js代码。</p>
+<p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; request &#125; <span class="keyword">from</span> <span class="string">'../../utils'</span></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 所有</div><div class="line"> * @returns &#123;Promise.&lt;*&gt;&#125;</div><div class="line"> */</div><div class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">list</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> request(<span class="string">'role/list'</span>, &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'get'</span></div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
 
@@ -189,7 +192,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac下免费好用的电脑清理工具——腾讯电脑管家/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/js/公司react项目开发流程/">展开全文 >></a>
         </p>
       
 
@@ -219,382 +222,214 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-expreience/mac/mac同一个应用之间切换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/16/expreience/mac/mac同一个应用之间切换/">mac同一个应用之间切换</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/16/expreience/mac/mac同一个应用之间切换/" class="archive-article-date">
-  	<time datetime="2017-07-16T15:21:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>不同应用之间切换，mac的快捷键是：cmd+tab<br>同一个应用之间切换的快捷键是：cmd+~</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">mac,技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac同一个应用之间切换/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-expreience/mac/ssh方式登录服务器命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-js/【转】JavaScript代码优化指南" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="ssh方式登录服务器命令"><a href="#ssh方式登录服务器命令" class="headerlink" title="ssh方式登录服务器命令"></a>ssh方式登录服务器命令</h1><p>命令：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh root@<span class="number">111.111</span>.<span class="number">11.11</span></div></pre></td></tr></table></figure>
-<p>进入目录：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd /home/zhongluo-node/apps/wechat/production</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/ssh方式登录服务器命令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-expreience/mac/vim编辑命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="vim编辑命令"><a href="#vim编辑命令" class="headerlink" title="vim编辑命令"></a>vim编辑命令</h1><p>保存退出vi编辑模式</p>
-<p>按ESC键，跳到命令模式，然后：</p>
-<p>:w 保存文件但不退出vi</p>
-<p>:w file 将修改另外保存到file中，不退出vi</p>
-<p>:w! 强制保存，不退出vi</p>
-<p>:wq 保存文件并退出vi</p>
-<p>:wq! 强制保存文件，并退出vi</p>
-<p>:q 不保存文件，退出vi</p>
-<p>:q! 不保存文件，强制退出vi</p>
-<p>:e! 放弃所有修改，从上次保存文件开始再编辑</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/vim编辑命令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-expreience/mac/ssh登录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>ssh登录</p>
-<p>客户端远程连接</p>
-<p>输入命令：</p>
-<p><code>ssh root@192.168.2.188</code></p>
-<p>然后输入密码就可以登录了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/ssh登录/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-expreience/mac/文件文件夹重命名快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="mac-文件-文件夹重命名快捷键"><a href="#mac-文件-文件夹重命名快捷键" class="headerlink" title="mac 文件/文件夹重命名快捷键"></a>mac 文件/文件夹重命名快捷键</h1><p>又开始无脑的问题了。。。</p>
-<p>mac文件/文件夹 重命名的快捷键是：直接 回车。。。</p>
-<p>笨的可以，继续加油！弥补白痴的自己~</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/文件文件夹重命名快捷键/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-expreience/mac/【转】SwaggerUI教程API文档神器 搭配Node使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="【转】SwaggerUI教程API文档神器-搭配Node使用"><a href="#【转】SwaggerUI教程API文档神器-搭配Node使用" class="headerlink" title="【转】SwaggerUI教程API文档神器 搭配Node使用"></a>【转】SwaggerUI教程API文档神器 搭配Node使用</h1><p>本文是一篇转载文章，方便自己学习汇总。原文出处：<a href="http://www.jianshu.com/p/d6626e6bd72c" target="_blank" rel="external">点击这里</a></p>
-<blockquote>
-<p>在团队开发中，一个好的 API 文档可以减少很多<strong>交流成本</strong>，也可以使一个新人快速上手业务。</p>
+        <h1 id="【转】JavaScript代码优化指南"><a href="#【转】JavaScript代码优化指南" class="headerlink" title="【转】JavaScript代码优化指南"></a>【转】JavaScript代码优化指南</h1><p>这是一篇转载自博客园的文章，文章原始出处：<a href="http://www.cnblogs.com/HCJJ/p/6218385.html">查看原始链接</a></p>
+<h3 id="1-将脚本放在页面的底部"><a href="#1-将脚本放在页面的底部" class="headerlink" title="1.将脚本放在页面的底部"></a>1.将脚本放在页面的底部</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>变量声明合并</p>
+<h3 id="2-变量声明合并"><a href="#2-变量声明合并" class="headerlink" title="2.变量声明合并"></a>2.变量声明合并</h3><blockquote>
+<p>将多条var语句合并为一条语句，建议将未赋值的变量放在最后面。</p>
+<p>并且为了代码的美观，可以将等号对齐。</p>
 </blockquote>
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><ul>
-<li><a href="https://github.com/swagger-api/swagger-ui" target="_blank" rel="external">swagger ui</a>是一个API在线文档生成和测试的利器，目前发现最好用的。</li>
-<li>为什么好用？<a href="http://petstore.swagger.io/" target="_blank" rel="external">Demo 传送门</a>支持API自动生成同步的在线文档这些文档可用于项目内部API审核方便测试人员了解API这些文档可作为客户产品文档的一部分进行发布支持API规范生成代码，生成的客户端和服务器端骨架代码可以加速开发和测试速度</li>
-</ul>
-<blockquote>
-<p>总结一句话就是好用，逼格高。下面我将总结一下如何快速在本地搭建一个基于Node和Swagger UI的 API 的文档工具</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//糟糕</span></div><div class="line"><span class="keyword">var</span> oBtn = <span class="built_in">document</span>.getElementById(<span class="string">'button'</span>);</div><div class="line"><span class="keyword">var</span> name = <span class="string">''</span>;</div><div class="line"><span class="keyword">var</span> index;</div><div class="line"><span class="keyword">var</span> oLis = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</div><div class="line"><span class="keyword">var</span> result = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="keyword">var</span> i;</div><div class="line"></div><div class="line"><span class="comment">//建议</span></div><div class="line"><span class="keyword">var</span> oLis   = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>),</div><div class="line">    oBtn   = <span class="built_in">document</span>.getElementById(<span class="string">'button'</span>),</div><div class="line">    result = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],</div><div class="line">    name   = <span class="string">''</span>,</div><div class="line">    index,</div><div class="line">    j;</div></pre></td></tr></table></figure>
+<h3 id="3-减少全局变量"><a href="#3-减少全局变量" class="headerlink" title="3.减少全局变量"></a>3.减少全局变量</h3><blockquote>
+<p>减少全局变量，并不是说不定义全局变量，而是我们可以定义一个对象，来保存我们定义的全局变量。</p>
+<p>我称这个对象为变量空间。</p>
 </blockquote>
-<h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><ul>
-<li>下载Swagger UI（也可以直接下载 zip 文件）</li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐</span></div><div class="line"><span class="keyword">var</span> global = <span class="string">'This is global Variant'</span>,</div><div class="line">   config = &#123;&#125;,</div><div class="line">   data = [];</div><div class="line"> </div><div class="line"><span class="comment">// 建议：</span></div><div class="line"><span class="keyword">var</span> varSpace = &#123;</div><div class="line">   <span class="attr">global</span>:<span class="string">'This is global Variant'</span>,</div><div class="line">   <span class="attr">config</span>:&#123;&#125;,</div><div class="line">   <span class="attr">data</span>:[]</div><div class="line"> &#125;;</div></pre></td></tr></table></figure>
+<h3 id="4-字面量方式"><a href="#4-字面量方式" class="headerlink" title="4.字面量方式"></a>4.字面量方式</h3><blockquote>
+<p>声明枚举类型的变量，应该采用字面量方式。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//糟糕的</span></div><div class="line">  <span class="keyword">var</span> object = <span class="keyword">new</span> <span class="built_in">Object</span>(),</div><div class="line">      array = <span class="keyword">new</span> <span class="built_in">Array</span>(),</div><div class="line">      pattrn = <span class="keyword">new</span> <span class="built_in">RegExp</span>();</div><div class="line"><span class="comment">//建议：</span></div><div class="line">  <span class="keyword">var</span> object = &#123;&#125;,</div><div class="line">      array = [],</div><div class="line">      pattrn = <span class="comment">//;</span></div></pre></td></tr></table></figure>
+<h5 id="5-缓存DOM"><a href="#5-缓存DOM" class="headerlink" title="5.缓存DOM"></a>5.缓存DOM</h5><blockquote>
+<p>DOM遍历是非常昂贵的，所以要尽量将会重用的DOM保存起来。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 糟糕</span></div><div class="line"><span class="keyword">var</span> height = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>).offsetHeight;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'box'</span>).style.background=<span class="string">"#f00"</span>;</div><div class="line"> </div><div class="line"><span class="comment">// 建议</span></div><div class="line"><span class="keyword">var</span> oBox = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>),</div><div class="line">    height = oBox.offsetHeight;</div><div class="line">oBox.style.background=<span class="string">"#f00"</span>;</div></pre></td></tr></table></figure>
+<h3 id="6-使用缓存的父元素来查询子元素"><a href="#6-使用缓存的父元素来查询子元素" class="headerlink" title="6.使用缓存的父元素来查询子元素"></a>6.使用缓存的父元素来查询子元素</h3><blockquote>
+<p>正如前面我们所说的DOM的操作与获取是非常昂贵的，所以对于获取一个DOM元素，首先我们应该检查它有没有已经被缓存了的父元素。如果存在的话，可以直接在父元素的基础上向内去查找。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 糟糕的</span></div><div class="line">    <span class="keyword">var</span> oBox = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>),</div><div class="line">        oLis = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</div><div class="line"> </div><div class="line"><span class="comment">// 建议</span></div><div class="line">    <span class="keyword">var</span> oBox = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>),</div><div class="line">        oLis = oBox.getElementsByTagName(<span class="string">'li'</span>);</div></pre></td></tr></table></figure>
+<h3 id="7-条件分支优化"><a href="#7-条件分支优化" class="headerlink" title="7.条件分支优化"></a>7.条件分支优化</h3><h4 id="7-1-选择接近"><a href="#7-1-选择接近" class="headerlink" title="7.1 选择接近"></a>7.1 选择接近</h4><blockquote>
+<p>​ 将条件分支，按可能性的顺序从高到低排列，可以减少JavaScript解释器对条件语句的探测次数。</p>
+</blockquote>
+<p>​    例如预计一个数在0~99的范围概率是50%，预计100-199的范围时15%在200-300的范围时30%，最后小于0的概率是5%。</p>
+<p>​    使用分支语句则可以这样组织代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(num&gt;=<span class="number">0</span> &amp;&amp; num&lt;<span class="number">100</span>)&#123;</div><div class="line">    <span class="comment">//...</span></div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(num &gt;=<span class="number">200</span> &amp;&amp; num &lt;= <span class="number">300</span>)&#123;</div><div class="line">    <span class="comment">//...</span></div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(num &gt;=<span class="number">100</span> &amp;&amp; num &lt; <span class="number">200</span>)&#123;</div><div class="line">    <span class="comment">//...</span></div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="comment">// 小于0</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​    实际上，还可以进一步优化：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(num &gt;=<span class="number">0</span>)&#123;</div><div class="line">    <span class="keyword">if</span>(num &lt; <span class="number">100</span>)&#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(num &gt;= <span class="number">200</span> &amp;&amp; num &lt;=<span class="number">300</span>)&#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(num &gt;=<span class="number">100</span> &amp;&amp; num &lt; <span class="number">200</span>)&#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="comment">// 小于0</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="7-2缩短检测条件"><a href="#7-2缩短检测条件" class="headerlink" title="7.2缩短检测条件"></a>7.2缩短检测条件</h4><blockquote>
+<p>对检测的条件进行优化</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//字符串为空或非空</span></div><div class="line"></div><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="keyword">if</span> (name === <span class="string">''</span>) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (name !== <span class="string">''</span>) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    <span class="keyword">if</span> (!name) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (name) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line"><span class="comment">//数组非空</span></div><div class="line"></div><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="keyword">if</span> (collection.length &gt; <span class="number">0</span>) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    <span class="keyword">if</span> (collection.length) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line"><span class="comment">//布尔不成立</span></div><div class="line"></div><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="keyword">if</span> (notTrue === <span class="literal">false</span>) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    <span class="keyword">if</span> (!notTrue) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line"><span class="comment">//null 或 undefined</span></div><div class="line"></div><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="keyword">if</span> (noValue === <span class="literal">null</span> || <span class="keyword">typeof</span> noValue === <span class="string">'undefined'</span>) &#123;</div><div class="line">      <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    <span class="keyword">if</span> (noValue == <span class="literal">null</span>) &#123;</div><div class="line">      <span class="comment">// ......</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h4 id="7-3-三目运算符"><a href="#7-3-三目运算符" class="headerlink" title="7.3 三目运算符"></a>7.3 三目运算符</h4><blockquote>
+<p>使用三目运算符可以代替简单的双分支结构。</p>
+</blockquote>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(a &gt; b)&#123;</div><div class="line">    num = a</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    num = b</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>用三目运算符：  <code>num = a &gt; b ? a : b;</code></p>
+<p>这里我推荐简单的条件判断，也就是在条件的语句组中，语句并不多，例如下面这种情况，我就不建议使用三目运算符。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(a &gt; b)&#123;</div><div class="line">    num = a;</div><div class="line">    array.push(num);</div><div class="line">    string = array.join(<span class="string">''</span>);</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="7-4-当分支数量大于等于3时，采用switch语句"><a href="#7-4-当分支数量大于等于3时，采用switch语句" class="headerlink" title="7.4 当分支数量大于等于3时，采用switch语句"></a>7.4 当分支数量大于等于3时，采用switch语句</h4><blockquote>
+<p>测试表明，当分支数量大于3时，switch的分支执行效率要高与if分支。在IE中尤为明显，其性能可以提升50%左右。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 糟糕 ...</span></div><div class="line"><span class="keyword">if</span>(num == a)&#123;</div><div class="line"> </div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(num == b)&#123;</div><div class="line"> </div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(num == c)&#123;</div><div class="line"> </div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">     </div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="comment">// 推荐：</span></div><div class="line"><span class="keyword">switch</span>(num)&#123;</div><div class="line">        <span class="keyword">case</span> a:</div><div class="line">            ...</div><div class="line">            break;</div><div class="line">        <span class="keyword">case</span> b:</div><div class="line">            ...</div><div class="line">            break;</div><div class="line">        <span class="keyword">case</span> c:</div><div class="line">            ...</div><div class="line">            break;</div><div class="line">        <span class="keyword">default</span>:</div><div class="line">            ....</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h3 id="8-循环优化"><a href="#8-循环优化" class="headerlink" title="8.循环优化"></a>8.循环优化</h3><h4 id="8-1-不在循环中声明变量。"><a href="#8-1-不在循环中声明变量。" class="headerlink" title="8.1 不在循环中声明变量。"></a>8.1 不在循环中声明变量。</h4><blockquote>
+<p>在循环中去声明变量或者是定义函数，会严重的消耗性能。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//糟糕：</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=data.length;i&lt;l;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(data[i] &gt; <span class="number">10</span>)&#123;</div><div class="line">            <span class="keyword">var</span> value = data[i]</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line"><span class="comment">//建议：</span></div><div class="line">    <span class="keyword">var</span> value ;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,i&lt;data.length;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(data[i] &gt; <span class="number">10</span>)&#123;</div><div class="line">            value = data[i]</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h4 id="8-2-优化循环终止条件"><a href="#8-2-优化循环终止条件" class="headerlink" title="8.2 优化循环终止条件"></a>8.2 优化循环终止条件</h4><blockquote>
+<p>由于每次循环过程都会去计算终止条件，所以可以用一个变量来保存这个终止条件，减少重复性的计算，提高执行速度。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//糟糕的：</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;data.length;i++)&#123;<span class="comment">//...&#125;</span></div><div class="line"> </div><div class="line"><span class="comment">//建议：</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=data.length;i&lt;l;i++)&#123;<span class="comment">//...&#125;</span></div></pre></td></tr></table></figure>
+<h4 id="8-3-优化循环体"><a href="#8-3-优化循环体" class="headerlink" title="8.3 优化循环体"></a>8.3 优化循环体</h4><blockquote>
+<p>循环体是执行最多的，所以要确保其最大程度的优化。</p>
+</blockquote>
+<h4 id="8-4-for-in-循环的优势"><a href="#8-4-for-in-循环的优势" class="headerlink" title="8.4 for in 循环的优势"></a>8.4 for in 循环的优势</h4><blockquote>
+<p>for in 循环对比于普通的循环，它更加适合遍历对象，这是因为for in 循环不仅可以返回对象的value值，还可以返回对象之前的key.</p>
+</blockquote>
+<p>实例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>( key <span class="keyword">in</span> <span class="built_in">Object</span>)&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="built_in">Object</span>.hasOwnProperty(key))&#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 注： 参考《JavaScript 语言精粹》</span></div></pre></td></tr></table></figure>
+<h3 id="9-巧用-和-amp-amp-布尔运算符"><a href="#9-巧用-和-amp-amp-布尔运算符" class="headerlink" title="9.巧用 || 和&amp;&amp; 布尔运算符"></a>9.巧用 || 和&amp;&amp; 布尔运算符</h3><ul>
+<li>短路求值</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/swagger-api/swagger-ui.git</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//糟糕的：</span></div><div class="line">    <span class="keyword">if</span>(!fn)&#123;</div><div class="line">        callback = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        callback = fn;</div><div class="line">    &#125;</div><div class="line"><span class="comment">//建议：</span></div><div class="line">    callback = fn || <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div></pre></td></tr></table></figure>
 <ul>
-<li>安装 express</li>
-<li>创建一个空文件夹<strong>node_app</strong></li>
+<li>短路检测执行</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir node_app</div></pre></td></tr></table></figure>
-<ul>
-<li>初始化 node ，创建package.json文件（）</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">➜  ~ ✗ &gt;cd node_ap</div><div class="line">➜  ~/node_app ✗ &gt;npm init</div><div class="line">// 下面的看你心情填写</div><div class="line">name: (node_app) node_app</div><div class="line">version: (1.0.0)</div><div class="line">description:</div><div class="line">entry point: (index.js)</div><div class="line">test command:</div><div class="line">git repository:</div><div class="line">keywords:</div><div class="line">author:</div><div class="line">license: (ISC)</div></pre></td></tr></table></figure>
-<ul>
-<li>安装 express</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜ ~/node_app git:(master) ✗ &gt;npm install express --save</div></pre></td></tr></table></figure>
-<ul>
-<li>创建 index.js</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  ~/node_app git:(master) ✗ &gt;vim index.js</div></pre></td></tr></table></figure>
-<ul>
-<li>把下面代码贴如 index.js 中</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var express = require(&apos;express&apos;);</div><div class="line">var app = express();</div><div class="line">app.get(&apos;/&apos;, function (req, res) &#123;</div><div class="line">  res.send(&apos;Hello World!&apos;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">app.listen(3000, function () &#123;</div><div class="line">  console.log(&apos;Example app listening on port 3000!&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<ul>
-<li>在 node_app 中创建空目录 public</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">➜  ~/node_app git:(master) ✗ &gt;mkdir public</div><div class="line">➜  ~/node_app git:(master) ✗ &gt;cd public</div></pre></td></tr></table></figure>
-<ul>
-<li><p>修改路由</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">➜  ~/node_app/public git:(master) ✗ &gt;vim ../index.js</div><div class="line">//在文件第三行插入下面这句话</div><div class="line">app.use(&apos;/static&apos;, express.static(&apos;public&apos;));</div></pre></td></tr></table></figure>
-</li>
-<li><p>把下载好的Swagger UI 文件中dist 目录下的文件全部复制到 public 文件夹下。</p>
-<p>​</p>
-<p>​</p>
-<p>​</p>
-<p>目录结构</p>
-</li>
-<li><p>开启 node</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  ~/node_app git:(master) ✗ &gt;node index.js</div></pre></td></tr></table></figure>
-</li>
-<li><p>打开浏览器，输入<a href="http://localhost:3000/static/index.html" target="_blank" rel="external">http://localhost:3000/static/index.html</a></p>
-</li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//糟糕的：</span></div><div class="line">    <span class="keyword">if</span>(name)&#123;</div><div class="line">        welcome();</div><div class="line">    &#125;</div><div class="line"><span class="comment">//建议：</span></div><div class="line">    name &amp;&amp; welcome();</div></pre></td></tr></table></figure>
+<h3 id="10-字符串优化"><a href="#10-字符串优化" class="headerlink" title="10.字符串优化"></a>10.字符串优化</h3><ul>
+<li>定界符</li>
 </ul>
 <blockquote>
-<p>到此为止，你已经把官方的 demo 在本地配置好了。当然你也可以吧这个搭建在服务器上</p>
+<p>统一使用单引号（’），不适用双引号（“）。这在创建HTML字符串非常有好处：</p>
 </blockquote>
-<h3 id="编写文档并发布"><a href="#编写文档并发布" class="headerlink" title="编写文档并发布"></a>编写文档并发布</h3><ul>
-<li><p>使用<a href="http://editor.swagger.io/#/" target="_blank" rel="external">Swagger Editor</a>编写 API 文档Swagger Editor 上的是基于 yaml 的语法，但是不用害怕，看着官方的 demo 看个10分钟就会了。</p>
+<p>实例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> msg = <span class="string">'This is some HTML &lt;div class="makes-sense"&gt;&lt;/div&gt;'</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>字符串拼接</li>
+</ul>
+<blockquote>
+<p>对于大量的字符串拼接的情况下，不建议使用+=进行拼接，而是建议先定义一个数组，然后不断的push,最后再使用join(‘’)进行字符串的拼接</p>
+</blockquote>
+<ul>
+<li>换一种角度来看待字符拼接</li>
+</ul>
+<blockquote>
+<p>当你遍历一个数组或对象时，不要总想着使用for语句，要有创造性，总能找到最好的办法，例如向下面这样。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arry = [<span class="string">'item1'</span>,<span class="string">'item2'</span>,<span class="string">'item3'</span>,<span class="string">'item4'</span>],</div><div class="line">    string = <span class="string">'&lt;ul&gt;&lt;li&gt;'</span>+ arry.join(<span class="string">'&lt;/li&gt;&lt;li&gt;'</span>)+<span class="string">'&lt;/li&gt;&lt;/ul&gt;'</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>String的隐式转换</li>
+</ul>
+<blockquote>
+<p>当有调用String对象的方法或属性时，JavaScript会进行一个隐式装箱操作，将字符串先转换成一个String对象。再去调用对应的方法。</p>
+</blockquote>
+<p>例如：</p>
+<p><code>&#39;hellow&#39;.length</code>  实际上进行了  <code>new String(&#39;hellow&#39;)</code>  -&gt;  <code>newString(&#39;hellow&#39;).length</code><br>所以，对于会用到String对象的方法或属性的字符串，我推荐通过 <code>new String()</code> 的方式来声明定义。</p>
+<h3 id="11-数组相关"><a href="#11-数组相关" class="headerlink" title="11.数组相关"></a>11.数组相关</h3><ul>
+<li><p>获取数组最后一个元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</div><div class="line">lastValue = array[array.length<span class="number">-1</span>];</div><div class="line">lastValue = array.slice(<span class="number">-1</span>);</div></pre></td></tr></table></figure>
 </li>
-<li><p>导出 test.json 文档</p>
-<p>​</p>
-<p>​</p>
-<p>​</p>
-<p>导出方式</p>
+<li><p>数组截断</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">array.length = <span class="number">0</span>;</div></pre></td></tr></table></figure>
 </li>
-<li><p>把 test.json 放到 node_app/public 目录下。</p>
-</li>
-<li><p>利用编辑器修改 <code>url = &quot;http://petstore.swagger.io/v2/swagger.json&quot;;</code>为<code>url = &quot;/static/test.json&quot;;</code></p>
-</li>
-<li><p>重启 node 服务，浏览器中打开<code>http://localhost:3000/static/index.html</code>就是你自己写的 api 文档了</p>
+<li><p>数组赛值</p>
+<blockquote>
+<p>对于按顺序增加数组元素，可以在循环中通过push依次添加。</p>
+</blockquote>
+<p>实例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> array = [];</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=data.length;i&lt;l;i++)&#123;</div><div class="line">    <span class="comment">// 糟糕</span></div><div class="line">    array[i] = i;</div><div class="line">    <span class="comment">// 推荐</span></div><div class="line">    array.push(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="http://upload-images.jianshu.io/upload_images/437742-92baa4445c830155.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="自己写的API接口"></p>
-<p>自己写的 API 接口</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/437742-53b4db379370461a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="PUT请求"></p>
-<p>PUT请求</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/437742-bb4e7ae6e6a563fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="GET请求"></p>
-<p>GET请求</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/437742-f08de28bb61398e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="POST请求"></p>
-<p>POST 请求</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/437742-7a921345c183f095.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="DELETE请求"></p>
-<p>DELETE 请求</p>
-<p>文／Damonwong（简书作者）<br>原文链接：<a href="http://www.jianshu.com/p/d6626e6bd72c" target="_blank" rel="external">http://www.jianshu.com/p/d6626e6bd72c</a><br>著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。</p>
-
+<h3 id="12-函数相关"><a href="#12-函数相关" class="headerlink" title="12.函数相关"></a>12.函数相关</h3><p>​    <strong>12.1 作用域提升</strong></p>
+<blockquote>
+<p>在JavaScrpit中变量和方法定义会自动提升到执行之前。JavaScript只有function级的定义域，而无其他许多编程语言中的块定义域，所以使得你在某一个function内的某语句和循环体中定义了一个变量，此变量可作用于整个function内，而不仅仅是在此语句或循环体中，因为他们的声明被JavaScript自动提升了。</p>
+</blockquote>
+<p>原function</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">myname = <span class="string">"global"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sample</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   alert(myname);   <span class="comment">// "undefined"</span></div><div class="line">   <span class="keyword">var</span> myname = <span class="string">"local"</span>;</div><div class="line">   alert(myname);   <span class="comment">// "local"</span></div><div class="line">&#125;</div><div class="line">sample()</div></pre></td></tr></table></figure>
+<p>被js提升后</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">myname = <span class="string">"global"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sample</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">var</span> myname;        <span class="comment">//没有赋值</span></div><div class="line">   alert(myname);    <span class="comment">// "undefined"</span></div><div class="line">   myname = <span class="string">"local"</span>;<span class="comment">//此处赋值</span></div><div class="line">   alert(myname); <span class="comment">// "local"</span></div><div class="line">&#125;</div><div class="line">sample();</div></pre></td></tr></table></figure>
+<p>　　　　<strong>*</strong> 需要注意的是，虽然作用域内的变量被自动提升到最前进行声明，但是变量赋值的依然是代码中的位置。<br>　　 　　 正如你所看到的这段令人充满困惑与误解的代码导致了出人意料的结果。只有良好的声明习惯，也就是下一章节我们要提到的声明规则，才能尽可能的避免这类错误风险。</p>
+<p>　　　　  声明提前<br>　　　　  为避免上述的变量和方法定义被自动提升造成误解，把风险降到最低，我们应该手动地显示地去声明变量与方法。也就是说，所有的变量以及方法，应当定义在 function 内的首行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 不推荐</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sample</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">var</span> first = <span class="number">0</span>;</div><div class="line">   <span class="keyword">var</span> last = <span class="number">1</span>;</div><div class="line">   <span class="keyword">if</span>(last &gt; first)&#123;</div><div class="line">        <span class="keyword">var</span> sum = first + last;</div><div class="line">   &#125;</div><div class="line">   <span class="keyword">var</span> count = sum;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="comment">// 推荐</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sample</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">var</span> first = <span class="number">0</span>,</div><div class="line">       last = <span class="number">1</span>,</div><div class="line">       sum = <span class="number">0</span>,</div><div class="line">       count = <span class="number">0</span>;</div><div class="line"> </div><div class="line">   <span class="keyword">if</span>(last &gt; first)&#123;</div><div class="line">        sum = first + last;</div><div class="line">   &#125;</div><div class="line">    count = sum;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​    <strong>12.2 函数的声明</strong></p>
+<p>　　　　JS会自动将函数的声明上调到函数的执行之前。<br>　　　　切勿在语句块内声明函数，在 ECMAScript 5 的严格模式下，这是不合法的。函数声明应该在定义域的顶层。但在语句块内可将函数申明转化为函数表达式赋值给变量。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="keyword">if</span> (x) &#123;</div><div class="line">      <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">    &#125;</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    <span class="keyword">if</span> (x) &#123;</div><div class="line">      <span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>​    <strong>12.3 参数设计</strong></p>
+<p>函数的参数，建议控制在6个以内，应为过多的参数便会导致维护成本的提升。<br>对于需要多个参数的函数，建议将所有参数封装成一个对象options进行传输。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getData</span>(<span class="params">params1,params2,params3,params4...</span>)</span>&#123;<span class="comment">//...&#125;</span></div><div class="line"><span class="comment">//建议：</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getData</span>(<span class="params">options</span>)</span>&#123;<span class="comment">//...&#125;</span></div><div class="line">    getData(&#123;<span class="string">'prams1'</span>:<span class="string">''</span>,<span class="string">'params2'</span>:,....&#125;);</div></pre></td></tr></table></figure>
+<p>​    <strong>12.4 闭包与立执行函数</strong></p>
+<p>　　　　 <strong>·</strong> 全局命名空间污染与 IIFE　　　</p>
+<p>总是将代码包裹成一个 IIFE(Immediately-Invoked Function Expression)，用以创建独立隔绝的定义域。这一举措可防止全局命名空间被污染。<br>IIFE 还可确保你的代码不会轻易被其它全局命名空间里的代码所修改（i.e. 第三方库，window 引用，被覆盖的未定义的关键字等等）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐</span></div><div class="line">    <span class="keyword">var</span> x = <span class="number">10</span>,</div><div class="line">        y = <span class="number">100</span>;</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">window</span>.x + <span class="string">' '</span> + <span class="built_in">window</span>.y);</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params">w</span>)</span>&#123;</div><div class="line"><span class="meta">      'use strict'</span>;</div><div class="line">      <span class="keyword">var</span> x = <span class="number">10</span>,</div><div class="line">          y = <span class="number">100</span>;</div><div class="line">        w.console.log((w.x === <span class="literal">undefined</span>) + <span class="string">' '</span> + (w.y === <span class="literal">undefined</span>));</div><div class="line">    &#125;(<span class="built_in">window</span>));</div></pre></td></tr></table></figure>
+<p><strong>·</strong> IIFE（立即执行的函数表达式）</p>
+<p>　　　　　　无论何时，想要创建一个新的封闭的定义域，那就用 IIFE。它不仅避免了干扰，也使得内存在执行完后立即释放。<br>　　　　　　所有脚本文件建议都从 IIFE 开始。<br>　　　　　　立即执行的函数表达式的执行括号应该写在外包括号内。虽然写在内还是写在外都是有效的，但写在内使得整个表达式看起来更像一个整体，因此推荐这么做。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐</span></div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)();</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;());</div></pre></td></tr></table></figure>
+<p>用下列写法来格式化你的 IIFE 代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">$, w, d</span>)</span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        w.alert(d.querySelectorAll(<span class="string">'div'</span>).length);</div><div class="line">    &#125;);</div><div class="line">&#125;(jQuery, <span class="built_in">window</span>, <span class="built_in">document</span>));</div></pre></td></tr></table></figure>
+<p>　　　　<strong>·</strong> 严格模式　　　　　　</p>
+<p>　　　　　　ECMAScript 5 严格模式可在整个脚本或独个方法内被激活。它对应不同的 javascript 语境会做更加严格的错误检查。严格模式也确保了 javascript 代码更加的健壮，运行的也更加快速。<br>　　　　　　严格模式会阻止使用在未来很可能被引入的预留关键字。<br>　　　　　　你应该在你的脚本中启用严格模式，最好是在独立的 IIFE 中应用它。避免在你的脚本第一行使用它而导致你的所有脚本都启动了严格模式，这有可能会引发一些第三方类库的问题。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐：</span></div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="comment">// some code</span></div><div class="line">    &#125;());</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="meta">        'use strict'</span>;</div><div class="line">        <span class="comment">// some code</span></div><div class="line">    &#125;());</div></pre></td></tr></table></figure>
+<h3 id="13-数据类型"><a href="#13-数据类型" class="headerlink" title="13. 数据类型"></a>13. 数据类型</h3><p>　　<strong>13.1 类型检测　</strong></p>
+<p>　　　　javaScript中数据类型，可以分为 值类型、枚举类型、null、undefined。<br>　　　　值类型可以通过typeof进行判断<br>　　　　枚举类型则可以通过 instanceof<br>　　　　而null、undefined则可以直接通过null进行判断。<br>　　　　示例：<br>　　　　　　值类型通过typeof直接进行检测</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// string</span></div><div class="line"><span class="keyword">typeof</span> variable --&gt;<span class="string">'string'</span></div><div class="line"> </div><div class="line"><span class="comment">// number</span></div><div class="line"><span class="keyword">typeof</span> variable --&gt; <span class="string">'number'</span></div><div class="line"> </div><div class="line"><span class="comment">// boolean</span></div><div class="line"><span class="keyword">typeof</span> variable --&gt; <span class="string">'boolean'</span></div><div class="line"> </div><div class="line"><span class="comment">// Function</span></div><div class="line"><span class="keyword">typeof</span> variable --&gt; <span class="string">'function'</span></div></pre></td></tr></table></figure>
+<p>​    枚举类型，通过以下方法是无法进行判断的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//null</span></div><div class="line"><span class="keyword">typeof</span> variable --&gt; <span class="string">'object'</span></div><div class="line"><span class="comment">// object</span></div><div class="line"><span class="keyword">typeof</span> variable --&gt; <span class="string">'object'</span></div><div class="line"><span class="comment">// Date</span></div><div class="line"><span class="keyword">typeof</span> variable --&gt; <span class="string">'object'</span></div></pre></td></tr></table></figure>
+<p>　　　　　　对于枚举类型就要采用instanceof进行判断</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// RegExp</span></div><div class="line">variable <span class="keyword">instanceof</span> <span class="built_in">RegExp</span> --&gt; <span class="literal">true</span></div><div class="line"> </div><div class="line"><span class="comment">// Array</span></div><div class="line">variable <span class="keyword">instanceof</span> <span class="built_in">Array</span>  --&gt; <span class="literal">true</span></div></pre></td></tr></table></figure>
+<p>而 undefined 或 null 则统一采用 undefined进行判断。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// null or undefined</span></div><div class="line"> variable == <span class="literal">null</span>  --&gt; <span class="literal">true</span></div></pre></td></tr></table></figure>
+<p>　　　　更具体的关于JavaScript数据类型判断方法，可以参见我的另一篇博客：[<a href="http://www.cnblogs.com/HCJJ/p/6032236.html">浅玩JavaScript的数据类型判断</a>]</p>
+<p>　<strong>13.2 类型判断</strong></p>
+<p>　　　　总是使用 === 精确的比较操作符，避免在判断的过程中，由 JavaScript 的强制类型转换所造成的困扰。<br>　　　　如果你使用 === 操作符，那比较的双方必须是同一类型为前提的条件下才会有效。<br>　　　　在只使用 == 的情况下，JavaScript 所带来的强制类型转换使得判断结果跟踪变得复杂，下面的例子可以看出这样的结果有多怪了：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="meta">  'use strict'</span>;</div><div class="line">   </div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'0'</span> == <span class="number">0</span>); <span class="comment">// true</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">''</span> == <span class="literal">false</span>); <span class="comment">// true</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'1'</span> == <span class="literal">true</span>); <span class="comment">// true</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">undefined</span>); <span class="comment">// true</span></div><div class="line">   </div><div class="line">  <span class="keyword">var</span> x = &#123;</div><div class="line">    <span class="attr">valueOf</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> <span class="string">'X'</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">   </div><div class="line">  <span class="built_in">console</span>.log(x == <span class="string">'X'</span>);</div><div class="line">   </div><div class="line">&#125;());</div></pre></td></tr></table></figure>
+<p><strong>13.3 类型转换</strong></p>
+<p>　　　　<strong>· 字符转数值</strong>　　　　</p>
+<p>　　　　　　PS:这里针对的是字符串类型的数值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐：</span></div><div class="line">     <span class="built_in">Number</span>(str);</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    variable*<span class="number">1</span>;</div><div class="line">    varIable<span class="number">-1</span>;</div><div class="line">    +variable;</div><div class="line"><span class="comment">//当字符串结尾包含非数字并期望忽略时，使用parseInt</span></div><div class="line">    <span class="built_in">parseInt</span>(variable)</div><div class="line"><span class="comment">//示例：</span></div><div class="line">    <span class="keyword">var</span> width = <span class="string">'200px'</span>;</div><div class="line">    <span class="built_in">parseInt</span>(width, <span class="number">10</span>);</div></pre></td></tr></table></figure>
+<p>　　　　<strong>· 小数转整数</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐：</span></div><div class="line">      <span class="built_in">parseInt</span>(variable)</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">      ~~variable</div><div class="line"><span class="comment">//备选:</span></div><div class="line">    <span class="built_in">Math</span>.ceil();</div><div class="line">    <span class="built_in">Math</span>.floor();</div></pre></td></tr></table></figure>
+<p>　　　　<strong>· 转换为布尔型</strong>　　</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="built_in">Boolean</span>(variable);</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    !variable</div><div class="line">    !!variable</div></pre></td></tr></table></figure>
+<p>　　　　<strong>· 转换为字符串</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="built_in">String</span>(variable);</div><div class="line">    variable.toString();</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    num + <span class="string">''</span>;</div></pre></td></tr></table></figure>
+<h3 id="14-DOM插入的优化"><a href="#14-DOM插入的优化" class="headerlink" title="14. DOM插入的优化"></a>14. DOM插入的优化</h3><ul>
+<li><strong>不在循环中插入DOM</strong></li>
+</ul>
+<p>　　　　更改页面的DOM结构基本上都会造成浏览器对页面的重新渲染，这所造成的代价是非常庞大的，如果还在循环中去操作DOM，这就更加不能容忍。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//糟糕的：</span></div><div class="line"> <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=arr.length;i&lt;l;i++)&#123;</div><div class="line">     <span class="keyword">var</span> oDiv = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</div><div class="line">     <span class="built_in">document</span>.body.appendChild(oDiv);</div><div class="line"> &#125;</div><div class="line"><span class="comment">//建议：</span></div><div class="line"> <span class="keyword">var</span> doc = <span class="built_in">document</span>.createDocumentFragment();</div><div class="line"> <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=arr.length;i&lt;l;i++)&#123;</div><div class="line">     <span class="keyword">var</span> oDiv = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</div><div class="line">      doc.appendChild(oDiv);</div><div class="line"> &#125;</div><div class="line"> <span class="built_in">document</span>.appendChild(doc);</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>innerHTML</strong></li>
+</ul>
+<p>　　　　利用文档碎片节点适合更改基本的DOM块，但是对于大范围的DOM更改，使用innerHTML不仅更加简便，而且相比于标准的DOM操作方法，更加的高效。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> htmlStr = <span class="string">''</span>;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">50</span>;i++)&#123;</div><div class="line">     htmlStr += <span class="string">'&lt;div&gt;'</span>+i+<span class="string">'&lt;/div&gt;'</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">document</span>.body.innerHTML = htmlStr;</div></pre></td></tr></table></figure>
+<h3 id="15-事件代理"><a href="#15-事件代理" class="headerlink" title="15. 事件代理"></a>15. 事件代理</h3><p>　　事件代理是利用了事件的冒泡特性。我们可以为一个统一的父节点绑定事件，然后去进行目标子节点的事件处理。<br>　　事件代理可以减少相同事件类型的绑定次数，另外可以解决在JS生成DOM时，必须在生成之后才能绑定事件的问题。最后事件代理还可以解决事件处理程序与所触发事件的DOM对象之间的循环引用问题。<br>　　事件代理的实现很简单：　</p>
+<p>　　　　HTML 结构：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"son"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>​        JavaScript:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'box'</span>).onclick=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> ev = e || <span class="built_in">window</span>.event,</div><div class="line">        oSrc = ev.target || ev.srcElement;</div><div class="line"> </div><div class="line">    <span class="keyword">if</span>(oSrc.id.indexOf(<span class="string">'son'</span>))&#123;</div><div class="line">        alert(<span class="string">'此时进行#son元素的事件处理'</span>);</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="16-注意NodeList"><a href="#16-注意NodeList" class="headerlink" title="16. 注意NodeList"></a>16. 注意NodeList</h3><p>　　NodeList 是一组节点列表，它在形态上很接近数组，但并不是数组，通常我们称之为伪数组。<br>　　NodeList 的获取主要是通过以下的方法与属性。<br>　　　　· document.getElementsByTagName(‘’)<br>　　　　· 访问了HTML-DOM的快捷集合属性</p>
+<p>　　　　　　· document.images<br>　　　　　　· document.forms<br>　　　　　　· document.links</p>
+<p>　　　　· 获取了DOM的 childNodes 属性<br>　　　　· 获取了DOM的 attributes 属性<br>　　了解了NodeList,我们还需要知道的是该怎么最小化去访问NodeList次数以便于改进脚本的执行性能：<br>　　这里可以参考循环的优化方式，比如循环的终止条件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=<span class="built_in">document</span>.forms.length;i&lt;l;i++)&#123;</div><div class="line">           <span class="comment">//....</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h3 id="17-检查对象是否具有指定的属性与方法"><a href="#17-检查对象是否具有指定的属性与方法" class="headerlink" title="17. 检查对象是否具有指定的属性与方法"></a>17. 检查对象是否具有指定的属性与方法</h3><p>　　当你需要检测一些属性是否存在，避免运行未定义的函数或属性时，这个小技巧就显得很有用。<br>　　如果打算定制一些跨兼容的浏览器代码，你也可能会用到这个小技巧。<br>　　例如，你想使用document.querySelector() 来选择一个id，并且让它能兼容IE6浏览器，但是在IE6浏览器中这个函数是不存在的，那么使用这个操作符来检测这个函数是否存在就显得非常有用，如下面的示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="string">'querySelector'</span> <span class="keyword">in</span> <span class="built_in">document</span>)&#123;</div><div class="line">    <span class="built_in">document</span>.querySelector(<span class="string">'#id'</span>);</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"id"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="18-松散耦合"><a href="#18-松散耦合" class="headerlink" title="18. 松散耦合"></a>18. 松散耦合</h3><p>　　我们强烈推荐前端的三层分离，结构层（HTML）、表现层（CSS）、行为层（JavaScript），但有时在工作中，我们又不能避免在我们的脚本中还附加了一些HTML或CSS代码。既然这个问题目前解决不了，那么我们就要想到以目前的方法，怎么进行最大的优化。</p>
+<ul>
+<li><strong>HTML &amp;&amp; JavaScript</strong></li>
+</ul>
+<p>　　　　当脚本中含有HTML代码时，以下方法可以根据自己的使用场合进行择优选择：　</p>
+<p>　　　　  · createElement ： 适合数量最少的DOM创建<br>　　　　  · 文档碎片          ： 适合成块的DOM更改。<br>　　　　  · innerHTML      ： 适合批量的DOM插入。</p>
+<ul>
+<li><strong>CSS &amp;&amp; JavaScript</strong></li>
+</ul>
+<p>　　　　 当脚本中含有CSS代码时，以下方法可以根据自己的使用场合进行择优选择：  </p>
+<p>　　　　　· style : 适合为DOM添加样式不多的情况下。<br>　　　　   · cssText ：适合为少量的DOM插入批量的样式。<br>　　　　   · className ：通过为DOM添加类名，而类名对应的具体样式内容，则存在一个CSS文件中，这是我更加推荐的。<br>　　　　　· <style> ： 如果你需要插入为很多的DOM插入批量的样式内容，那么通过JavaScript 创建一个 <style>标签，也不失是一个解决方案。</p>
+<h3 id="19-异常处理"><a href="#19-异常处理" class="headerlink" title="19. 异常处理"></a>19. 异常处理</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span>&#123;</div><div class="line">        <span class="comment">// 尝试运行</span></div><div class="line"> </div><div class="line">&#125;<span class="keyword">catch</span>(msg)&#123;</div><div class="line"> </div><div class="line">    <span class="keyword">throw</span> <span class="string">"Error name:"</span> + msg.name; <span class="comment">// throw会在控制台抛出异常信息，注意：throw会阻塞程序执行。建议使用console.log</span></div><div class="line">    <span class="keyword">throw</span> <span class="string">"Error message:"</span> + msg.message </div><div class="line"> </div><div class="line">    <span class="comment">/*  Error.Name 的常见错误信息：</div><div class="line"> </div><div class="line">        1. EvalError：eval_r()的使用与定义不一致</div><div class="line">        2. RangeError：数值越界</div><div class="line">        3. ReferenceError：非法或不能识别的引用数值</div><div class="line">        4. SyntaxError：发生语法解析错误</div><div class="line">        5. TypeError：操作数类型错误</div><div class="line">        6. URIError：URI处理函数使用不当</div><div class="line"> </div><div class="line">    */</span></div><div class="line"> </div><div class="line">&#125;<span class="keyword">finally</span>&#123;</div><div class="line">    <span class="comment">// finally 最终不论是运行成功还是没有运行成功都会执行。</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</style></p>
       
 
       
@@ -606,7 +441,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/mac/【转】SwaggerUI教程API文档神器 搭配Node使用/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/js/【转】JavaScript代码优化指南/">展开全文 >></a>
         </p>
       
 
@@ -636,12 +471,17 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-expreience/server/tomcat部署网站配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-TypeScript/greeter2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="tomcat部署网站配置"><a href="#tomcat部署网站配置" class="headerlink" title="tomcat部署网站配置"></a>tomcat部署网站配置</h1>
+        function greeter(person) {
+    return "Hello," + person.firstName + " " + person.lastName;
+}
+var user = { firstName: "嘿嘿", lastName: "李四" };
+document.body.innerHTML = greeter(user);
+
       
 
       
@@ -653,7 +493,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/expreience/server/tomcat部署网站配置/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter2/">展开全文 >></a>
         </p>
       
 
@@ -683,108 +523,26 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-tools/emmet/emmet系列（1）基础语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-TypeScript/greeter3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="emmet-系列（1）基础语法"><a href="#emmet-系列（1）基础语法" class="headerlink" title="emmet 系列（1）基础语法"></a>emmet 系列（1）基础语法</h1><blockquote>
-<p>emmet 是一个能显著提升开发html和css开发效率的web开发者工具</p>
-<p>emmet基本上目前已知的编辑器都有相应的插件，各个编辑器的emmet插件的下载地址：<a href="http://emmet.io/download/" target="_blank" rel="external">点我下载</a></p>
-</blockquote>
-<h2 id="子集元素-gt"><a href="#子集元素-gt" class="headerlink" title="子集元素:&gt;"></a>子集元素:&gt;</h2><blockquote>
-<p>nav&gt;ul&gt;li</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">nav</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="兄弟元素"><a href="#兄弟元素" class="headerlink" title="兄弟元素:+"></a>兄弟元素:+</h2><blockquote>
-<p>div+p+bq</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">blockquote</span>&gt;</span><span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="父级元素"><a href="#父级元素" class="headerlink" title="父级元素:^"></a>父级元素:^</h2><blockquote>
-<p>div+div&gt;p&gt;span+em^bq</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">blockquote</span>&gt;</span><span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="分组"><a href="#分组" class="headerlink" title="分组:()"></a>分组:()</h2><blockquote>
-<p>div&gt;(header&gt;ul&gt;li*2&gt;a)+footer&gt;p</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">footer</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">footer</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>(div&gt;dl&gt;(dt+dd)*3)+footer&gt;p</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dl</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">dd</span>&gt;</span><span class="tag">&lt;/<span class="name">dd</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">dd</span>&gt;</span><span class="tag">&lt;/<span class="name">dd</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">dd</span>&gt;</span><span class="tag">&lt;/<span class="name">dd</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="多个"><a href="#多个" class="headerlink" title="多个:*"></a>多个:*</h2><blockquote>
-<p>ul&gt;li*5</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="项目编号"><a href="#项目编号" class="headerlink" title="项目编号:$"></a>项目编号:$</h2><blockquote>
-<p>ul&gt;li.item$*5</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item1"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item2"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item3"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item4"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item5"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>h$[title=item$]{Header $}*3</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">title</span>=<span class="string">"item1"</span>&gt;</span>Header 1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">title</span>=<span class="string">"item2"</span>&gt;</span>Header 2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h3</span> <span class="attr">title</span>=<span class="string">"item3"</span>&gt;</span>Header 3<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>ul&gt;li.item$@-*5</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item5"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item4"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item3"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item2"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item1"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>ul&gt;li.item$@3*5</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item3"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item4"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item5"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item6"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item7"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="ID和Class属性"><a href="#ID和Class属性" class="headerlink" title="ID和Class属性# ."></a>ID和Class属性# .</h2><blockquote>
-<p>#header</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"header"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>.title</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"title"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>Form#search.wide</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">"search"</span> <span class="attr">class</span>=<span class="string">"wide"</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>p.class1.class2.class3</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"class1 class2 class3"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="常用属性"><a href="#常用属性" class="headerlink" title="常用属性:[]"></a>常用属性:[]</h2><blockquote>
-<p>p[title=”hello world”]</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">title</span>=<span class="string">"hello world"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>td[rowspan=2 colspan=3 title]</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">td</span> <span class="attr">rowspan</span>=<span class="string">"2"</span> <span class="attr">colspan</span>=<span class="string">"3"</span> <span class="attr">title</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>[a=’value1’ b=’value2’]</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">a</span>=<span class="string">"value1"</span> <span class="attr">b</span>=<span class="string">"value2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="文本："><a href="#文本：" class="headerlink" title="文本：{}"></a>文本：{}</h2><blockquote>
-<p>a{click me}</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>p&gt;{Click }+a{here}+{ to continue}</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Click<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>here<span class="tag">&lt;/<span class="name">a</span>&gt;</span> to continue<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="默认规则"><a href="#默认规则" class="headerlink" title="默认规则"></a>默认规则</h2><blockquote>
-<p>默认规则，当指明父标签时，符合默认规则的子标签可不必写出具体标签名</p>
-<p>.aaa</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"aaa"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>em&gt;.classs</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">em</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"classs"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">em</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>ul&gt;.classs</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"classs"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>table&gt;.row&gt;.col</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"col"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
+        //类
+var Student = (function () {
+    function Student(firstName, middleInitial, lastName) {
+        this.firstName = firstName;
+        this.middleInitial = middleInitial;
+        this.lastName = lastName;
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
+    return Student;
+}());
+function greeter(person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+var user = new Student("Jane", "M.", "User");
+document.body.innerHTML = greeter(user);
 
       
 
@@ -797,7 +555,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/tools/emmet/emmet系列（1）基础语法/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter3/">展开全文 >></a>
         </p>
       
 
@@ -827,130 +585,296 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-tools/emmet/index" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-vue/【转】Vue.js——vue-resource全攻略" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html lang="en">
+        <h1 id="【转】Vue-js——vue-resource全攻略"><a href="#【转】Vue-js——vue-resource全攻略" class="headerlink" title="【转】Vue.js——vue-resource全攻略"></a>【转】Vue.js——vue-resource全攻略</h1><p>这是一篇转载文章，原文出处：<a href="http://www.cnblogs.com/keepfool/p/5657065.html">查看详情</a></p>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>上一篇我们介绍了如何将$.ajax和Vue.js结合在一起使用，并实现了一个简单的跨域CURD示例。Vue.js是数据驱动的，这使得我们并不需要直接操作DOM，如果我们不需要使用jQuery的DOM选择器，就没有必要引入jQuery。vue-resource是Vue.js的一款插件，它可以通过XMLHttpRequest或JSONP发起请求并处理响应。也就是说，$.ajax能做的事情，vue-resource插件一样也能做到，而且vue-resource的API更为简洁。另外，vue-resource还提供了非常有用的inteceptor功能，使用inteceptor可以在请求前和请求后附加一些行为，比如使用inteceptor在ajax请求时显示loading界面。</p>
+<p>本文的主要内容如下：</p>
+<ul>
+<li>介绍vue-resource的特点</li>
+<li>介绍vue-resource的基本使用方法</li>
+<li>基于this.$http的增删查改示例</li>
+<li>基于this.$resource的增删查改示例</li>
+<li>基于inteceptor实现请求等待时的loading画面</li>
+<li>基于inteceptor实现请求错误时的提示画面</li>
+</ul>
+<p>本文11个示例的源码已放到GitHub，如果您觉得本篇内容不错，请点个赞，或在GitHub上加个星星！</p>
+<p><a href="https://github.com/keepfool/vue-tutorials/tree/master/03.Ajax/vue-resource" target="_blank" rel="external">GitHub Source</a></p>
+<p>本文的所有示例如下：</p>
+<ul>
+<li><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/http-get.html" target="_blank" rel="external">http get示例</a></li>
+<li><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/http-jsonp.html" target="_blank" rel="external">http jsonp示例</a></li>
+<li><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/http-post.html" target="_blank" rel="external">http post示例</a></li>
+<li><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/http-put.html" target="_blank" rel="external">http put示例</a></li>
+<li><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/http-delete.html" target="_blank" rel="external">http delete示例</a></li>
+<li><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/resource-get.html" target="_blank" rel="external">resource get示例</a></li>
+<li><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/resource-post.html" target="_blank" rel="external">resource save示例(HTTP POST)</a></li>
+<li><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/resource-put.html" target="_blank" rel="external">resource update示例(HTTP PUT)</a></li>
+<li><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/resource-delete.html" target="_blank" rel="external">resource remove示例(HTTP DELETE)</a></li>
+<li><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/inteceptor-demo1.html" target="_blank" rel="external">inteceptor示例1——ajax请求的loading界面</a></li>
+<li><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/inteceptor-demo2.html" target="_blank" rel="external">inteceptor实例2——请求失败时的提示对话框</a></li>
+</ul>
+<p>各位在阅读这篇文章的内容时，可以先尝试该列表的最后两个示例，这两个示例综合使用了this.$http和inteceptor。</p>
+<h1 id="vue-resource特点"><a href="#vue-resource特点" class="headerlink" title="vue-resource特点"></a>vue-resource特点</h1><p>vue-resource插件具有以下特点：</p>
+<p><strong>1. 体积小</strong></p>
+<p>vue-resource非常小巧，在压缩以后只有大约12KB，服务端启用gzip压缩后只有4.5KB大小，这远比jQuery的体积要小得多。</p>
+<p><strong>2. 支持主流的浏览器</strong></p>
+<p>和Vue.js一样，vue-resource除了不支持IE 9以下的浏览器，其他主流的浏览器都支持。</p>
+<p><strong>3. 支持Promise API和URI Templates</strong></p>
+<p>Promise是ES6的特性，Promise的中文含义为“先知”，Promise对象用于异步计算。<br>URI Templates表示URI模板，有些类似于ASP.NET MVC的路由模板。</p>
+<p><strong>4. 支持拦截器</strong></p>
+<p>拦截器是全局的，拦截器可以在请求发送前和发送请求后做一些处理。<br>拦截器在一些场景下会非常有用，比如请求发送前在headers中设置access_token，或者在请求失败时，提供共通的处理方式。</p>
+<h1 id="vue-resource使用"><a href="#vue-resource使用" class="headerlink" title="vue-resource使用"></a>vue-resource使用</h1><h2 id="引入vue-resource"><a href="#引入vue-resource" class="headerlink" title="引入vue-resource"></a>引入vue-resource</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;js/vue.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;js/vue-resource.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>引入vue-resource后，可以基于全局的Vue对象使用http，也可以基于某个Vue实例使用http。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 基于全局Vue对象使用http</div><div class="line">Vue.http.get(&apos;/someUrl&apos;, [options]).then(successCallback, errorCallback);</div><div class="line">Vue.http.post(&apos;/someUrl&apos;, [body], [options]).then(successCallback, errorCallback);</div><div class="line"></div><div class="line">// 在一个Vue实例内使用$http</div><div class="line">this.$http.get(&apos;/someUrl&apos;, [options]).then(successCallback, errorCallback);</div><div class="line">this.$http.post(&apos;/someUrl&apos;, [body], [options]).then(successCallback, errorCallback);</div></pre></td></tr></table></figure>
+<p>在发送请求后，使用<code>then</code>方法来处理响应结果，<code>then</code>方法有两个参数，第一个参数是响应成功时的回调函数，第二个参数是响应失败时的回调函数。</p>
+<p><code>then</code>方法的回调函数也有两种写法，第一种是传统的函数写法，第二种是更为简洁的ES 6的Lambda写法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">// 传统写法</div><div class="line">this.$http.get(&apos;/someUrl&apos;, [options]).then(function(response)&#123;</div><div class="line">    // 响应成功回调</div><div class="line">&#125;, function(response)&#123;</div><div class="line">    // 响应错误回调</div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line">// Lambda写法</div><div class="line">this.$http.get(&apos;/someUrl&apos;, [options]).then((response) =&gt; &#123;</div><div class="line">    // 响应成功回调</div><div class="line">&#125;, (response) =&gt; &#123;</div><div class="line">    // 响应错误回调</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>PS：做过.NET开发的人想必对Lambda写法有一种熟悉的感觉。</p>
+<h2 id="支持的HTTP方法"><a href="#支持的HTTP方法" class="headerlink" title="支持的HTTP方法"></a>支持的HTTP方法</h2><p>vue-resource的请求API是按照REST风格设计的，它提供了7种请求API：</p>
+<ul>
+<li><code>get(url, [options])</code></li>
+<li><code>head(url, [options])</code></li>
+<li><code>delete(url, [options])</code></li>
+<li><code>jsonp(url, [options])</code></li>
+<li><code>post(url, [body], [options])</code></li>
+<li><code>put(url, [body], [options])</code></li>
+<li><code>patch(url, [body], [options])</code></li>
+</ul>
+<p>除了jsonp以外，另外6种的API名称是标准的HTTP方法。当服务端使用REST API时，客户端的编码风格和服务端的编码风格近乎一致，这可以减少前端和后端开发人员的沟通成本。</p>
+<table>
+<thead>
+<tr>
+<th>客户端请求方法</th>
+<th>服务端处理方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>this.$http.get(…)</td>
+<td>Getxxx</td>
+</tr>
+<tr>
+<td>this.$http.post(…)</td>
+<td>Postxxx</td>
+</tr>
+<tr>
+<td>this.$http.put(…)</td>
+<td>Putxxx</td>
+</tr>
+<tr>
+<td>this.$http.delete(…)</td>
+<td>Deletexxx</td>
+</tr>
+</tbody>
+</table>
+<h2 id="options对象"><a href="#options对象" class="headerlink" title="options对象"></a>options对象</h2><p>发送请求时的options选项对象包含以下属性：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td><code>string</code></td>
+<td>请求的URL</td>
+</tr>
+<tr>
+<td>method</td>
+<td><code>string</code></td>
+<td>请求的HTTP方法，例如：’GET’, ‘POST’或其他HTTP方法</td>
+</tr>
+<tr>
+<td>body</td>
+<td><code>Object</code>, <code>FormData``string</code></td>
+<td>request body</td>
+</tr>
+<tr>
+<td>params</td>
+<td><code>Object</code></td>
+<td>请求的URL参数对象</td>
+</tr>
+<tr>
+<td>headers</td>
+<td><code>Object</code></td>
+<td>request header</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td><code>number</code></td>
+<td>单位为毫秒的请求超时时间 (<code>0</code> 表示无超时时间)</td>
+</tr>
+<tr>
+<td>before</td>
+<td><code>function(request)</code></td>
+<td>请求发送前的处理函数，类似于jQuery的beforeSend函数</td>
+</tr>
+<tr>
+<td>progress</td>
+<td><code>function(event)</code></td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent" target="_blank" rel="external">ProgressEvent</a>回调处理函数</td>
+</tr>
+<tr>
+<td>credentials</td>
+<td><code>boolean</code></td>
+<td>表示跨域请求时是否需要使用凭证</td>
+</tr>
+<tr>
+<td>emulateHTTP</td>
+<td><code>boolean</code></td>
+<td>发送PUT, PATCH, DELETE请求时以HTTP POST的方式发送，并设置请求头的<code>X-HTTP-Method-Override</code></td>
+</tr>
+<tr>
+<td>emulateJSON</td>
+<td><code>boolean</code></td>
+<td>将request body以<code>application/x-www-form-urlencoded</code> content type发送</td>
+</tr>
+</tbody>
+</table>
+<h3 id="emulateHTTP的作用"><a href="#emulateHTTP的作用" class="headerlink" title="emulateHTTP的作用"></a>emulateHTTP的作用</h3><p>如果Web服务器无法处理PUT, PATCH和DELETE这种REST风格的请求，你可以启用enulateHTTP现象。启用该选项后，请求会以普通的POST方法发出，并且HTTP头信息的<code>X-HTTP-Method-Override</code>属性会设置为实际的HTTP方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Vue.http.options.emulateHTTP = true;</div></pre></td></tr></table></figure>
+<h3 id="emulateJSON的作用"><a href="#emulateJSON的作用" class="headerlink" title="emulateJSON的作用"></a>emulateJSON的作用</h3><p>如果Web服务器无法处理编码为application/json的请求，你可以启用emulateJSON选项。启用该选项后，请求会以<code>application/x-www-form-urlencoded</code>作为MIME type，就像普通的HTML表单一样。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Vue.http.options.emulateJSON = true;</div></pre></td></tr></table></figure>
+<h2 id="response对象"><a href="#response对象" class="headerlink" title="response对象"></a>response对象</h2><p>response对象包含以下属性：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text()</td>
+<td><code>string</code></td>
+<td>以string形式返回response body</td>
+</tr>
+<tr>
+<td>json()</td>
+<td><code>Object</code></td>
+<td>以JSON对象形式返回response body</td>
+</tr>
+<tr>
+<td>blob()</td>
+<td><code>Blob</code></td>
+<td>以二进制形式返回response body</td>
+</tr>
+<tr>
+<td><strong>属性</strong></td>
+<td><strong>类型</strong></td>
+<td><strong>描述</strong></td>
+</tr>
+<tr>
+<td>ok</td>
+<td><code>boolean</code></td>
+<td>响应的HTTP状态码在200~299之间时，该属性为true</td>
+</tr>
+<tr>
+<td>status</td>
+<td><code>number</code></td>
+<td>响应的HTTP状态码</td>
+</tr>
+<tr>
+<td>statusText</td>
+<td><code>string</code></td>
+<td>响应的状态文本</td>
+</tr>
+<tr>
+<td>headers</td>
+<td><code>Object</code></td>
+<td>响应头</td>
+</tr>
+</tbody>
+</table>
+<p>注意：本文的vue-resource版本为v0.9.3，如果你使用的是v0.9.0以前的版本，response对象是没有json(), blob(), text()这些方法的。</p>
+<h1 id="CURD示例"><a href="#CURD示例" class="headerlink" title="CURD示例"></a>CURD示例</h1><p>提示：以下示例仍然沿用上一篇的组件和WebAPI，组件的代码和页面HTML代码我就不再贴出来了。</p>
+<h2 id="GET请求"><a href="#GET请求" class="headerlink" title="GET请求"></a>GET请求</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">var demo = new Vue(&#123;</div><div class="line">    el: &apos;#app&apos;,</div><div class="line">    data: &#123;</div><div class="line">        gridColumns: [&apos;customerId&apos;, &apos;companyName&apos;, &apos;contactName&apos;, &apos;phone&apos;],</div><div class="line">        gridData: [],</div><div class="line">        apiUrl: &apos;http://211.149.193.19:8080/api/customers&apos;</div><div class="line">    &#125;,</div><div class="line">    ready: function() &#123;</div><div class="line">        this.getCustomers()</div><div class="line">    &#125;,</div><div class="line">    methods: &#123;</div><div class="line">        getCustomers: function() &#123;</div><div class="line">            this.$http.get(this.apiUrl)</div><div class="line">                .then((response) =&gt; &#123;</div><div class="line">                    this.$set(&apos;gridData&apos;, response.data)</div><div class="line">                &#125;)</div><div class="line">                .catch(function(response) &#123;</div><div class="line">                    console.log(response)</div><div class="line">                &#125;)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>这段程序的then方法只提供了successCallback，而省略了errorCallback。<br>catch方法用于捕捉程序的异常，catch方法和errorCallback是不同的，errorCallback只在响应失败时调用，而catch则是在整个请求到响应过程中，只要程序出错了就会被调用。</p>
+<p>在then方法的回调函数内，你也可以直接使用this，this仍然是指向Vue实例的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">getCustomers: function() &#123;</div><div class="line">    this.$http.get(this.apiUrl)</div><div class="line">        .then((response) =&gt; &#123;</div><div class="line">            this.$set(&apos;gridData&apos;, response.data)</div><div class="line">        &#125;)</div><div class="line">        .catch(function(response) &#123;</div><div class="line">            console.log(response)</div><div class="line">        &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>为了减少作用域链的搜索，建议使用一个局部变量来接收this。</strong></p>
+<p><a href="http://images2015.cnblogs.com/blog/341820/201607/341820-20160710081832421-180201531.png" target="_blank" rel="external"><img src="http://images2015.cnblogs.com/blog/341820/201607/341820-20160710081833764-743891043.png" alt="image"></a></p>
+<p><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/http-get.html" target="_blank" rel="external">View Demo</a></p>
+<h2 id="JSONP请求"><a href="#JSONP请求" class="headerlink" title="JSONP请求"></a>JSONP请求</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">getCustomers: function() &#123;</div><div class="line">    this.$http.jsonp(this.apiUrl).then(function(response)&#123;</div><div class="line">        this.$set(&apos;gridData&apos;, response.data)</div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/http-jsonp.html" target="_blank" rel="external">View Demo</a></p>
+<h2 id="POST请求"><a href="#POST请求" class="headerlink" title="POST请求"></a>POST请求</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">var demo = new Vue(&#123;</div><div class="line">    el: &apos;#app&apos;,</div><div class="line">    data: &#123;</div><div class="line">        show: false,</div><div class="line">        gridColumns: [&#123;</div><div class="line">            name: &apos;customerId&apos;,</div><div class="line">            isKey: true</div><div class="line">        &#125;, &#123;</div><div class="line">            name: &apos;companyName&apos;</div><div class="line">        &#125;, &#123;</div><div class="line">            name: &apos;contactName&apos;</div><div class="line">        &#125;, &#123;</div><div class="line">            name: &apos;phone&apos;</div><div class="line">        &#125;],</div><div class="line">        gridData: [],</div><div class="line">        apiUrl: &apos;http://211.149.193.19:8080/api/customers&apos;,</div><div class="line">        item: &#123;&#125;</div><div class="line">    &#125;,</div><div class="line">    ready: function() &#123;</div><div class="line">        this.getCustomers()</div><div class="line">    &#125;,</div><div class="line">    methods: &#123;</div><div class="line">        closeDialog: function() &#123;</div><div class="line">            this.show = false</div><div class="line">        &#125;,</div><div class="line">        getCustomers: function() &#123;</div><div class="line">            var vm = this</div><div class="line">            vm.$http.get(vm.apiUrl)</div><div class="line">                .then((response) =&gt; &#123;</div><div class="line">                    vm.$set(&apos;gridData&apos;, response.data)</div><div class="line">                &#125;)</div><div class="line">        &#125;,</div><div class="line">        createCustomer: function() &#123;</div><div class="line">            var vm = this</div><div class="line">            vm.$http.post(vm.apiUrl, vm.item)</div><div class="line">                .then((response) =&gt; &#123;</div><div class="line">                    vm.$set(&apos;item&apos;, &#123;&#125;)</div><div class="line">                    vm.getCustomers()</div><div class="line">                &#125;)</div><div class="line">            this.show = false</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p><a href="http://images2015.cnblogs.com/blog/341820/201607/341820-20160710081835108-205718456.gif" target="_blank" rel="external"><img src="http://images2015.cnblogs.com/blog/341820/201607/341820-20160710081836280-560832480.gif" alt="29"></a></p>
+<p><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/http-post.html" target="_blank" rel="external">View Demo</a></p>
+<h2 id="PUT请求"><a href="#PUT请求" class="headerlink" title="PUT请求"></a>PUT请求</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">updateCustomer: function() &#123;</div><div class="line">    var vm = this</div><div class="line">    vm.$http.put(this.apiUrl + &apos;/&apos; + vm.item.customerId, vm.item)</div><div class="line">        .then((response) =&gt; &#123;</div><div class="line">            vm.getCustomers()</div><div class="line">        &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://images2015.cnblogs.com/blog/341820/201607/341820-20160710081838421-1682614527.gif" target="_blank" rel="external"><img src="http://images2015.cnblogs.com/blog/341820/201607/341820-20160710081840796-784935687.gif" alt="30"></a></p>
+<p><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/http-put.html" target="_blank" rel="external">View Demo</a></p>
+<h2 id="Delete请求"><a href="#Delete请求" class="headerlink" title="Delete请求"></a>Delete请求</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deleteCustomer: function(customer)&#123;</div><div class="line">    var vm = this</div><div class="line">    vm.$http.delete(this.apiUrl + &apos;/&apos; + customer.customerId)</div><div class="line">        .then((response) =&gt; &#123;</div><div class="line">            vm.getCustomers()</div><div class="line">        &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://images2015.cnblogs.com/blog/341820/201607/341820-20160710081842983-1292990930.gif" target="_blank" rel="external"><img src="http://images2015.cnblogs.com/blog/341820/201607/341820-20160710081843827-1892715249.gif" alt="31"></a></p>
+<p><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/http-delete.html" target="_blank" rel="external">View Demo</a></p>
+<h1 id="使用resource服务"><a href="#使用resource服务" class="headerlink" title="使用resource服务"></a>使用resource服务</h1><p>vue-resource提供了另外一种方式访问HTTP——resource服务，resource服务包含以下几种默认的action：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">get: &#123;method: &apos;GET&apos;&#125;,</div><div class="line">save: &#123;method: &apos;POST&apos;&#125;,</div><div class="line">query: &#123;method: &apos;GET&apos;&#125;,</div><div class="line">update: &#123;method: &apos;PUT&apos;&#125;,</div><div class="line">remove: &#123;method: &apos;DELETE&apos;&#125;,</div><div class="line">delete: &#123;method: &apos;DELETE&apos;&#125;</div></pre></td></tr></table></figure>
+<p>resource对象也有两种访问方式：</p>
+<ul>
+<li>全局访问：<code>Vue.resource</code></li>
+<li>实例访问：<code>this.$resource</code></li>
+</ul>
+<p>resource可以结合URI Template一起使用，以下示例的apiUrl都设置为{/id}了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apiUrl: &apos;http://211.149.193.19:8080/api/customers&#123;/id&#125;&apos;</div></pre></td></tr></table></figure>
+<h2 id="GET请求-1"><a href="#GET请求-1" class="headerlink" title="GET请求"></a>GET请求</h2><p>使用get方法发送GET请求，下面这个请求没有指定<code>{/id}</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">getCustomers: function() &#123;</div><div class="line"></div><div class="line">    var resource = this.$resource(this.apiUrl)</div><div class="line">        vm = this</div><div class="line"></div><div class="line">    resource.get()</div><div class="line">        .then((response) =&gt; &#123;</div><div class="line">            vm.$set(&apos;gridData&apos;, response.data)</div><div class="line">        &#125;)</div><div class="line">        .catch(function(response) &#123;</div><div class="line">            console.log(response)</div><div class="line">        &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/resource-get.html" target="_blank" rel="external">View Demo</a></p>
+<h2 id="POST请求-1"><a href="#POST请求-1" class="headerlink" title="POST请求"></a>POST请求</h2><p>使用save方法发送POST请求，下面这个请求没有指定<code>{/id}</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">createCustomer: function() &#123;</div><div class="line">    var resource = this.$resource(this.apiUrl)</div><div class="line">        vm = this</div><div class="line">        </div><div class="line">    resource.save(vm.apiUrl, vm.item)</div><div class="line">        .then((response) =&gt; &#123;</div><div class="line">            vm.$set(&apos;item&apos;, &#123;&#125;)</div><div class="line">            vm.getCustomers()</div><div class="line">        &#125;)</div><div class="line">    this.show = false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/resource-post.html" target="_blank" rel="external">View Demo</a></p>
+<h2 id="PUT请求-1"><a href="#PUT请求-1" class="headerlink" title="PUT请求"></a>PUT请求</h2><p>使用update方法发送PUT请求，下面这个请求指定了<code>{/id}</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">updateCustomer: function() &#123;</div><div class="line">    var resource = this.$resource(this.apiUrl)</div><div class="line">        vm = this</div><div class="line">        </div><div class="line">    resource.update(&#123; id: vm.item.customerId&#125;, vm.item)</div><div class="line">        .then((response) =&gt; &#123;</div><div class="line">            vm.getCustomers()</div><div class="line">        &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>{/id}</code>相当于一个占位符，当传入实际的参数时该占位符会被替换。<br>例如，<code>{ id: vm.item.customerId}</code>中的vm.item.customerId为12，那么发送的请求URL为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://211.149.193.19:8080/api/customers/12</div></pre></td></tr></table></figure>
+<p><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/resource-post.put" target="_blank" rel="external">View Demo</a></p>
+<h2 id="DELETE请求"><a href="#DELETE请求" class="headerlink" title="DELETE请求"></a>DELETE请求</h2><p>使用remove或delete方法发送DELETE请求，下面这个请求指定了<code>{/id}</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">deleteCustomer: function(customer)&#123;</div><div class="line">    var resource = this.$resource(this.apiUrl)</div><div class="line">        vm = this</div><div class="line">        </div><div class="line">    resource.remove(&#123; id: customer.customerId&#125;)</div><div class="line">        .then((response) =&gt; &#123;</div><div class="line">            vm.getCustomers()</div><div class="line">        &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/resource-delete.html" target="_blank" rel="external">View Demo</a></p>
+<h1 id="使用inteceptor"><a href="#使用inteceptor" class="headerlink" title="使用inteceptor"></a>使用inteceptor</h1><p>拦截器可以在请求发送前和发送请求后做一些处理。</p>
+<p><a href="http://images2015.cnblogs.com/blog/341820/201607/341820-20160710080108405-1797105421.png" target="_blank" rel="external"><img src="http://images2015.cnblogs.com/blog/341820/201607/341820-20160710080109342-1842115136.png" alt="image"></a></p>
+<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Vue.http.interceptors.push((request, next) =&gt; &#123;</div><div class="line">        // ...</div><div class="line">        // 请求发送前的处理逻辑</div><div class="line">        // ...</div><div class="line">    next((response) =&gt; &#123;</div><div class="line">        // ...</div><div class="line">        // 请求发送后的处理逻辑</div><div class="line">        // ...</div><div class="line">        // 根据请求的状态，response参数会返回给successCallback或errorCallback</div><div class="line">        return response</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>在response返回给successCallback或errorCallback之前，你可以修改response中的内容，或做一些处理。<br>例如，响应的状态码如果是404，你可以显示友好的404界面。</p>
+<p>如果不想使用Lambda函数写法，可以用平民写法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Vue.http.interceptors.push(function(request, next) &#123;</div><div class="line">    // ...</div><div class="line">    // 请求发送前的处理逻辑</div><div class="line">    // ...</div><div class="line">    next(function(response) &#123;</div><div class="line">        // ...</div><div class="line">        // 请求发送后的处理逻辑</div><div class="line">        // ...</div><div class="line">        // 根据请求的状态，response参数会返回给successCallback或errorCallback</div><div class="line">        return response</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h2><p>之前的CURD示例有一处用户体验不太好，用户在使用一些功能的时候如果网络较慢，画面又没有给出反馈，用户是不知道他的操作是成功还是失败的，他也不知道是否该继续等待。</p>
+<p>通过inteceptor，我们可以为所有的请求处理加一个loading：请求发送前显示loading，接收响应后隐藏loading。</p>
+<p>具体步骤如下：</p>
+<p><strong>1.添加一个loading组件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;template id=&quot;loading-template&quot;&gt;</div><div class="line">    &lt;div class=&quot;loading-overlay&quot;&gt;</div><div class="line">        &lt;div class=&quot;sk-three-bounce&quot;&gt;</div><div class="line">            &lt;div class=&quot;sk-child sk-bounce1&quot;&gt;&lt;/div&gt;</div><div class="line">            &lt;div class=&quot;sk-child sk-bounce2&quot;&gt;&lt;/div&gt;</div><div class="line">            &lt;div class=&quot;sk-child sk-bounce3&quot;&gt;&lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div></pre></td></tr></table></figure>
+<p><strong>2.将loading组件作为另外一个Vue实例的子组件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var help = new Vue(&#123;</div><div class="line">    el: &apos;#help&apos;,</div><div class="line">    data: &#123;</div><div class="line">        showLoading: false</div><div class="line">    &#125;,</div><div class="line">    components: &#123;</div><div class="line">        &apos;loading&apos;: &#123;</div><div class="line">            template: &apos;#loading-template&apos;,</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p><strong>3.将该Vue实例挂载到某个HTML元素</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;help&quot;&gt;</div><div class="line">    &lt;loading v-show=&quot;showLoading&quot;&gt;&lt;/loading&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p><strong>4.添加inteceptor</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Vue.http.interceptors.push((request, next) =&gt; &#123;</div><div class="line">    loading.show = true</div><div class="line">    next((response) =&gt; &#123;</div><div class="line">        loading.show = false</div><div class="line">        return response</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><a href="http://images2015.cnblogs.com/blog/341820/201607/341820-20160710080111577-589930124.gif" target="_blank" rel="external"><img src="http://images2015.cnblogs.com/blog/341820/201607/341820-20160710080115421-1463297506.gif" alt="27"></a></p>
+<p><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/inteceptor-demo1.html" target="_blank" rel="external">View Demo</a></p>
+<h2 id="示例2"><a href="#示例2" class="headerlink" title="示例2"></a>示例2</h2><p>当用户在画面上停留时间太久时，画面数据可能已经不是最新的了，这时如果用户删除或修改某一条数据，如果这条数据已经被其他用户删除了，服务器会反馈一个404的错误，但由于我们的put和delete请求没有处理errorCallback，所以用户是不知道他的操作是成功还是失败了。</p>
+<p>你问我为什么不在每个请求里面处理errorCallback，这是因为我比较懒。这个问题，同样也可以通过inteceptor解决。</p>
+<p><strong>1. 继续沿用上面的loading组件，在#help元素下加一个对话框</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;help&quot;&gt;</div><div class="line">    &lt;loading v-show=&quot;showLoading&quot; &gt;&lt;/loading&gt;</div><div class="line">    &lt;modal-dialog :show=&quot;showDialog&quot;&gt;</div><div class="line">        &lt;header class=&quot;dialog-header&quot; slot=&quot;header&quot;&gt;</div><div class="line">            &lt;h1 class=&quot;dialog-title&quot;&gt;Server Error&lt;/h1&gt;</div><div class="line">        &lt;/header&gt;</div><div class="line">        &lt;div class=&quot;dialog-body&quot; slot=&quot;body&quot;&gt;</div><div class="line">            &lt;p class=&quot;error&quot;&gt;Oops,server has got some errors, error code: &#123;&#123;errorCode&#125;&#125;.&lt;/p&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/modal-dialog&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p><strong>2.给help实例的data选项添加两个属性</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var help = new Vue(&#123;</div><div class="line">        el: &apos;#help&apos;,</div><div class="line">        data: &#123;</div><div class="line">            showLoading: false,</div><div class="line">            showDialog: false,</div><div class="line">            errorCode: &apos;&apos;</div><div class="line">        &#125;,</div><div class="line">        components: &#123;</div><div class="line">            &apos;loading&apos;: &#123;</div><div class="line">                template: &apos;#loading-template&apos;,</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+<p><strong>3.修改inteceptor</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Vue.http.interceptors.push((request, next) =&gt; &#123;</div><div class="line">    help.showLoading = true</div><div class="line">    next((response) =&gt; &#123;</div><div class="line">        if(!response.ok)&#123;</div><div class="line">            help.errorCode = response.status</div><div class="line">            help.showDialog = true</div><div class="line">        &#125;</div><div class="line">        help.showLoading = false</div><div class="line">        return response</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><a href="http://images2015.cnblogs.com/blog/341820/201607/341820-20160710080119764-1660995803.gif" target="_blank" rel="external"><img src="http://images2015.cnblogs.com/blog/341820/201607/341820-20160710080125577-619574256.gif" alt="28"></a></p>
+<p><a href="http://211.149.193.19:8090/vue-tutorials/03.Ajax/vue-resource/inteceptor-demo2.html" target="_blank" rel="external">View Demo</a></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>vue-resource是一个非常轻量的用于处理HTTP请求的插件，它提供了两种方式来处理HTTP请求：</p>
+<ul>
+<li>使用Vue.http或this.$http</li>
+<li>使用Vue.resource或this.$resource</li>
+</ul>
+<p>这两种方式本质上没有什么区别，阅读vue-resource的源码，你可以发现第2种方式是基于第1种方式实现的。</p>
+<p>inteceptor可以在请求前和请求后附加一些行为，这意味着除了请求处理的过程，请求的其他环节都可以由我们来控制。</p>
+<p>参考链接：<a href="https://github.com/vuejs/vue-resource/tree/master/docs" target="_blank" rel="external">https://github.com/vuejs/vue-resource/tree/master/docs</a></p>
 
-<head>
-    <title>测试emmet</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
-</head>
-
-<body>
-    <!--测试子集元素-->
-    <nav>
-        <ul>
-            <li></li>
-        </ul>
-    </nav>
-    <!--测试兄弟元素-->
-    <div></div>
-    <p></p>
-    <blockquote></blockquote>
-    <!--上级元素-->
-    <div></div>
-    <div>
-        <p><span></span><em></em></p>
-        <blockquote></blockquote>
-    </div>
-    <!--分组-->
-    <div>
-        <header>
-            <ul>
-                <li>
-                    <a href=""></a>
-                </li>
-                <li>
-                    <a href=""></a>
-                </li>
-            </ul>
-        </header>
-        <footer>
-            <p></p>
-        </footer>
-    </div>
-    <!--分组2-->
-    <div>
-        <dl>
-            <dt></dt>
-            <dd></dd>
-            <dt></dt>
-            <dd></dd>
-            <dt></dt>
-            <dd></dd>
-        </dl>
-    </div>
-    <footer>
-        <p></p>
-    </footer>
-    <!--多个-->
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    <!--项目编号-->
-    <ul>
-        <li class="item1"></li>
-        <li class="item2"></li>
-        <li class="item3"></li>
-        <li class="item4"></li>
-        <li class="item5"></li>
-    </ul>
-    <!--项目编号2-->
-    <h1 title="item1">Header 1</h1>
-    <h2 title="item2">Header 2</h2>
-    <h3 title="item3">Header 3</h3>
-    <!--项目编号3-->
-    <ul>
-        <li class="item5"></li>
-        <li class="item4"></li>
-        <li class="item3"></li>
-        <li class="item2"></li>
-        <li class="item1"></li>
-    </ul>
-    <!--项目编号4-->
-    <ul>
-        <li class="item3"></li>
-        <li class="item4"></li>
-        <li class="item5"></li>
-        <li class="item6"></li>
-        <li class="item7"></li>
-    </ul>
-    <!--ID和clsss属性-->
-    <div id="header"></div>
-    <div class="title"></div>
-    <form action="" id="search" class="wide"></form>
-    <p class="class1 class2 class3"></p>
-    <!--常用属性-->
-    <p title="hello world"></p>
-    <td rowspan="2" colspan="3" title=""></td>
-    <div a="value1" b="value2"></div>
-    <!--文本-->
-    <a href="">Click me</a>
-    <p>Click<a href="">here</a> to continue</p>
-    <!--默认规则-->
-    <div class="aaa"></div>
-    <em><span class="classs"></span></em>
-    <ul>
-        <li class="classs"></li>
-    </ul>
-    <table>
-        <tr class="row">
-            <td class="col"></td>
-        </tr>
-    </table>
-</body>
-
-</html>
       
 
       
@@ -962,7 +886,258 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/tools/emmet/index/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/16/vue/【转】Vue.js——vue-resource全攻略/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-expreience/docker/docker学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="docker学习笔记"><a href="#docker学习笔记" class="headerlink" title="docker学习笔记"></a>docker学习笔记</h1><h2 id="docker加速器，DaoCloud加速器详细地址"><a href="#docker加速器，DaoCloud加速器详细地址" class="headerlink" title="docker加速器，DaoCloud加速器详细地址"></a>docker加速器，DaoCloud加速器<a href="https://www.daocloud.io/mirror.html#accelerator-doc" target="_blank" rel="external">详细地址</a></h2><h3 id="docker命令"><a href="#docker命令" class="headerlink" title="docker命令"></a>docker命令</h3><p>从服务器拉文件</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker pull xxx软件包</div></pre></td></tr></table></figure>
+<p>配置docker</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --name mysql -e MYSQL_ROOT_PASSWORD=heihei -d mysql</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/expreience/docker/docker学习笔记/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-expreience/mac/Mac 编写sh脚本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Mac-编写sh脚本"><a href="#Mac-编写sh脚本" class="headerlink" title="Mac 编写sh脚本"></a>Mac 编写sh脚本</h1><p>由于经常调用一些命令，每次都手写，太麻烦了。于是今天摸索了下，怎么写脚本，发现还是蛮简单的。</p>
+<p>1.在文件下直接创建xxx.sh文件，然后把你常用的命令拷贝进去。</p>
+<p>2.在命令行下，通过cd进入创建xxx.sh的目录，输入 . xxx.sh 即可调用命令。</p>
+<p>非常方便。这样总算是解放出来啦！！！</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/expreience/mac/Mac 编写sh脚本/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-expreience/mac/mac chrome检查元素快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>mac chrome检查元素快捷键</p>
+<p>command+option+i</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac chrome检查元素快捷键/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-expreience/mac/mac 删除目录命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="mac-删除目录命令"><a href="#mac-删除目录命令" class="headerlink" title="mac 删除目录命令"></a>mac 删除目录命令</h1><p>mac 删除非空目录命令</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -r 目录名</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac 删除目录命令/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-expreience/mac/mac 剪切快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>mac 剪切快捷键</p>
+<p>windows上用习惯了。。。一直想当然的以为mac上也是一样。。。</p>
+<p>mac上复制是<code>command+c</code>,粘贴时<code>command+v</code>,其实剪切就是先复制再用<code>commad+option+v</code> 就可以了。</p>
+<p>笨的真是可以-_-!</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/expreience/mac/mac 剪切快捷键/">展开全文 >></a>
         </p>
       
 
@@ -994,7 +1169,7 @@ var _hmt = _hmt || [];
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
     </nav>
   
 

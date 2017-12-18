@@ -169,16 +169,200 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-command/touch命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-12/loadtest" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>touch命令-创建文件</p>
-<p>touch 创建文件命令。</p>
-<p>eg:</p>
+        <p>测试页面性能神器-loadtest</p>
+<p>今天看阿里的以为大神的文章。看到上面推荐测试性能工具-loadtest.</p>
+<p>官方github地址：<a href="https://github.com/alexfernandez/loadtest" target="_blank" rel="external">https://github.com/alexfernandez/loadtest</a></p>
+<p>就看了下loadtest的简介，这里记录下用法和说明。</p>
+<h2 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h2><h4 id="n-requests"><a href="#n-requests" class="headerlink" title="-n requests"></a><code>-n requests</code></h4><p>说明：</p>
 <blockquote>
-<p>touch gen.js</p>
+<p>请求数参数，设置总的请求的格式</p>
+</blockquote>
+<p>用法：</p>
+<blockquote>
+<p>loadtest -n 100 <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a></p>
+</blockquote>
+<h4 id="c-concurrency"><a href="#c-concurrency" class="headerlink" title="-c concurrency"></a><code>-c concurrency</code></h4><p>说明：</p>
+<blockquote>
+<p>并发数</p>
+</blockquote>
+<p>用法：</p>
+<blockquote>
+<p>loadtest -c 3 <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a></p>
+</blockquote>
+<h4 id="t-timelimit"><a href="#t-timelimit" class="headerlink" title="-t timelimit"></a><code>-t timelimit</code></h4><p>说明：</p>
+<blockquote>
+<p>设置超时时间(秒为单位)</p>
+</blockquote>
+<p>用法：</p>
+<blockquote>
+<p>loadtest -t 3 <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a></p>
+</blockquote>
+<h4 id="k-or-keepalive"><a href="#k-or-keepalive" class="headerlink" title="-k or --keepalive"></a><code>-k</code> or <code>--keepalive</code></h4><p>说明：</p>
+<blockquote>
+<p>保持连接</p>
+<p>header头 用’Connection: Keep-alive’ 替代’Connection: Close’.</p>
+</blockquote>
+<p>用法：</p>
+<blockquote>
+<p>loadtest -k <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a></p>
+</blockquote>
+<h4 id="C-cookie-name-value"><a href="#C-cookie-name-value" class="headerlink" title="-C cookie-name=value"></a><code>-C cookie-name=value</code></h4><p>说明：</p>
+<blockquote>
+<p>设置cookie信息，以name=value格式设置</p>
+</blockquote>
+<p>用法：</p>
+<blockquote>
+<p>loadtest -C username=heihei;userpass=heihei <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a></p>
+</blockquote>
+<h4 id="H-header-value"><a href="#H-header-value" class="headerlink" title="-H header:value"></a><code>-H header:value</code></h4><p>说明：</p>
+<blockquote>
+<p>设置header头信息</p>
+</blockquote>
+<p>用法：</p>
+<blockquote>
+<p>loadtest -H user-agent:tester/0.4;accept:text/plain <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a></p>
+<p>loadtest -H “Authorization: Basic xxx==”</p>
+</blockquote>
+<h4 id="T-content-type"><a href="#T-content-type" class="headerlink" title="-T content-type"></a><code>-T content-type</code></h4><p>说明：</p>
+<blockquote>
+<p>Content-type 类型</p>
+</blockquote>
+<p>用法：</p>
+<blockquote>
+<p>loadtest -T </p>
+</blockquote>
+<h4 id="P-POST-body"><a href="#P-POST-body" class="headerlink" title="-P POST-body"></a><code>-P POST-body</code></h4><p>说明：</p>
+<blockquote>
+<p>设置POST body内容</p>
+</blockquote>
+<p>用法：</p>
+<blockquote>
+<p>loadtest -P ‘{“key”: “a9acf03f”}’</p>
+</blockquote>
+<h4 id="A-PATCH-body"><a href="#A-PATCH-body" class="headerlink" title="-A PATCH-body"></a><code>-A PATCH-body</code></h4><p>说明：</p>
+<blockquote>
+<p>设置PATCH body内容</p>
+</blockquote>
+<p>用法：</p>
+<blockquote>
+<p>loadtest -A ‘{“key”: “a9acf03f”}’</p>
+</blockquote>
+<h4 id="m-method"><a href="#m-method" class="headerlink" title="-m method"></a><code>-m method</code></h4><p>说明：</p>
+<blockquote>
+<p>设置提交方式</p>
+<p>可选方式：[GET, POST, PUT, DELETE, PATCH, get, post, put, delete, patch]</p>
+</blockquote>
+<p>用法：</p>
+<blockquote>
+<p>loadtest -m POST</p>
+</blockquote>
+<h4 id="data-POST-some-variables"><a href="#data-POST-some-variables" class="headerlink" title="--data POST some variables"></a><code>--data POST some variables</code></h4><p>说明：</p>
+<blockquote>
+<p>发送数据，不支持get请求</p>
+</blockquote>
+<p>用法：</p>
+<blockquote>
+<p>–data ‘{“username”: “test”, “password”: “test”}’ -T ‘application/x-www-form-urlencoded’ -m POST</p>
+</blockquote>
+<h4 id="p-POST-file"><a href="#p-POST-file" class="headerlink" title="-p POST-file"></a><code>-p POST-file</code></h4><h4 id="u-PUT-file"><a href="#u-PUT-file" class="headerlink" title="-u PUT-file"></a><code>-u PUT-file</code></h4><h4 id="s"><a href="#s" class="headerlink" title="-s"></a><code>-s</code></h4><p>说明：</p>
+<blockquote>
+<p>TLS/SSL 方法使用</p>
+</blockquote>
+<p>用法：</p>
+<blockquote>
+<p>loadtest -n 1000 -s TLSv1_method htts://www.baidu.com</p>
+</blockquote>
+<h4 id="V"><a href="#V" class="headerlink" title="-V"></a><code>-V</code></h4><p>说明：</p>
+<blockquote>
+<p>查看loadtest版本</p>
+</blockquote>
+<p>用法：</p>
+<blockquote>
+<p>loadtest -V</p>
+</blockquote>
+<h2 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h2><h4 id="rps-requestsPerSecond"><a href="#rps-requestsPerSecond" class="headerlink" title="--rps requestsPerSecond"></a><code>--rps requestsPerSecond</code></h4><h4 id="timeout-milliseconds"><a href="#timeout-milliseconds" class="headerlink" title="--timeout milliseconds"></a><code>--timeout milliseconds</code></h4><p>说明：</p>
+<p>&gt;</p>
+<p>用法：</p>
+<p>&gt;</p>
+<h4 id="agent-deprecated"><a href="#agent-deprecated" class="headerlink" title="--agent (deprecated)"></a><code>--agent</code> (deprecated)</h4><h4 id="quiet"><a href="#quiet" class="headerlink" title="--quiet"></a><code>--quiet</code></h4><p>说明：</p>
+<blockquote>
+<p>静默模式</p>
+</blockquote>
+<p>用法：</p>
+<blockquote>
+</blockquote>
+<h4 id="debug"><a href="#debug" class="headerlink" title="--debug"></a><code>--debug</code></h4><p>说明：</p>
+<p>&gt;</p>
+<p>用法：</p>
+<p>&gt;</p>
+<h4 id="insecure"><a href="#insecure" class="headerlink" title="--insecure"></a><code>--insecure</code></h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/18/12/loadtest/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-12/elk_data" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前端监控资料汇总</p>
+<p>ELK Docker 镜像：</p>
+<blockquote>
+<p><a href="https://hub.docker.com/r/sebp/elk/" target="_blank" rel="external">https://hub.docker.com/r/sebp/elk/</a></p>
+</blockquote>
+<p>ELKstack 书籍 《ELKstack 中文指南》</p>
+<blockquote>
+<p><a href="https://www.gitbook.com/book/chenryn/elk-stack-guide-cn" target="_blank" rel="external">https://www.gitbook.com/book/chenryn/elk-stack-guide-cn</a></p>
+</blockquote>
+<p>ELKstack 中文官方网站</p>
+<blockquote>
+<p><a href="https://www.elastic.co/cn/" target="_blank" rel="external">https://www.elastic.co/cn/</a></p>
+</blockquote>
+<p>百度FEX 前端性能监控系统</p>
+<blockquote>
+<p><a href="http://fex.baidu.com/blog/2014/05/build-performance-monitor-in-7-days/" target="_blank" rel="external">http://fex.baidu.com/blog/2014/05/build-performance-monitor-in-7-days/</a></p>
 </blockquote>
 
       
@@ -192,7 +376,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/18/command/touch命令/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/12/17/12/elk_data/">展开全文 >></a>
         </p>
       
 
@@ -222,13 +406,13 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-interview/summary" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-11/评论系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="面试题汇总"><a href="#面试题汇总" class="headerlink" title="面试题汇总"></a>面试题汇总</h2><p>这里汇总见过的面试题，所谓知己知彼百战不殆！熟悉别人才能做到更好。</p>
-<p><a href="https://lenshen.com/2017/08/27/alibaba-interview/" target="_blank" rel="external">阿里校招前端面经</a></p>
+        <p>评论系统</p>
+<p>无限回复功能</p>
 
       
 
@@ -241,7 +425,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/28/interview/summary/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/11/23/11/评论系统/">展开全文 >></a>
         </p>
       
 
@@ -271,213 +455,50 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-docker/docker-exec" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-11/第三周周报" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Docker学习（1）-进入Docker容器的命令</p>
-<h3 id="1-首先讲列出来docker当前的所有容器的命令"><a href="#1-首先讲列出来docker当前的所有容器的命令" class="headerlink" title="1.首先讲列出来docker当前的所有容器的命令"></a>1.首先讲列出来docker当前的所有容器的命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps -a</div></pre></td></tr></table></figure>
-<h3 id="2-进入Docker容器的命令"><a href="#2-进入Docker容器的命令" class="headerlink" title="2.进入Docker容器的命令"></a>2.进入Docker容器的命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker exec -it CONTAINER_NAME /bin/bash</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/25/docker/docker-exec/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-node/querystring" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="node-js系列-01-querystring查询字符串"><a href="#node-js系列-01-querystring查询字符串" class="headerlink" title="node.js系列(01)-querystring查询字符串"></a>node.js系列(01)-querystring查询字符串</h1><h2 id="querystring-查询字符串"><a href="#querystring-查询字符串" class="headerlink" title="querystring 查询字符串"></a>querystring 查询字符串</h2><p><code>querystring</code> 模块提供了一些实用工具，用于解析与格式化 URL 查询字符串。它可以通过以下方式被使用：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> querystring = <span class="built_in">require</span>(<span class="string">'querystring'</span>);</div></pre></td></tr></table></figure>
-<h3 id="querystring-escape-str"><a href="#querystring-escape-str" class="headerlink" title="querystring.escape(str)"></a>querystring.escape(str)</h3><blockquote>
-<p>对URL字符串进行编码</p>
+        <h1 id="技术部工作周总结与计划"><a href="#技术部工作周总结与计划" class="headerlink" title="技术部工作周总结与计划"></a>技术部工作周总结与计划</h1><blockquote>
+<p>报告人：卢亚东</p>
+<p>岗位：.NET工程师</p>
+<p>工作时间：2017.11.15-2017-11.17</p>
 </blockquote>
-<p>eg:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> strParams=<span class="string">'q=中文&amp;oq=中文&amp;aqs=chrome..69i57j69i61l3j69i65l2.5370j0j1&amp;sourceid=chrome&amp;ie=UTF-8'</span></div><div class="line"><span class="keyword">const</span> result=querystring.escape(strParams);</div><div class="line"><span class="comment">//q=%E4%B8%AD%E6%96%87&amp;oq=%E4%B8%AD%E6%96%87&amp;aqs=chrome..69i57j69i61l3j69i65l2.5370j0j1&amp;sourceid=chrome&amp;ie=UTF-8</span></div></pre></td></tr></table></figure>
-<h3 id="querystring-parse-str-sep-eq-options"><a href="#querystring-parse-str-sep-eq-options" class="headerlink" title="querystring.parse(str[, sep[, eq[, options]]])"></a>querystring.parse(str[, sep[, eq[, options]]])</h3><ul>
-<li><p><code>str</code> <string> 要解析的 URL 查询字符串。</string></p>
-</li>
-<li><p><code>sep</code> <string> 用于界定查询字符串中的键值对的子字符串。默认为 <code>&#39;&amp;&#39;</code>。</string></p>
-</li>
-<li><p><code>eq</code> <string> 用于界定查询字符串中的键与值的子字符串。默认为 <code>&#39;=&#39;</code>。</string></p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">options &lt;Object&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li><code>decodeURIComponent</code> <function> 当解码查询字符串中百分号编码的字符时使用的函数。默认为 <code>querystring.unescape()</code>。</function></li>
-<li><code>maxKeys</code> <number> 指定要解析的键的最大数量。默认为 <code>1000</code>。指定为 <code>0</code> 则移除键数的限制。</number></li>
-</ul>
-</li>
-</ul>
-<p><code>querystring.parse()</code> 方法能把一个 URL 查询字符串（<code>str</code>）解析成一个键值对的集合。</p>
-<p>e.g.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> strParams = <span class="string">'foo=bar&amp;abc=xyz&amp;abc=123'</span>;</div><div class="line"><span class="keyword">const</span> result = querystring.parse(strParams);</div></pre></td></tr></table></figure>
-<p>Result:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  foo: 'bar',</div><div class="line">  abc: ['xyz', '123']</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/23/node/querystring/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-TCP:UDP常用端口汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>TCP/UDP常用端口汇总</p>
-<table>
+<h2 id="上周总结"><a href="#上周总结" class="headerlink" title="上周总结"></a>上周总结</h2><h4 id="项目进度"><a href="#项目进度" class="headerlink" title="项目进度"></a>项目进度</h4><table>
 <thead>
 <tr>
-<th>端口</th>
-<th>服务</th>
-<th>说明</th>
+<th>时间</th>
+<th>工作内容</th>
+<th>已完成进度</th>
+<th>计划进度</th>
+<th>当天完成进度</th>
+<th>改进措施</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>21</td>
-<td>FTP</td>
-<td>FTP服务器所开放的端口，用于上传、下载</td>
+<td>周三</td>
+<td>熟悉公司相关文档，看公司业务小册子</td>
+<td>100%</td>
+<td>100%</td>
+<td>100%</td>
+<td></td>
 </tr>
 <tr>
-<td>22</td>
-<td>SSH</td>
-<td>22端口就是ssh端口，用于通过命令行模式远程连接Linux系统服务器</td>
+<td>周四</td>
+<td>1.熟悉人大项目源代码</td>
+<td>100%</td>
+<td>100%</td>
+<td>100%</td>
+<td></td>
 </tr>
 <tr>
-<td>25</td>
-<td>SMTP</td>
-<td>SMTP服务器所开放的端口，用于发送邮件</td>
-</tr>
-<tr>
-<td>80</td>
-<td>HTTP</td>
-<td>用于网站服务例如IIS、Apache、Nginx等提供对外访问</td>
-</tr>
-<tr>
-<td>110</td>
-<td>POP3</td>
-<td>110端口是为POP3（邮件协议3）服务开放的</td>
-</tr>
-<tr>
-<td>137/138/139</td>
-<td>NETBIOS</td>
-<td>其中137、138是UDP端口，当通过网上邻居传输文件时用这个端口。而139端口：通过这个端口进入的连接试图获得NetBIOS/SMB服务。这个协议被用于windows文件和打印机共享和SAMBA</td>
-</tr>
-<tr>
-<td>143</td>
-<td>IMAP</td>
-<td>143端口主要是用于“Internet Message AccessProtocol”v2（Internet消息访问协议，简称IMAP），和POP3一样，是用于电子邮件的接收的协议</td>
-</tr>
-<tr>
-<td>443</td>
-<td>HTTPS</td>
-<td>网页浏览端口，能提供加密和通过安全端口传输的另一种HTTP</td>
-</tr>
-<tr>
-<td>1433</td>
-<td>SQL Server</td>
-<td>1433端口，是SQL Server默认的端口，SQL Server服务使用两个端口：TCP-1433、UDP-1434。其中1433用于供SQL Server对外提供服务，1434用于向请求者返回SQL Server使用了哪个TCP/IP端口</td>
-</tr>
-<tr>
-<td>3306</td>
-<td>MySQL</td>
-<td>3306端口，是MySQL数据库的默认端口，用于MySQL对外提供服务</td>
-</tr>
-<tr>
-<td>3389</td>
-<td>Windows Server Remote Desktop Services</td>
-<td>3389端口是Windows远程桌面的服务端口，可以通过这个端口，用”远程桌面”等连接工具来连接到远程的服务器</td>
-</tr>
-<tr>
-<td>8080</td>
-<td>代理端口</td>
-<td>8080端口同80端口，是被用于WWW代理服务的，可以实现网页浏览，经常在访问某个网站或使用代理服务器的时候，会加上“:8080”端口号。另外Apache Tomcat web server安装后，默认的服务端口就是8080</td>
-</tr>
-<tr>
-<td>27017</td>
-<td>MongoDB</td>
-<td><a href="http://docs.mongoing.com/manual-zh/reference/program/mongod.html#bin.mongod" target="_blank" rel="external"><code>mongod</code></a> 和 <a href="http://docs.mongoing.com/manual-zh/reference/program/mongos.html#bin.mongos" target="_blank" rel="external"><code>mongos</code></a> 实例的默认端口。你可以通过 <a href="http://docs.mongoing.com/manual-zh/reference/configuration-options.html#net.port" target="_blank" rel="external"><code>port</code></a>或 <em>–port</em> 改变该端口。</td>
-</tr>
-<tr>
-<td>6379</td>
-<td>Redis</td>
-<td>Redis默认端口。 6379在是手机按键上MERZ对应的号码，而MERZ取自意大利歌女Alessia Merz的名字。MERZ长期以来被Redis作者antirez及其朋友当作愚蠢的代名词。后来Redis作者在开发Redis时就选用了这个端口。</td>
+<td>周五</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -493,7 +514,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/23/TCP:UDP常用端口汇总/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/11/17/11/第三周周报/">展开全文 >></a>
         </p>
       
 
@@ -523,39 +544,18 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Node js学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-11/数域科技规章制度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Node js学习</p>
-<p>网站</p>
-<p><a href="http://nodejs.cn/api/" target="_blank" rel="external">node 中文API文档</a></p>
-<p><a href="https://cnodejs.org/?tab=good" target="_blank" rel="external">cnode社区</a></p>
-<p><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014344991049250a2c80ec84cb4861bbd1d9b2c0c2850e000" target="_blank" rel="external">JavaScript简介（廖雪峰大神）</a></p>
-<p><a href="https://www.npmjs.com/" target="_blank" rel="external">TOP12 npm package</a></p>
-<p><a href="http://blog.fens.me/series-nodejs/" target="_blank" rel="external">从零开始学习Node.js系列文章</a></p>
-<p><a href="https://github.com/JacksonTian/fks" target="_blank" rel="external">前端技能汇总（阿里-朴灵大神）</a></p>
-<p><a href="https://yjhjstz.gitbooks.io/deep-into-node/content/" target="_blank" rel="external">《深入理解Node.js:核心思想和源码分析》</a></p>
-<p><a href="https://www.zhihu.com/topic/19569535" target="_blank" rel="external">知乎：Node.js专区</a></p>
-<p><a href="https://segmentfault.com/blogs" target="_blank" rel="external">segmentfault专栏文章</a></p>
-<blockquote>
-<p>2017.8.28 新增</p>
-</blockquote>
-<p><a href="https://wizardforcel.gitbooks.io/llthw/content/ex0.html" target="_blank" rel="external">笨方法学 Linux</a></p>
-<blockquote>
-<p>2017.8.29 新增</p>
-</blockquote>
-<p><a href="http://www.zaoduke.net/" target="_blank" rel="external">前端早读课</a></p>
-<p><a href="http://taobaofed.org/" target="_blank" rel="external">淘宝前端团队FED</a></p>
-<p><a href="https://aotu.io/" target="_blank" rel="external">凹凸实验室（京东用户体验中心）</a></p>
-<p><a href="https://75team.com/archives/" target="_blank" rel="external">360前端团队-奇舞团</a></p>
-<p><a href="http://fex.baidu.com/" target="_blank" rel="external">百度前端团队FEX</a></p>
-<p><a href="http://www.alloyteam.com/page/0/" target="_blank" rel="external">AlloyTeam腾讯全端团队</a></p>
-<blockquote>
-<p>2017.10.25 新增</p>
-</blockquote>
-<p><a href="http://cn.redux.js.org/index.html" target="_blank" rel="external">Redux中文文档</a></p>
+        <p>8：35开晨会</p>
+<p>8:30上班</p>
+<p>12：00 下班</p>
+<p>13：30 上班</p>
+<p>6：00 下班</p>
+<p>早上8点到公司即可，8点之前公司没人</p>
+<p>杜丁山 </p>
 
       
 
@@ -568,7 +568,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/23/Node js学习/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/11/16/11/数域科技规章制度/">展开全文 >></a>
         </p>
       
 
@@ -598,13 +598,22 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-全栈知识汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-11/财政系统理解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>全栈知识汇总</p>
-<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h3 id="测试请求工具-autocannon"><a href="#测试请求工具-autocannon" class="headerlink" title="测试请求工具-autocannon"></a>测试请求工具-autocannon</h3>
+        <h1 id="基础配置平台"><a href="#基础配置平台" class="headerlink" title="基础配置平台"></a>基础配置平台</h1><h4 id="权力事项管理"><a href="#权力事项管理" class="headerlink" title="权力事项管理"></a>权力事项管理</h4><p>项目工作流，合同工作流，验收工作流，绩效工作流是什么？</p>
+<p>节点是用来做什么的？</p>
+<h5 id="Error"><a href="#Error" class="headerlink" title="Error:"></a>Error:</h5><p>System/RightManageEdit.aspx</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer&amp; number, NumberFormatInfo info, Boolean parseDecimal) +7470887</div><div class="line">System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info) +119</div><div class="line">System_RightManageEdit.Init() +212</div><div class="line">System_RightManageEdit.Page_Load(Object sender, EventArgs e) +101</div><div class="line">System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e) +14</div><div class="line">System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e) +35</div><div class="line">System.Web.UI.Control.OnLoad(EventArgs e) +99</div><div class="line">DAS.Web.UI.DASPage.OnLoad(EventArgs e) in D:\数域项目\财经部\00统一平台\01代码\SpFunds\Common\WebControls\DASPage.cs:133</div><div class="line">System.Web.UI.Control.LoadRecursive() +50</div><div class="line">System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +627</div></pre></td></tr></table></figure>
+<p>msg:入字符串的格式不正确。</p>
+<h4 id="系统节假日设置"><a href="#系统节假日设置" class="headerlink" title="系统节假日设置"></a>系统节假日设置</h4><p>是用来计算放假时间，作为不受理的时间的？</p>
+<h4 id="计划类别管理"><a href="#计划类别管理" class="headerlink" title="计划类别管理"></a>计划类别管理</h4><p>用来做什么的？</p>
+<p>Error:</p>
+<p>编辑无法操作</p>
+<p>添加空白页</p>
+<h4 id="技术领域管理"><a href="#技术领域管理" class="headerlink" title="技术领域管理"></a>技术领域管理</h4>
       
 
       
@@ -616,7 +625,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/19/全栈知识汇总/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/11/16/11/财政系统理解/">展开全文 >></a>
         </p>
       
 
@@ -646,102 +655,20 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/23/hello-world/" class="archive-article-date">
-  	<time datetime="2017-07-23T08:55:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/23/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-js/ES6 Array map用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-11/2017.11.15 日记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="ES6-Array-map用法"><a href="#ES6-Array-map用法" class="headerlink" title="ES6 Array map用法"></a>ES6 Array map用法</h2><p>map() 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用三个参数</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</div><div class="line"></div><div class="line"><span class="keyword">let</span> arr = numbers.map(<span class="function">(<span class="params">currentValue, index, array</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`currentValue = `</span>, currentValue);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`index = `</span>, index);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`array= `</span>, array);</div><div class="line">    <span class="keyword">return</span> currentValue * <span class="number">2</span>;</div><div class="line">&#125;, numbers);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">`arr `</span>, arr);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">let</span> numbers = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">15</span>];</div><div class="line"><span class="keyword">let</span> doubles = numbers.map(<span class="function">(<span class="params">x</span>) =&gt;</span> &#123;</div><div class="line">   <span class="keyword">return</span> x * <span class="number">2</span>;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// doubles is now [2, 10, 20, 30]</span></div><div class="line"><span class="comment">// numbers is still [1, 5, 10, 15]</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">let</span> numbers = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>];</div><div class="line"><span class="keyword">let</span> roots = numbers.map(<span class="built_in">Math</span>.sqrt);</div><div class="line"></div><div class="line"><span class="comment">// roots is now [1, 2, 3]</span></div><div class="line"><span class="comment">// numbers is still [1, 4, 9]</span></div></pre></td></tr></table></figure>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt; <span class="keyword">let</span> array = arr.map(<span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">currentValue, index, array</span>) </span>&#123; </div><div class="line">&gt;     <span class="comment">// Return element for new_array </span></div><div class="line">&gt; &#125;[, thisArg])</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-</blockquote>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p><code>callback</code></p>
-<ul>
-<li><p><code>currentValue</code></p>
-<p><code>callback</code> 的第一个参数，数组中正在处理的当前元素。</p>
-</li>
-<li><p><code>index</code></p>
-<p><code>callback</code> 的第二个参数，数组中正在处理的当前元素的索引。</p>
-</li>
-<li><p><code>array</code></p>
-<p><code>callback</code> 的第三个参数，<code>map</code> 方法被调用的数组。</p>
-</li>
-</ul>
-<p><code>thisArg</code></p>
-<p>可选的。执行 <code>callback</code> 函数时 使用的<code>this</code> 值。</p>
-<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>一个新数组，每个元素都是回调函数的结果。</p>
+        <p>今天是第一天在新公司上班。新公司名字叫：<strong>数域科技</strong>，以后得记住这个名字。免得都不知道自己公司名字叫什么。。。</p>
+<p>新公司代码比较糟糕，很老套。用的vs2008开发。。。</p>
+<p>等团队开发主管来了再谈吧。看能不能用mac来开发项目。不用公司的电脑。。。</p>
+<p>平常在公司没有事情，要多学习新东西，每天给自己定个目标，学习一个新东西，人要上进！</p>
+<p>每天学不完新东西，不下班！</p>
+<p>自己规定的事情完成不了，不下班！</p>
+<p>下班时间要开始利用起来，去健身房健身，多锻炼身体。</p>
+<h3 id="今天公司学习事项"><a href="#今天公司学习事项" class="headerlink" title="今天公司学习事项"></a>今天公司学习事项</h3><p>1.熟悉公司开发环境，翻看公司之前的代码架构。</p>
+<p>2.熟悉公司的业务系统，了解公司同事。</p>
 
       
 
@@ -754,7 +681,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/17/js/ES6 Array map用法/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/11/15/11/2017.11.15 日记/">展开全文 >></a>
         </p>
       
 
@@ -784,26 +711,520 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-TypeScript/greeter3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-11/c#面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        //类
-var Student = (function () {
-    function Student(firstName, middleInitial, lastName) {
-        this.firstName = firstName;
-        this.middleInitial = middleInitial;
-        this.lastName = lastName;
-        this.fullName = firstName + " " + middleInitial + " " + lastName;
-    }
-    return Student;
-}());
-function greeter(person) {
-    return "Hello, " + person.firstName + " " + person.lastName;
+        <h1 id="C-面试题"><a href="#C-面试题" class="headerlink" title="C#面试题"></a>C#面试题</h1><h2 id="1-基础面试题"><a href="#1-基础面试题" class="headerlink" title="1.基础面试题"></a>1.基础面试题</h2><p>汇总最全的C#.NET面试题及参考答案，随时更新。做为自己的学习笔记，知识罗列，面试参考。</p>
+<h2 id="一、数据库篇"><a href="#一、数据库篇" class="headerlink" title="一、数据库篇"></a>一、数据库篇</h2><p>1.维护数据库的完整性、一致性、你喜欢用触发器还是自写业务逻辑？为什么?</p>
+<p>答：</p>
+<p>尽可能用约束（包括CHECK、主键、唯一键、外键、非空字段）实现，这种方式的效率最好；其次用触发器，这种方式可以保证无论何种业务系统访问数据库都能维持数据库的完整性、一致性；最后再考虑用自写业务逻辑实现，但这种方式效率最低、编程最复杂，当为下下之策。</p>
+<p>2.什么是事务？什么是锁？请说出sql server中锁的隔离级别有哪些，默认是哪一种？</p>
+<p>答：</p>
+<p>事务是指一个工作单元，它包含了一组数据操作命令，并且所有的命令作为一个整体一起向系统提交或撤消请求操作，即这组命令要么都执行，要么都不执行。</p>
+<p>锁是在多用户环境中对数据的访问的限制。SqlServer自动锁定特定记录、字段或文件，防止用户访问，以维护数据安全或防止并发数据操作问题，锁可以保证事务的完整性和并发性。</p>
+<p>3.什么是索引，有什么优点？使用索引需要注意些什么？</p>
+<p>答：</p>
+<p>索 引与书的目录类似，可以快速定位要查找的数据所有位置，索引使数据库程序无需扫描整个表，就可以在其中找到所需要的数据，索引包含了一个表中包含值的列 表，其中包含了各个值的行所存储的位置，索引可以是单个或一组列，索引提供的表中数据的逻辑位置，合理划分索引能够大大提高数据库性能。</p>
+<p>索引需要注意：加索引的列一定要是经常使用来条件筛选的列，并且where中要避免对有索引的列进行计算，索引并不是越多越好，索引会占用更多的存储空间，也会对insert 、update、delete这些操作有一定的性能影响。</p>
+<p>4.视图是什么？游标是什么？</p>
+<p>答：</p>
+<p>视图是一种虚拟表，虚拟表具有和物理表相同的功能，可以对虚拟表进行增该查操作;</p>
+<p>视图通常是一个或多个表的行或列的子集;</p>
+<p>视图的结果更容易理解（修改视图对基表不影响），获取数据更容易（相比多表查询更方便），限制数据检索（比如需要隐藏某些行或列），维护更方便。</p>
+<p>游标对查询出来的结果集作为一个单元来有效的处理，游标可以定位在结果集的特定行、从结果集的当前位置检索一行或多行、可以对结果集中当前位置进行修改、</p>
+<p>5.什么是存储过程？有什么优点？</p>
+<p>答：</p>
+<p>存储过程是一组预编译的SQL语句</p>
+<p>它的优点：</p>
+<p>1.允许模块化程序设计，就是说只需要创建一次过程，以后在程序中就可以调用该过程任意次。          　　</p>
+<p>2.允许更快执行，如果某操作需要执行大量SQL语句或重复执行，存储过程比SQL语句执行的要快。           　</p>
+<p>3.减少网络流量，例如一个需要数百行的SQL代码的操作有一条执行语句完成，不需要在网络中发送数百行代码。　　　　　　　</p>
+<p>4.更好的安全机制，对于没有权限执行存储过程的用户，也可授权他们执行存储过程。</p>
+<p>6.什么是触发器？有什么优点？</p>
+<p>答：</p>
+<p>触发器是一种特殊类型的存储过程，触发器主要通过事件触发而被执行的，</p>
+<p>触发器的优点：</p>
+<p>1.强化约束，触发器能够提供比CHECK约束;</p>
+<p>2.跟踪变化，触发器可以跟踪数据库内的操作，从而不允许未经允许许可的更新和变化;</p>
+<p>3.联级运算，比如某个表上的触发器中包含对另一个表的数据操作，而该操作又导致该表上的触发器被触发</p>
+<p>7、说一说储过程和触发器和优点和缺点</p>
+<p>优点：</p>
+<p>1、预编译，已优化，效率较高。避免了SQL语句在网络传输然后再解释的低效率。</p>
+<p>2、存储过程可以重复使用，减少开发人员的工作量。</p>
+<p>3、业务逻辑封装性好，修改方便。</p>
+<p>4、安全。不会有SQL语句注入问题存在。</p>
+<p>缺点：</p>
+<p>1、可移植性是存储过程和触发器最大的缺点。</p>
+<p>2、占用服务器端太多的资源，对服务器造成很大的压力</p>
+<p>3、不能做DDL。（DDL是什么？）</p>
+<p>4、触发器排错困难，而且数据容易造成不一致，后期维护不方便。</p>
+<p>8、T-SQL中is null和null 的区别?</p>
+<p>答：is null 和 null 区别相当于 “是空盒子” 和 “空盒子”的区别</p>
+<p>9、写出一条Sql语句：取出表A中第31到第40记录（SQLServer,以自动增长的ID</p>
+<p>作为主键,注意：ID可能不是连续的。</p>
+<p>答：</p>
+<p>解1: </p>
+<p>select top 10 * from A where id not in (select top 30 id from A)</p>
+<p>解2: </p>
+<p>select top 10 * from A where id &gt;(select max(id) from (select</p>
+<p>top 30 id from A )as A)</p>
+<p>解3：</p>
+<p>SELECT * FROM (</p>
+<p>SELECT *,ROW_NUMBER() over(ORDER BY ID) AS rownum FROM A) t </p>
+<p>WHERE t.rownum BETWEEN 31 AND 40</p>
+<h2 id="二、-NET篇"><a href="#二、-NET篇" class="headerlink" title="二、.NET篇"></a>二、.NET篇</h2><p>1.什么是装箱和拆箱？什么是重载？</p>
+<p>答：</p>
+<p>装箱就是把值类型转成引用类型，拆箱相反把引用转换成值类型。</p>
+<p>重载就是指一个方法名相同,参数个数或参数的类型不相同,返回值可以相同的方法。</p>
+<p>2.简单介绍下ADO.NET和ADO主要有什么改进？</p>
+<p>答：</p>
+<p>ADO以Recordset存储,而ADO.NET则以DataSet表示，ADO.NET提供了数据集和数据适配器，有利于实现分布式处理，降低了对数据库服务器资源的消耗。</p>
+<ol>
+<li>简述 private、 protected、 public、 internal 修饰符的访问权限。</li>
+</ol>
+<p>答 . </p>
+<p>private : 私有成员, 在类的内部才可以访问。</p>
+<p>protected : 保护成员，该类内部和继承类中可以访问。</p>
+<p>public : 公共成员，完全公开，没有访问限制。</p>
+<p>internal: 在同一命名空间内可以访问。</p>
+<p>protected internal: 访问仅限于从包含类派生的当前程序集或类型。</p>
+<p>2 .列举ASP.NET 页面之间传递值的几种方式。</p>
+<p>答.</p>
+<p>参数方式：</p>
+<p>1、使用QueryString, 如….?id=1; response. Redirect()….;使用Server.Transfer</p>
+<p>2、表单提交</p>
+<p>共享变量</p>
+<p>1.使用Session变量</p>
+<p>2、Application</p>
+<p>3、Cookie</p>
+<p>Session有什么优缺点？</p>
+<p>微软是怎么弥补的？</p>
+<p>微软推出的sqlserver,serverstate模式</p>
+<p>Cookie和Seesion有什么联系？</p>
+<p>cookie会存储session的回话ID</p>
+<p>数组去重，怎么做？</p>
+<p>Linq表达式熟悉么？</p>
+<p>页面的生命周期说一下，每个层次的意思？</p>
+<p>HTTP请求的完整过程说一下？</p>
+<p>OK</p>
+<p>zookeeper你熟悉么</p>
+<p>设计模式你说下，你用到哪几种</p>
+<p>3、说说你对领域驱动的理解？</p>
+<p>4、如何把一个array复制到arrayist里</p>
+<p>foreach( object arr in array1) arrayist1.Add(arr);</p>
+<p>或者</p>
+<p>arrayist1.AddRange(array1);</p>
+<p>5.C#中的委托是什么？事件是不是一种委托？</p>
+<p>答 ： </p>
+<p>委托可以把一个方法作为参数代入另一个方法。</p>
+<p>委托可以理解为指向一个函数的引用。</p>
+<p>是，是一种特殊的委托。</p>
+<p>委托本质上是一种“方法接口”，它相当于C/C++中的函数指针，当然它比函数指针安全，在C#中通常用于事件处理。事件不是委托，不过由于事件的性质决定了处理它的程序逻辑能访问的参数，因此，在C#中处理事件的逻辑都包装为委托。但是<a href="http://www.lanhusoft.com/Article/174.html" target="_blank" rel="external">c#.net中的delegate委托，注意内存泄漏</a>。</p>
+<p>6.详述.NET里类和结构（class和struct）的区别</p>
+<p>答：</p>
+<p>结构与类共享几乎所有相同的语法，但结构比类受到的限制更多：尽管结构的静态字段可以初始化，结构实例字段声明还是不能使用初始值设定项。</p>
+<p>结构不能声明默认构造函数（没有参数的构造函数）或析构函数。</p>
+<p>结构的副本由编译器自动创建和销毁，因此不需要使用默认构造函数和析构函数。实际上，编译器通过为所有字段赋予默认值（参见默认值表）来实现默认构造函数。</p>
+<p>结构不能从类或其他结构继承。</p>
+<p>结构是值类型 – 如果从结构创建一个对象并将该对象赋给某个变量，变量则包含结构的全部值。复制包含结构的变量时，将复制所有数据，对新副本所做的任何修改都不会改变旧副本的数据。</p>
+<p>由于结构不使用引用，因此结构没有标识 – 具有相同数据的两个值类型实例是无法区分的。C# 中的所有值类型本质上都继承自ValueType，后者继承自 Object。编译器可以在一个称为装箱的过程中将值类型转换为引用类型。</p>
+<p>结构具有以下特点：</p>
+<p>结构是值类型，而类是引用类型。</p>
+<p>结构的实例其它值类型一样在堆栈中分配内存，而类的对象实例在堆中分配内存。</p>
+<p>向方法传递结构时，结构是通过传值方式传递的，而不是作为引用传递的。</p>
+<p>与类不同，结构的实例化可以不使用 new 运算符。</p>
+<p>结构可以声明构造函数，但它们必须带参数。</p>
+<p>一个结构不能从另一个结构或类继承，而且不能作为一个类的基。所有结构都直接继承自 System.ValueType，后者继承自 System.Object。</p>
+<p>结构可以实现接口。</p>
+<p>在结构中初始化实例字段是错误的。</p>
+<p>7.override与重载的区别</p>
+<p>答 ：</p>
+<p>override 与重载的区别。重载是方法的名称相同。参数个数或参数类型不同，进行多次重载以适应不同的需要;</p>
+<p>Override 是进行基类中函数的重写。是为了实现多态。</p>
+<p>8.如果在一个B/S结构的系统中需要传递变量值，但是又不能使用Session、Cookie、Application，您有几种方法进行处理？</p>
+<p>答 ：</p>
+<p>this.Server.Transfer</p>
+<p>Response. Redirect()—QueryString</p>
+<p>9.描述一下C#中索引器的实现过程，是否只能根据数字进行索引？</p>
+<p>答：不是。可以用任意类型。<a href="http://www.lanhusoft.com/Article/182.html" target="_blank" rel="external">c#使用索引器详解</a></p>
+<p>11.用.net做B/S结构的系统，您是用几层结构来开发，每一层之间的关系以及为什么要这样分层？</p>
+<p>答：</p>
+<p>一般为3层</p>
+<p>数据访问层(DAL)，业务层(BLL)，表示层(Web)。</p>
+<p>数据访问层对数据库进行增删查改。</p>
+<p>业务层一般分为二层，业务表观层实现与表示层的沟通，业务规则层实现用户密</p>
+<p>码的安全等。</p>
+<p>表示层为了与用户交互例如用户添加表单。</p>
+<p>优点： 分工明确，条理清晰，易于调试，而且具有可扩展性。</p>
+<p>缺点： 增加成本。</p>
+<p>13.什么叫应用程序域？</p>
+<p>答：</p>
+<p>应用程序域可以理解为一种轻量级进程。起到安全的作用。占用资源小。</p>
+<p>应用程序域为隔离正在运行的应用程序提供了一种灵活而安全的方法。</p>
+<p>应用程序域通常由运行库宿主创建和操作。有时，您可能希望应用程序以编程方式与应用程序域交互，例如想在不停止应用程序运行的情况下卸载某个组件时。</p>
+<p>应用程序域使应用程序以及应用程序的数据彼此分离，有助于提高安全性。单个进程可以运行多个应用程序域，并具有在单独进程中所存在的隔离级别。在单个进程中运行多个应用程序提高了服务器伸缩性。</p>
+<p>应用程序域具有以下特点：</p>
+<p>1、必须先将程序集加载到应用程序域中，然后才能执行该程序集。</p>
+<p>2、 一个应用程序域中的错误不会影响在另一个应用程序域中运行的其他代码。 </p>
+<p>3、 能够在不停止整个进程的情况下停止单个应用程序并卸载代码。不能卸载单独的程序集或类型，只能卸载整个应用程序域。 </p>
+<p>14.CTS、CLS、CLR分别作何解释？</p>
+<p>答：CTS：通用语言系统。CLS：通用语言规范。CLR：公共语言运行库。</p>
+<p>15.什么是受管制的代码？</p>
+<p>答：unsafe：非托管代码。不经过CLR运行。</p>
+<p>16.什么是强类型系统？</p>
+<p>答：RTTI：类型识别系统。</p>
+<p>17.net中读写数据库需要用到那些类？他们的作用？</p>
+<p>答：</p>
+<p>Connection连接对象，</p>
+<p>Command执行命令和存储过程，</p>
+<p>DataReader向前只读的数据流，</p>
+<p>DataAdapter适配器，支持增删查询，</p>
+<p>DataSet数据级对象，相当与内存里的一张或多张表。</p>
+<p>18.ASP.NET的身份验证方式有哪些？分别是什么原理？</p>
+<p>答：</p>
+<p>Windows 身份验证提供程序：提供有关如何将Windows 身份验证与Microsoft Internet 信息服务 (IIS) 身份验证结合使用来确保 ASP.NET 应用程序安全的信息。 </p>
+<p>Forms 身份验证提供程序：提供有关如何使用您自己的代码创建应用程序特定的登录窗体并执行身份验证的信息。使用 Forms 身份验证的一种简便方法是使用 ASP.NET 成员资格和 ASP.NET 登录控件，它们一起提供了一种只需少量或无需代码就可以收集、验证和管理用户凭据的方法。</p>
+<p>Passport 身份验证提供程序：提供有关由Microsoft 提供的集中身份验证服务的信息，该服务为成员站点提供单一登录和核心配置</p>
+<p>19.什么是Code-Behind技术？</p>
+<p>答：代码后植。aspx,resx和cs三个后缀的文件，这个就是代码分离.实现了HTML代码和服务器代码分离.方便代码编写和整理.</p>
+<p>20.在.net中，配件assembly的意思是？</p>
+<p>答：程序集。（中间语言，元数据，资源，装配清单）</p>
+<p>21.常用的调用WebService的方法有哪些？</p>
+<p>答：</p>
+<p>1.使用WSDL.exe命令行工具。</p>
+<p>2.使用VS.NET中的Add Web Reference菜单选项</p>
+<p>22..net Remoting 的工作原理是什么？</p>
+<p>答：服务器端向客户端发送一个进程编号，一个程序域编号，以确定对象的位置。</p>
+<p>23.在C＃中，string str = null 与 string str =”” 请尽量使用文字或图，string存储在什么位置，StringBuilder使用场景？</p>
+<p>象说明其中的区别。</p>
+<p>答：</p>
+<p>string str = null 是不给他分配内存空间,而string str = “” 给它分配长度为空字符串的内存空间。当程序中涉及到多次的修改、追加同一个字符串变量或者是比较长的字符串时，要基于性能考虑要选择用StringBuilder。</p>
+<p>24.分析以下代码，完成填空</p>
+<p>string strTmp = “abcdefg某某某”;</p>
+<p>int i= System.Text.Encoding.Default.GetBytes(strTmp).Length;</p>
+<p>int j= strTmp.Length;</p>
+<p>以上代码执行完后，i= j=</p>
+<p>答：i=13,j=10</p>
+<p>25.SQLSERVER服务器中，给定表 table1 中有两个字段 ID、LastUpdateDate，</p>
+<p>ID表示更新的事务号， LastUpdateDate表示更新时的服务器时间，请使用一句</p>
+<p>SQL语句获得最后更新的事务号</p>
+<p>答：select ID FROM table1 Where LastUpdateDate = (Select MAX(LastUpdateDate) FROM table1)</p>
+<p>26.简要谈一下您对微软.NET 构架下remoting和webservice两项技术的理解以及实际中的应用。</p>
+<p>答：WS主要是可利用HTTP，穿透防火墙。而Remoting可以利用TCP/IP，二进制传送提高效率。</p>
+<p>27.公司要求开发一个继承System.Windows.Forms.ListView类的组件，要求达到</p>
+<p>以下的特殊功能：点击ListView各列列头时，能按照点击列的每行值进行重排视</p>
+<p>图中的所有行 (排序的方式如DataGrid相似)。根据您的知识，请简要谈一下您的思路</p>
+<p>答：</p>
+<p>继承IComparetor自定义一个用于排序的类A，声明排序方式，当前排序的字段并实现Compare(object x,object y)方法，在里面取出ListView对应列的值进行比较。在第一次加载数据的时候为ListView的属性ListViewItemSorter赋一个A的实例，为ListView添加事件ColumnClick函数，并通过事件参数为ListViewItemSorter赋上相应的值用于排序，最后调用ListView的Sort方法实现数据排序。</p>
+<p><a href="http://www.lanhusoft.com/Article/179.html" target="_blank" rel="external">C#中winform ListView实现点击列头数据排序并修复数字列排序不对的问题  </a>           </p>
+<p>28.<a href="http://www.lanhusoft.com/Article/84.html" target="_blank" rel="external">面向对象</a>的语言具有<strong><em>__</em></strong>性、<strong><strong>_</strong></strong>性、<strong><em>__</em></strong>性</p>
+<p>答：封装、继承、多态。</p>
+<p>29、面向对象的原则有哪些</p>
+<p>答：</p>
+<p>单一职责、开放封闭原则，接口隔离原则，依赖倒置，里氏（Liskov）代换原则</p>
+<p>30.能用foreach遍历访问的对象需要实现 <strong><strong><strong><em>__</em></strong></strong></strong>接口或声明<strong><strong><strong><em>__</em></strong></strong></strong>方法的类型。</p>
+<p>答：IEnumerable 、 GetEnumerator。</p>
+<p>31.GC是什么? 为什么要有GC?</p>
+<p>答：</p>
+<p>GC是垃圾收集器。程序员不用担心内存管理，因为垃圾收集器会自动进行管</p>
+<p>理。要请求垃圾收集，可以调用下面的方法之一：</p>
+<p>System.gc()</p>
+<p>Runtime.getRuntime().gc()</p>
+<p>32.C#常用的<a href="http://www.lanhusoft.com/Article/33.html" target="_blank" rel="external">多线程</a>传参数方法 </p>
+<p>答：</p>
+<p>线程委托的方法为一个类的方法，初始化类就把类的属性初始化好</p>
+<p>委托的异步调用XXEventHanlder.BeginInvoke </p>
+<p>使用ParameterizedThreadStart委托</p>
+<p>具体请看：<a href="http://www.lanhusoft.com/Article/33.html" target="_blank" rel="external">C#常用的多线程传参数方法</a></p>
+<p>33.接口是否可继承接口? 抽象类是否可实现(implements)接口? 抽象类是否可继承实体类(concrete class)?</p>
+<p>答：</p>
+<p>接口可以继承接口。抽象类可以实现(implements)接口，抽象类是否可继承实体类，但前提是实体类必须有明确的构造函数。</p>
+<p>34.构造器Constructor是否可被override?</p>
+<p>答：</p>
+<p>构造器Constructor不能被继承，因此不能重写override，但可以被重载overload。</p>
+<p>35.是否可以继承String类?</p>
+<p>答：String类是sealed类故不可以继承。</p>
+<p>36.try {}里有一个return语句，那么紧跟在这个try后的finally {}里的code会不会被执行，什么时候被执行，在return前还是后?</p>
+<p>答：会执行，在return前执行。</p>
+<p>37.c#中的swtich是否能作用在byte上，是否能作用在long上，是否能作用在String上?</p>
+<p>答：可以。</p>
+<p>38.short s1 = 1; s1 = s1 + 1;有什么错? short s1 = 1; s1 += 1;有什么错?</p>
+<p>答：</p>
+<p>short s1 = 1; s1 = s1 + 1;有错，s1是short型，s1+1是int型,不能显式转化为short型。可修改为s1 =(short)(s1 + 1) 。</p>
+<p>short s1 = 1; s1 += 1正确。</p>
+<p>39.如何处理几十万条并发数据？</p>
+<p>答：</p>
+<p>用存储过程或事务。取得最大标识的时候同时更新..注意主键不是自增量方式这种方法并发的时候是不会有重复主键的..取得最大标识要有一个存储过程来获取。</p>
+<p>40.Session有什么重大BUG，微软提出了什么方法加以解决？</p>
+<p>答：</p>
+<p>是iis中由于有进程回收机制，系统繁忙的话Session会丢失，可以用Sate Server或SQL Server数据库的方式存储Session不过这种方式比较慢，而且无法捕获Session的END事件。</p>
+<p>41.如何处理几十万条并发数据？</p>
+<p>答：用存储过程或事务。取得最大标识的时候同时更新。注意主键不是自增量方式这种方法并发的时候是不会有重复主键的。取得最大标识要有一个存储过程来获取.</p>
+<p>42.进程和线程的区别？</p>
+<p>答：</p>
+<p>进程是系统进行资源分配和调度的单位；线程是CPU调度和分派的单位，一个进程可以有多个线程，这些线程共享这个进程的资源。</p>
+<p>43.堆和栈的区别？</p>
+<p>答：</p>
+<p>栈：由编译器自动分配、释放。在函数体中定义的变量通常在栈上。</p>
+<p>堆：一般由程序员分配释放。用new、malloc等分配内存函数分配得到的就是在堆上，比如对象实例。</p>
+<p>44.成员变量和成员函数前加static的作用？</p>
+<p>答：</p>
+<p>又称为类成员变量和类成员函数。分别用来反映类的状态，这些成员是属于类的而不是类对象实例，因此static声明的变量在存储在内存的静态存储区，且只有一份，生命周期和应用程序域一致。</p>
+<p>45.请说明在.net中常用的几种页面间传递参数的方法，并说出他们的优缺点。</p>
+<p>答：</p>
+<p>session(viewstate) 简单，但易丢失</p>
+<p>application 全局</p>
+<p>cookie 简单，但可能不支持，可能被伪造</p>
+<p>input type=”hidden” 简单，可能被伪造</p>
+<p>url参数 简单，显示于地址栏，长度有限</p>
+<p>数据库 稳定，安全，但性能相对弱</p>
+<p>46.请指出GAC的含义？</p>
+<p>答：全局程序集缓存。</p>
+<p>47.向服务器发送请求有几种方式？</p>
+<p>答：get,post。get一般为链接方式，post一般为按钮、表单方式。</p>
+<p>48.DataReader与Dataset有什么区别？</p>
+<p>答：一个是只能向前的只读游标，一个是内存中虚拟的数据库。</p>
+<p>49.<a href="http://www.lanhusoft.com/" target="_blank" rel="external">软件开发</a>过程一般有几个阶段？每个阶段的作用？</p>
+<p>答：需求分析，架构设计，代码编写，QA，部署</p>
+<p>50.在c#中using和new这两个关键字有什么意义，请写出你所知道的意义？using指令 和语句 new 创建实例 new 隐藏基类中方法。</p>
+<p>答：</p>
+<p>using 引入名称空间或者使用非托管资源</p>
+<p>using 语句块</p>
+<p>new 新建实例或者隐藏父类方法</p>
+<p>51.需要实现对一个字符串的处理,首先将该字符串首尾的空格去掉,如果字符串中间还有连续空格的话,仅保留一个空格,即允许字符串中间有多个空格,但连续的空格数不可超过一个.</p>
+<p>答：</p>
+<p> string inputStr = “ xx xx “;</p>
+<p> inputStr = Regex.Replace(inputStr.Trim(), “ +”, “ “);</p>
+<p>52.什么叫做<a href="http://www.lanhusoft.com/Article/132.html" target="_blank" rel="external">sql注入</a>，如何防止？请举例说明。</p>
+<p>答：</p>
+<p>利用sql关键字对网站进行攻击。过滤关键字’等</p>
+<p>利用sql语言漏洞获得合法身份登陆系统。</p>
+<p>如身份验证的程序设计成：</p>
+<p>SqlCommand com=new SqlCommand(“Select* from users where username=’”+t_name.text+”‘ andpwd=’”+t_pwd.text+”‘“);</p>
+<p>　object obj=com.ExcuteScale();</p>
+<p>　if(obj!=null)</p>
+<p>​    {</p>
+<p>​      //通过验证</p>
+<p>​    }</p>
+<p>这段代码容易被sql注入。如用户在t_name中随便输入，在t_pwd中输入1’ and 1=’1  就可以进入系统了。</p>
+<p><a href="http://www.lanhusoft.com/Article/132.html" target="_blank" rel="external">ASP.NET MVC 5使用Filter过滤Action参数防止sql注入</a></p>
+<p>53.什么是ApplicationPool？</p>
+<p>答：</p>
+<p>Web应用，类似Thread Pool，提高并发性能。</p>
+<p>应用程序池可隔离站点和应用程序，有利于解决可靠性、可用性和安全性问题。 如果要实现下列目的之一，就应考虑创建应用程序池：</p>
+<p>1、将使用相同配置设置运行的站点和应用程序分为一组。</p>
+<p>2、隔离使用唯一配置设置运行的站点和应用程序。 </p>
+<p>3、通过使用自定义标识运行应用程序来增强安全性。 </p>
+<p>4、防止一个应用程序中的资源访问另一个应用程序中的资源。 例如，ISP 可以为每个客户的站点和应用程序创建单个应用程序池。 通过这种方式来分隔客户内容，可防止一个客户的资源访问另一个客户站点上的资源，即使这两个客户的站点都位于同一台 Web 服务器上也不例外。 </p>
+<p>5、将不稳定的应用程序与运行良好的应用程序隔开，以此来提高性能</p>
+<p>54.什么是虚函数？什么是抽像函数？作用？</p>
+<p>答：</p>
+<p>虚函数：可由子类继承并重写的函数。关键词virtual声明，重写override。</p>
+<p>抽像函数：规定其非虚子类必须实现的函数，必须被重写。关键词abstract声明，重写override。</p>
+<p>主要用于对象对象的多态，在子类中重写方法，达到相同的操作，不同的行为效果。</p>
+<p>55.什么是<a href="http://www.lanhusoft.com/Article/156.html" target="_blank" rel="external">反射</a>？及劣势，有什么可以改进的地方</p>
+<p>答：</p>
+<p>动态获取程序集信息，可以程序在运行的时候动态一创建一个类的实例，或者调用方法。具体请看：<a href="http://www.lanhusoft.com/Article/156.html" target="_blank" rel="external">.net反射存在的问题及优化技术</a></p>
+<p>56.说说单例模式的应用场景和C#中如何实现？</p>
+<p>答：</p>
+<p>资源共享的情况下，避免由于资源操作时导致的性能或损耗等。</p>
+<p>控制资源的情况下，方便资源之间的互相通信。如线程池等。</p>
+<p>\1. Windows的Task Manager（任务管理器）就是很典型的单例模式（这个很熟悉吧），想想看，是不是呢，你能打开两个windows task manager吗？ 不信你自己试试看哦~</p>
+<p>\2. windows的Recycle Bin（回收站）也是典型的单例应用。在整个系统运行过程中，回收站一直维护着仅有的一个实例。</p>
+<p>\3. 网站的计数器，一般也是采用单例模式实现，否则难以同步。</p>
+<p>\4. 应用程序的日志应用，一般都何用单例模式实现，这一般是由于共享的日志文件一直处于打开状态，因为只能有一个实例去操作，否则内容不好追加。</p>
+<p>\5. Web应用的配置对象的读取，一般也应用单例模式，这个是由于配置文件是共享的资源。</p>
+<p>\6. 数据库连接池的设计一般也是采用单例模式，因为数据库连接是一种数据库资源。数据库软件系统中使用数据库连接池，主要是节省打开或者关闭数据库连接所引起的效率损耗，这种效率上的损耗还是非常昂贵的，因为此处用单例模式来维护，就可以大大降低这种损耗。</p>
+<p>\7. 多线程的线程池的设计一般也是采用单例模式，这是由于线程池要方便对池中的线程进行控制。</p>
+<p>\8. 操作系统的文件系统，也是大的单例模式实现的具体例子，一个操作系统只能有一个文件系统。</p>
+<p>\9. HttpApplication 也是单位例的典型应用。熟悉ASP.Net(IIS)的整个请求生命周期的人应该知道HttpApplication也是单例模式，所有的HttpModule都共享一个HttpApplication实例。</p>
+<p>以上来自：<a href="http://blog.csdn.net/tanyujing/article/details/14160941" target="_blank" rel="external">http://blog.csdn.net/tanyujing/article/details/14160941</a></p>
+<p>实现方法：</p>
+<p>static属性里面new ,构造函数private，如果是要求多线程情况，线程安全要double check</p>
+<p>56.什么是XML？</p>
+<p>答：XML即可扩展标记语言。eXtensible Markup Language.标记是指计算机所能理解的信息符号，通过此种标记，计算机之间可以处理包含各种信息的文章等。如何定义这些标记，即可以选择国际通用的标记语言，比如HTML，也可以使用象XML这样由相关人士自由决定的标记语言，这就是语言的可扩展性。XML是从SGML中简化修改出来的。它主要用到的有XML、XSL和XPath等。</p>
+<p>57.什么是Web Service？UDDI？</p>
+<p>答：Web Service便是基于网络的、分布式的模块化组件，它执行特定的任务，遵守具体的技术规范，这些规范使得Web Service能与其他兼容的组件进行互操作。UDDI 的目的是为电子商务建立标准；UDDI是一套基于Web的、分布式的、为Web Service提供的、信息注册中心的实现标准规范，同时也包含一组使企业能将自身提供的Web Service注册，以使别的企业能够发现的访问协议的实现标准。</p>
+<p>58.什么是ASP.NET中的用户控件？一般什么时候用？</p>
+<p>答：</p>
+<p>用户控件继承于UserControl，一般用在内容多为静态,或者少许会改变的情况下.类似ASP中的include..但是功能要强大的多。一般多个页面公共的部分会考虑到用用户控件，这样可以复用代码，减少代码量，而且维护方便，可以利用控件的输出缓存，提高程序的性能。</p>
+<p>59.列举一下你所了解的XML技术及其应用</p>
+<p>答：xml用于配置,用于保存静态数据类型，当数据量不是很的情况下也可以用来保存数据，接触XML最多的是web Services..和config</p>
+<p>61.什么是SOAP,有哪些应用。</p>
+<p>答：</p>
+<p>simple object access protocal,简单对象接受协议.以xml为基本编码结构,建立在已有通信协议上(如http,不过据说ms在搞最底层的架构在tcp/ip上的</p>
+<p>soap)的一种规范Web Service使用的协议。</p>
+<p>62.C#中 property 与 attribute的区别，他们各有什么用处，这种机制的好处在哪里？</p>
+<p>答：</p>
+<p>一个是属性，用于存取类的字段，一个是特性，用来标识类，方法等的附加性质。</p>
+<p>property可以控制对字段的访问。</p>
+<p>attribute一处定义，多处使用。</p>
+<p>63.XML 与 HTML 的主要区别</p>
+<p>答：</p>
+<p>\1. XML是区分大小写字母的，HTML不区分。</p>
+<p>\2. 在HTML中，如果上下文清楚地显示出段落或者列表键在何处结尾，那么你可以</p>
+<p>省略</p>或者之类的结束标记。在XML中，绝对不能省略掉结束标记。<p></p>
+<p>\3. 在XML中，拥有单个标记而没有匹配的结束标记的元素必须用一个 / 字符作为</p>
+<p>结尾。这样分析器就知道不用 查找结束标记了。</p>
+<p>\4. 在XML中，属性值必须分装在引号中。在HTML中，引号是可用可不用的。</p>
+<p>\5. 在HTML中，可以拥有不带值的属性名。在XML中，所有的属性都必须带有相应</p>
+<p>的值。</p>
+<p>64.c#中的三元运算符是？</p>
+<p>答：？：</p>
+<p>65.当整数a赋值给一个object对象时，整数a将会被？</p>
+<p>答：装箱。</p>
+<p>66.public static const int A=1;这段代码有错误么？是什么？</p>
+<p>答：const不能用static修饰。</p>
+<p>67.float f=-123.567F; int i=(int)f;i的值现在是<strong>_</strong>?</p>
+<p>答：-123。</p>
+<p>68.用sealed修饰的类有什么特点？</p>
+<p>答：密封，不能继承。</p>
+<p>69.在Asp.net中所有的自定义用户控件都必须继承自<strong><em>__</em></strong>?</p>
+<p>答：Control。</p>
+<p>70.在.Net中所有可序列化的类都被标记为<strong>_</strong>?</p>
+<p>答：[serializable]</p>
+<p>71.当类T只声明了私有实例构造函数时，则在T的程序文本外部，<strong><em>可以</em></strong>（可以 or 不可以）从T派生出新的类，不可以<em>__</em>（可以 or 不可以）直接创建T的任何实例。</p>
+<p>答：不可以，不可以。</p>
+<p>72..net的错误处理机制是什么？</p>
+<p>答：</p>
+<p>.net错误处理机制采用try-&gt;catch-&gt;finally结构，发生错误时，层层上抛，直到找到匹配的Catch为止。</p>
+<p>73.在.net（C# or vb.net）中如何取消一个窗体的关闭。</p>
+<p>答：private void Form1_Closing(object sender,</p>
+<p>System.ComponentModel.CancelEventArgs e)</p>
+<p>{</p>
+<p>e.Cancel=true;</p>
+<p>}</p>
+<p>74.在.net（C# or vb.net）中，Appplication.Exit 还是 Form.Close有什么</p>
+<p>不同？</p>
+<p>答：一个是退出整个应用程序，一个是关闭其中一个form。</p>
+<p>75.某一密码仅使用K、L、M、N、O共5个字母，密码中的单词从左向右排列，密</p>
+<p>码单词必须遵循如下规则：</p>
+<p>（1） 密码单词的最小长度是两个字母，可以相同，也可以不同</p>
+<p>（2） K不可能是单词的第一个字母</p>
+<p>（3） 如果L出现，则出现次数不止一次</p>
+<p>（4） M不能使最后一个也不能是倒数第二个字母</p>
+<p>（5） K出现，则N就一定出现</p>
+<p>（6） O如果是最后一个字母，则L一定出现</p>
+<p>问题一：下列哪一个字母可以放在LO中的O后面，形成一个3个字母的密码单词？</p>
+<p>A) K B)L C) M D) N</p>
+<p>答案:B</p>
+<p>问题二：如果能得到的字母是K、L、M，那么能够形成的两个字母长的密码单词的</p>
+<p>总数是多少？</p>
+<p>A)1个 B)3个 C)6个 D）9个</p>
+<p>答案:A</p>
+<p>问题三：下列哪一个是单词密码？</p>
+<p>A) KLLN B) LOML C) MLLO D)NMKO</p>
+<p>答案:C</p>
+<p>\76. 62-63=1 等式不成立，请移动一个数字（不可以移动减号和等于号），使得等</p>
+<p>式成立，如何移动？</p>
+<p>答案:62移动成2的6次方</p>
+<p>77.C#可否对内存进行直接的操作？</p>
+<p>答：</p>
+<p>在.net下，.net引用了垃圾回收（GC）功能，它替代了程序员 不过在C#中，不能直接实现Finalize方法，而是在析构函数中调用基类的Finalize()方法</p>
+<p>78.写一个HTML页面，实现以下功能，左键点击页面时显示“您好”，右键点击</p>
+<p>时显示“禁止右键”。并在2分钟后自动关闭页面。</p>
+<p>答：</p>
+<script language="javascript">
+
+setTimeout('window.close();',3000);
+
+function show()
+
+{
+
+if (window.event.button == 1)
+
+{
+
+alert("左");
+
 }
-var user = new Student("Jane", "M.", "User");
-document.body.innerHTML = greeter(user);
+
+else if (window.event.button == 2)
+
+{
+
+alert("右");
+
+}
+
+}
+
+</script>
+
+<p>79、大概描述一下ASP.NET服务器控件的生命周期</p>
+<p>答：</p>
+<p>初始化-&gt; 加载视图状态 -&gt;处理回发数据 -&gt;加载 -&gt;发送回发更改通知-&gt; 处理回发事件 -&gt;预呈现-&gt; 保存状态 -&gt;呈现-&gt; 处置 -&gt;卸载</p>
+<p><a href="http://www.lanhusoft.com/Article/85.html" target="_blank" rel="external">教你记住ASP.NET WebForm页面的生命周期</a> </p>
+<p>80、说说ASP.NET从IIS接受请求到响应的处理过程</p>
+<p><a href="http://www.lanhusoft.com/Article/149.html" target="_blank" rel="external">详解ASP.NET从IIS6 IIS7接受请求到响应的处理过程</a></p>
+<p>81.请简述面向对象的多态的特性及意义！</p>
+<p>答：</p>
+<p>面向对象的编程使用了派生继承以及虚函数机制.一个本来指向基类的对象指针可 以指向其派生类的.并访问从基类继承而来的成员变量和函数.而虚函数是专门为这个特性设计的,这个函数在每个基类的派生类中都是同一个名字,但函数体却并 不一定相同,派生类往往为实现自己的功能而修改这个虚函数.这样用一个指针就能够实现对多种不同的派生类的访问, 并实现其派生类的特定功能(代码 )</p>
+<p>82.，&amp;和&amp;&amp;的区别。</p>
+<p>&amp;是位运算符，表示按位与运算，&amp;&amp;是逻辑运算符，表示逻辑与（and）.</p>
+<p>83.a=10,b=15，在不用第三方变量的前提下，把a,b的值互换</p>
+<p>答：a=a+b;b=a-b;a=a-b;</p>
+<p>84.error和exception有什么区别?</p>
+<p>答：</p>
+<p>error 表示恢复不是不可能但很困难的情况下的一种严重问题。比如说内存溢出。不可能指望程序能处理这样的情况。</p>
+<p>exception 表示一种设计或实现问题。也就是说，它表示如果程序运行正常，从不会发生的情况。</p>
+<p>85.&lt;%# %&gt; 和 &lt;% %&gt; 有什么区别？</p>
+<p>答：</p>
+<p>&lt;%# %&gt;表示绑定的数据源</p>
+<p>&lt;% %&gt;是服务器端代码块</p>
+<p>86.你觉得ASP.NET 2.0（VS2005）和你以前使用的开发工具（.Net 1.0或其他）有什么最大的区别？你在以前的平台上使用的哪些开发思（pattern /architecture）可以移植到ASP.NET 2.0上 (或者已经内嵌在ASP.NET 2.0中)</p>
+<p>答：</p>
+<p>1、 ASP.NET 2.0 把一些代码进行了封装打包,所以相比1.0相同功能减少了很</p>
+<p>多代码.</p>
+<p>2 、同时支持代码分离和页面嵌入服务器端代码两种模式,以前1.0版本,.NET提示帮助只有在分离的代码文件,无 法 在页面嵌入服务器端代码获得帮助提示,</p>
+<p>3 、代码和设计界面切换的时候,2.0支持光标定位.这个我比较喜欢</p>
+<p>4、 在绑定数据,做表的分页.Update,Delete,等操作都可以可视化操作,方便了初学者</p>
+<p>5 、在ASP.NET中增加了40多个新的控件,减少了工作量</p>
+<p>87.重载与覆盖的区别？</p>
+<p>答：</p>
+<p>1、方法的覆盖是子类和父类之间的关系，是垂直关系；方法的重载是同一个类中方法之间的关系，是水平关系</p>
+<p>2、覆盖只能由一个方法，或只能由一对方法产生关系；方法的重载是多个方法之间的关系。</p>
+<p>3、覆盖要求参数列表相同；重载要求参数列表不同。</p>
+<p>4、覆盖关系中，调用那个方法体，是根据对象的类型（对象对应存储空间类型）来决定；重载关系，是根据调 用时的实参表与形参表来选择方法体的。</p>
+<p>88.什么是WSE？目前最新的版本是多少？</p>
+<p>答：WSE (Web Service Extension) 包来提供最新的WEB服务安全保证，目前最新版本2.0。</p>
+<p>89.abstract class和interface有什么区别?</p>
+<p>答：</p>
+<p>声明方法的存在而不去实现它的类被叫做抽象类（abstract class），它用于要创建一个体现某些基本行为的类，并为该类声明方法，但不能在该类中实现该类的情况。不能创建abstract 类的实例。然而可以创建一个变量，其类型是一个抽象类，并让它指向具体子类的一个实例。不能有抽象构造函数或抽象静态方法。Abstract 类的子类为它们父类中的所有抽象方法提供实现，否则它们也是抽象类为。取而代之，在子类中实现该方法。知道其行为的其它类可以在类中实现这些方法。</p>
+<p>接口（interface）是抽象类的变体。在接口中，所有方法都是抽象的。多继承性可通过实现这样的接口而获得。接口中的所有方法都是抽象的，没有一个有程序体。接口只可以定义static final成员变量。接口的实现与子类相似，除了该实现类不能从接口定义中继承行为。当类实现特殊接口时，它定义（即将程序体给予）所有这种接口的方法。然后，它可以在实现了该接口的类的任何对象上调用接口的方法。由于有抽象类，它允许使用接口名作为引用变量的类型。通常的动态联编将生效。引用可以转换到接口类型或从接口类型转换，instanceof 运算符可以用来决定某对象的类是否实现了接口。</p>
+<p>90、概述O/R Mapping 的原理，说说一你用过的所有ORM框架，你最喜欢哪一种，为什么？有没有觉得可以改进的地方？</p>
+<p>答：利用反射，配置将对象和数据库表映射。</p>
+<h2 id="三、非技术问题"><a href="#三、非技术问题" class="headerlink" title="三、非技术问题"></a>三、非技术问题</h2><p>1、对你来说工作中最重要的是什么？ </p>
+<p>答：团队目标的实现。（这是所有公司希望员工拥有的素质）</p>
+<p>2、为什么愿意为本公司工作？ </p>
+<p> 答：因为我认为我可以与贵公司取得共同的发展。（暗示留下我可能为公司带来的益处）</p>
+<p>3、你认为公司为什么要聘用你？ </p>
+<p>答：因为我认为我的能力和性格完全适合贵公司的这个职位。</p>
+<p>4、如果我们聘用你，你会待多久？ </p>
+<p>答：我说过了，我想与贵公司共同发展，当然我相信这种发展是可持续的，我不愿意失去这个发展机会。（考虑忠诚度问题，这样回答比较中肯，乱发誓在陌生人面前是完全没用的）</p>
+<p>5、在你看来，我们会为你的职业生涯规划一个怎样的环境？ </p>
+<p>答：我有一个比较长远的职业生涯规划目标，但不管是近期目标还是中长期目标，贵公司的环境恰恰与我的计划相吻合，我相信一定能在贵公司的帮助下实现自己的规划。（看你的计划性，如果知道公司的一些具体情况，也可顺便拍拍马屁，但不能过头）</p>
+<p>6、你的优点是什么？ </p>
+<p>答：优点是不喜欢多说，喜欢多做。（每个老板都喜欢的脚踏实地而不是夸夸其谈的员工） </p>
+<p>7、什么是你最大的弱点？友情提示：不妨借自我批评来自我表扬。 </p>
+<p>答1：我的短处是心比较软，总是不擅于推辞别人的要求。（体现你的乐于助人）</p>
+<p>答2：我过去不太注重与人的沟通，觉得只要技术好就可以了，但随着年龄的增长和接触更多的人，我觉得与人沟通也很重要，我现在正努力地锻炼提高自己的沟通能力</p>
+<p>8、你的业余时间（爱好）喜欢做什么？ </p>
+<p>答：我经常会去打篮球，喜欢户外运动，听音乐和看电影</p>
+<p>9、你对薪水的期望是多少？ </p>
+<p>答：望可以根据贵公司的情况以及本地软件业行情还有我的能力给出一个合理的薪金。</p>
+<p>10、如果……的话，你怎么办？ </p>
+<p>答：如果在我的利益呵公司的利益之间选择，我会毫不犹豫选择公司。</p>
+<p>11、你对我们公司有什么想法？</p>
+<p>友情提示：这可体现你对公司前景的关注，切忌回答：“都很好，没什么想法。”，参考回答：“贵公司XX地方做的很好，但XX地方需要加强”， 不宜多说。</p>
+<h2 id="2-Redis和memcached各有什么优缺点，主要的应用场景是什么"><a href="#2-Redis和memcached各有什么优缺点，主要的应用场景是什么" class="headerlink" title="2.Redis和memcached各有什么优缺点，主要的应用场景是什么"></a>2.Redis和memcached各有什么优缺点，主要的应用场景是什么</h2><p><a href="https://www.zhihu.com/question/19829601" target="_blank" rel="external">知乎Redis和memcached的优缺点</a></p>
+<h2 id="3-设计模式"><a href="#3-设计模式" class="headerlink" title="3.设计模式"></a>3.设计模式</h2><h2 id="4-真实面试题"><a href="#4-真实面试题" class="headerlink" title="4.真实面试题"></a>4.真实面试题</h2><p>如：猫抓老鼠问题</p>
+<h2 id="5-MVC相关面试题"><a href="#5-MVC相关面试题" class="headerlink" title="5.MVC相关面试题"></a>5.MVC相关面试题</h2><p>6.其他面试题参考</p>
+<p><a href="http://blog.csdn.net/xc917563264/article/details/65628636" target="_blank" rel="external">面试题（高级特性）</a></p>
+<p><a href="http://blog.csdn.net/xc917563264/article/details/68483201" target="_blank" rel="external">面试题（ASP.NET高级进阶）</a></p>
 
       
 
@@ -816,7 +1237,110 @@ document.body.innerHTML = greeter(user);
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter3/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/11/06/11/c#面试题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-11/2017.11.5 思考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="2017-11-5-思考"><a href="#2017-11-5-思考" class="headerlink" title="2017.11.5 思考"></a>2017.11.5 思考</h1><p>做事情要量力而行。不能做自己做不到的事情，不能答应别人自己做不到的承诺。</p>
+<p>要评估下自己。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/05/11/2017.11.5 思考/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-11/node.js可能想到的面试题汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="node-js能想到的面试题汇总"><a href="#node-js能想到的面试题汇总" class="headerlink" title="node.js能想到的面试题汇总"></a>node.js能想到的面试题汇总</h1><p>做成大纲式。</p>
+<p>1.实现一个Promise</p>
+<blockquote>
+</blockquote>
+<p>2.分布式怎么做，怎么优化处理</p>
+<p>3.热更新</p>
+<p>4.事件</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/03/11/node.js可能想到的面试题汇总/">展开全文 >></a>
         </p>
       
 
@@ -848,7 +1372,7 @@ document.body.innerHTML = greeter(user);
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 

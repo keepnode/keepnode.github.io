@@ -169,36 +169,70 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-html/[转]patch和put方法的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-11/2017.11.3 阅读《深入浅出node.js》感触" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="【转】patch和put方法的区别"><a href="#【转】patch和put方法的区别" class="headerlink" title="【转】patch和put方法的区别"></a>【转】patch和put方法的区别</h1><p>今天看了下项目中使用到patch，于是把patch的相关用法学习了下。找到一篇好文章转载记录下。</p>
-<p>原文出处：<a href="https://segmentfault.com/q/1010000005685904" target="_blank" rel="external">查看详情</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PATCH方法是新引入的，是对PUT方法的补充，用来对已知资源进行局部更新</div></pre></td></tr></table></figure>
-<p><strong>问题：</strong><br>什么是局部更新？</p>
-<p>比如我在一个restful的编辑页面，进行更新操作，用put和PATCH都能成功，可是不太理解什么叫局部。</p>
-<p><strong>解答：</strong></p>
-<p><code>patch</code>方法用来更新局部资源，这句话我们该如何理解？</p>
-<p>假设我们有一个<code>UserInfo</code>，里面有<code>userId</code>， <code>userName</code>， <code>userGender</code>等10个字段。可你的编辑功能因为需求，在某个特别的页面里只能修改<code>userName</code>，这时候的更新怎么做？</p>
-<p>人们通常(为徒省事)把一个包含了修改后<code>userName</code>的完整<code>userInfo</code>对象传给后端，做完整更新。但仔细想想，这种做法感觉有点二，而且真心浪费带宽(纯技术上讲，你不关心带宽那是你土豪)。</p>
-<p>于是<code>patch</code>诞生，只传一个<code>userName</code>到指定资源去，表示该请求是一个局部更新，后端仅更新接收到的字段。</p>
-<p>而<code>put</code>虽然也是更新资源，但要求前端提供的一定是一个完整的资源对象，理论上说，如果你用了<code>put</code>，但却没有提供完整的<code>UserInfo</code>，那么缺了的那些字段应该被清空</p>
-<p>补充:</p>
-<p>最后再补充一句，<code>restful</code>只是标准，标准的意思是如果在大家都依此行事的话，沟通成本会很低，开发效率就高。但并非强制(也没人强制得了)，所以你说在你的程序里把方法名从<code>put</code>改成<code>patch</code>没有任何影响，那是自然，因为你的后端程序并没有按照标准对两个方法做不同处理，她的表现自然是一样的</p>
-<p><strong>补充：</strong></p>
-<p>补充一下，PATCH 与 PUT 属性上的一个重要区别还在于：PUT 是幂等的，而 PATCH 不是幂等的。幂等是一个数学和计算机学概念，在计算机范畴内表示一个操作执行任意次对系统的影响跟一次是相同。</p>
-<p>在HTTP/1.1规范中幂等性的定义是:</p>
+        <h1 id="2017-11-3-阅读《深入浅出node-js》感触"><a href="#2017-11-3-阅读《深入浅出node-js》感触" class="headerlink" title="2017.11.3 阅读《深入浅出node.js》感触"></a>2017.11.3 阅读《深入浅出node.js》感触</h1><p>今天看《深入浅出node.js》这本书，发现作者的功底之深，简直深不可测。真是大神级人物啊！</p>
+<p>以后要多读书，少玩游戏，甚至不玩游戏。把时间都用在看书学习别人代码上。</p>
+<p>看作者写的文章，我的一个感受就是，真是兴趣就是最好的老师！</p>
+<p>现在玩node.js，已经很感兴趣了。一定要深入研究，把前端的知识点也补上。</p>
+<p>准备完全转node.js工程师。</p>
+<p>把自己能想到的所有面试官可能问道的问题，都汇总下。一个一个的解答。一个一个的练习，掌握。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/03/11/2017.11.3 阅读《深入浅出node.js》感触/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-command/touch命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>touch命令-创建文件</p>
+<p>touch 创建文件命令。</p>
+<p>eg:</p>
 <blockquote>
-<p>Methods can also have the property of “idempotence” in that (aside from error or expiration issues) the side-effects of N &gt; 0 identical requests is the same as for a single request.</p>
+<p>touch gen.js</p>
 </blockquote>
-<p>如：POST 方法不是幂等的，若反复执行多次对应的每一次都会创建一个新资源。如果请求超时，则需要回答这一问题：资源是否已经在服务端创建了？能否再重试一次或检查资源列表？而对于幂等方法不存在这一个问题，我们可以放心地多次请求。</p>
-<p>参考文献：</p>
-<ol>
-<li><a href="http://www.cnblogs.com/weidagang2046/archive/2011/06/04/idempotence.html">理解 HTTP 幂等性</a></li>
-<li><a href="http://sofish.github.io/restcookbook/http%20methods/idempotency" target="_blank" rel="external">Restful 手册</a></li>
-</ol>
 
       
 
@@ -211,7 +245,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/html/[转]patch和put方法的区别/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/10/18/command/touch命令/">展开全文 >></a>
         </p>
       
 
@@ -241,171 +275,13 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-html/[转]HTML head 头标签" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-interview/summary" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="转-HTML-head-头标签"><a href="#转-HTML-head-头标签" class="headerlink" title="[转]HTML head 头标签"></a>[转]HTML head 头标签</h1><p>原文出处：<a href="http://fex.baidu.com/blog/2014/10/html-head-tags/" target="_blank" rel="external">查看详情</a></p>
-<p>HTML head 头部分的标签、元素有很多，涉及到浏览器对网页的渲染，SEO 等等，而各个浏览器内核以及各个国内浏览器厂商都有些自己的标签元素,这就造成了很多差异性。移动互联网时代，head 头部结构，移动端的 meta 元素，显得更为重要。了解每个标签的意义，写出满足自己需求的 head 头标签，是本文的目的。本篇以<a href="https://github.com/yisibl/blog/issues/1" target="_blank" rel="external">一丝的文章</a>为基础，进行扩展总结介绍常用的 head 中各个标签、元素的意义以及使用场景。</p>
-<h3 id="DOCTYPE"><a href="#DOCTYPE" class="headerlink" title="DOCTYPE"></a>DOCTYPE</h3><p>DOCTYPE(Document Type)，该声明位于文档中最前面的位置，处于 <code>html</code> 标签之前，此标签告知浏览器文档使用哪种 HTML 或者 XHTML 规范。</p>
-<p>DTD(Document Type Definition) 声明以 <code>` 开始，不区分大小写，前面没有任何内容，如果有其他内容(空格除外)会使浏览器在 IE 下开启怪异模式(quirks mode)渲染网页。公共 DTD，名称格式为</code>注册//组织//类型 标签//语言<code>,</code>注册<code>指组织是否由国际标准化组织(ISO)注册，</code>+<code>表示是，</code>-<code>表示不是。</code>组织<code>即组织名称，如：W3C。</code>类型<code>一般是 DTD。</code>标签<code>是指定公开文本描述，即对所引用的公开文本的唯一描述性名称，后面可附带版本号。最后</code>语言`是 DTD 语言的 ISO 639 语言标识符，如：EN 表示英文，ZH 表示中文。XHTML 1.0 可声明三种 DTD 类型。分别表示严格版本，过渡版本，以及基于框架的 HTML 文档。</p>
-<ul>
-<li><p>HTML 4.01 strict</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>HTML 4.01 Transitional</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>HTML 4.01 Frameset</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Frameset//EN&quot; &quot;http://www.w3.org/TR/html4/frameset.dtd&quot;&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>最新 HTML5 推出更加简洁的书写，它向前向后兼容，推荐使用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>在 HTML中 <code>doctype</code> 有两个主要目的。</p>
-<ul>
-<li><p>对文档进行有效性验证。</p>
-<p>它告诉用户代理和校验器这个文档是按照什么 DTD 写的。这个动作是被动的，每次页面加载时，浏览器并不会下载 DTD 并检查合法性，只有当手动校验页面时才启用。</p>
-</li>
-<li><p>决定浏览器的呈现模式</p>
-<p>对于实际操作，通知浏览器读取文档时用哪种解析算法。如果没有写，则浏览器则根据自身的规则对代码进行解析，可能会严重影响 html 排版布局。浏览器有三种方式解析 HTML 文档。 <em> 非怪异（标准）模式 </em> 怪异模式 * 部分怪异（近乎标准）模式 关于IE浏览器的文档模式，浏览器模式，严格模式，怪异模式，DOCTYPE 标签，可详细阅读<a href="http://padding.me/blog/2014/07/04/mode-or-standard/" target="_blank" rel="external">模式？标准！</a>的内容。</p>
-</li>
-</ul>
-<h3 id="charset"><a href="#charset" class="headerlink" title="charset"></a>charset</h3><p>声明文档使用的字符编码，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</div></pre></td></tr></table></figure>
-<p>html5 之前网页中会这样写：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;</div></pre></td></tr></table></figure>
-<p>这两个是等效的，具体可移步阅读：<a href="http://stackoverflow.com/questions/4696499/meta-charset-utf-8-vs-meta-http-equiv-content-type" target="_blank" rel="external"><code>vs</code></a>，所以建议使用较短的，易于记忆。</p>
-<h3 id="lang属性"><a href="#lang属性" class="headerlink" title="lang属性"></a>lang属性</h3><p>简体中文</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html lang=&quot;zh-cmn-Hans&quot;&gt;</div></pre></td></tr></table></figure>
-<p>繁体中文</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html lang=&quot;zh-cmn-Hant&quot;&gt;</div></pre></td></tr></table></figure>
-<p>为什么 <code>lang=&quot;zh-cmn-Hans&quot;</code> 而不是我们通常写的 <code>lang=&quot;zh-CN&quot;</code> 呢，请移步阅读: <a href="http://zhi.hu/XyIa" target="_blank" rel="external">页头部的声明应该是用 lang=”zh” 还是 lang=”zh-cn”</a>。</p>
-<h3 id="优先使用-IE-最新版本和-Chrome"><a href="#优先使用-IE-最新版本和-Chrome" class="headerlink" title="优先使用 IE 最新版本和 Chrome"></a>优先使用 IE 最新版本和 Chrome</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;</div></pre></td></tr></table></figure>
-<h3 id="360-使用Google-Chrome-Frame"><a href="#360-使用Google-Chrome-Frame" class="headerlink" title="360 使用Google Chrome Frame"></a>360 使用Google Chrome Frame</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;</div></pre></td></tr></table></figure>
-<p>360 浏览器就会在读取到这个标签后，立即切换对应的极速核。 另外为了保险起见再加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge,chrome=1&quot;&gt;</div></pre></td></tr></table></figure>
-<p>这样写可以达到的效果是如果安装了 Google Chrome Frame，则使用 GCF 来渲染页面，如果没有安装 GCF，则使用最高版本的 IE 内核进行渲染。</p>
-<p>相关链接：<a href="http://se.360.cn/v6/help/meta.html" target="_blank" rel="external">浏览器内核控制 Meta 标签说明文档</a></p>
-<h3 id="百度禁止转码"><a href="#百度禁止转码" class="headerlink" title="百度禁止转码"></a>百度禁止转码</h3><p>通过百度手机打开网页时，百度可能会对你的网页进行转码，脱下你的衣服，往你的身上贴狗皮膏药的广告，为此可在 head 内添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;no-siteapp&quot; /&gt;</div></pre></td></tr></table></figure>
-<p>相关链接：<a href="http://m.baidu.com/pub/help.php?pn=22&amp;ssid=0&amp;from=844b&amp;bd_page_type=1" target="_blank" rel="external">SiteApp 转码声明</a></p>
-<h3 id="SEO-优化部分"><a href="#SEO-优化部分" class="headerlink" title="SEO 优化部分"></a>SEO 优化部分</h3><ul>
-<li><p>页面标题``标签(head 头部必须)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;title&gt;your title&lt;/title&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>页面关键词 keywords</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;keywords&quot; content=&quot;your keywords&quot;&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>页面描述内容 description</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;description&quot; content=&quot;your description&quot;&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>定义网页作者 author</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;author&quot; content=&quot;author,email address&quot;&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>定义网页搜索引擎索引方式，robotterms 是一组使用英文逗号「,」分割的值，通常有如下几种取值：none，noindex，nofollow，all，index和follow。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;robots&quot; content=&quot;index,follow&quot;&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>相关链接：<a href="http://msdn.microsoft.com/zh-cn/library/ff724037/(v=expression.40/" target="_blank" rel="external">WEB1038 - 标记包含无效的值</a>.aspx)</p>
-<h3 id="viewport"><a href="#viewport" class="headerlink" title="viewport"></a>viewport</h3><p><code>viewport</code> 可以让布局在移动浏览器上显示的更好。 通常会写</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</div></pre></td></tr></table></figure>
-<p><code>width=device-width</code> 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边(<a href="http://bigc.at/ios-webapp-viewport-meta.orz" target="_blank" rel="external">http://bigc.at/ios-webapp-viewport-meta.orz</a>)</p>
-<p>content 参数：</p>
-<ul>
-<li><p>width viewport 宽度(数值/device-width)</p>
-</li>
-<li><p>height viewport 高度(数值/device-height)</p>
-</li>
-<li><p>initial-scale 初始缩放比例</p>
-</li>
-<li><p>maximum-scale 最大缩放比例</p>
-</li>
-<li><p>minimum-scale 最小缩放比例</p>
-</li>
-<li><p>user-scalable 是否允许用户缩放(yes/no)</p>
-</li>
-<li><p>minimal-ui iOS 7.1 beta 2 中新增属性，可以在页面加载时最小化上下状态栏。这是一个布尔值，可以直接这样写：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, minimal-ui&quot;&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>而如果你的网站不是响应式的，请不要使用 initial-scale 或者禁用缩放。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,user-scalable=yes&quot;&gt;</div></pre></td></tr></table></figure>
-<p>相关链接：<a href="http://www.qianduan.net/non-responsive-design-viewport.html" target="_blank" rel="external">非响应式设计的viewport</a></p>
-<p>适配 iPhone 6 和 iPhone 6plus 则需要写：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=375&quot;&gt;</div><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=414&quot;&gt;</div></pre></td></tr></table></figure>
-<p>大部分 4.7~5 寸的安卓设备的 viewport 宽设为 360px，iPhone 6 上却是 375px，大部分 5.5 寸安卓机器（比如说三星 Note）的 viewport 宽为 400，iPhone 6 plus 上是 414px。</p>
-<h3 id="ios-设备"><a href="#ios-设备" class="headerlink" title="ios 设备"></a>ios 设备</h3><p>添加到主屏后的标题（iOS 6 新增）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;标题&quot;&gt; &lt;!-- 添加到主屏后的标题（iOS 6 新增） --&gt;</div></pre></td></tr></table></figure>
-<p>是否启用 WebApp 全屏模式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt; &lt;!-- 是否启用 WebApp 全屏模式 --&gt;</div></pre></td></tr></table></figure>
-<p>设置状态栏的背景颜色</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot; /&gt; &lt;!-- 设置状态栏的背景颜色，只有在 `&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;` 时生效 --&gt;</div></pre></td></tr></table></figure>
-<p>只有在 “apple-mobile-web-app-capable” content=”yes” 时生效</p>
-<p>content 参数：</p>
-<ul>
-<li>default 默认值。</li>
-<li>black 状态栏背景是黑色。</li>
-<li>black-translucent 状态栏背景是黑色半透明。 如果设置为 default 或 black ,网页内容从状态栏底部开始。 如果设置为 black-translucent ,网页内容充满整个屏幕，顶部会被状态栏遮挡。</li>
-</ul>
-<p>禁止数字识自动别为电话号码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot; /&gt; &lt;!-- 禁止数字识自动别为电话号码 --&gt;</div></pre></td></tr></table></figure>
-<h3 id="iOS-图标"><a href="#iOS-图标" class="headerlink" title="iOS 图标"></a>iOS 图标</h3><p>rel 参数： apple-touch-icon 图片自动处理成圆角和高光等效果。 apple-touch-icon-precomposed 禁止系统自动添加效果，直接显示设计原图。 iPhone 和 iTouch，默认 57x57 像素，必须有</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;/apple-touch-icon-57x57-precomposed.png&quot; /&gt; &lt;!-- iPhone 和 iTouch，默认 57x57 像素，必须有 --&gt;</div></pre></td></tr></table></figure>
-<p>iPad，72x72 像素，可以没有，但推荐有</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;72x72&quot; href=&quot;/apple-touch-icon-72x72-precomposed.png&quot; /&gt; &lt;!-- iPad，72x72 像素，可以没有，但推荐有 --&gt;</div></pre></td></tr></table></figure>
-<p>Retina iPhone 和 Retina iTouch，114x114 像素，可以没有，但推荐有</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;/apple-touch-icon-114x114-precomposed.png&quot; /&gt; &lt;!-- Retina iPhone 和 Retina iTouch，114x114 像素，可以没有，但推荐有 --&gt;</div></pre></td></tr></table></figure>
-<p>Retina iPad，144x144 像素，可以没有，但推荐有</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;/apple-touch-icon-144x144-precomposed.png&quot; /&gt; &lt;!-- Retina iPad，144x144 像素，可以没有，但推荐有 --&gt;</div></pre></td></tr></table></figure>
-<p>IOS 图标大小在iPhone 6 plus上是180×180，iPhone 6 是120x120。 适配iPhone 6 plus，则需要在<head>中加上这段</head></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;180x180&quot; href=&quot;retinahd_icon.png&quot;&gt;</div></pre></td></tr></table></figure>
-<p>###iOS 启动画面</p>
-<p>官方文档：<a href="https://developer.apple.com/library/ios/qa/qa1686/_index.html" target="_blank" rel="external">https://developer.apple.com/library/ios/qa/qa1686/_index.html</a> 参考文章：<a href="http://wxd.ctrip.com/blog/2013/09/ios7-hig-24/" target="_blank" rel="external">http://wxd.ctrip.com/blog/2013/09/ios7-hig-24/</a></p>
-<p>iPad 的启动画面是不包括状态栏区域的。</p>
-<p>iPad 竖屏 768 x 1004（标准分辨率）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;apple-touch-startup-image&quot; sizes=&quot;768x1004&quot; href=&quot;/splash-screen-768x1004.png&quot; /&gt; &lt;!-- iPad 竖屏 768 x 1004（标准分辨率） --&gt;</div></pre></td></tr></table></figure>
-<p>iPad 竖屏 1536x2008（Retina）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;apple-touch-startup-image&quot; sizes=&quot;1536x2008&quot; href=&quot;/splash-screen-1536x2008.png&quot; /&gt; &lt;!-- iPad 竖屏 1536x2008（Retina） --&gt;</div></pre></td></tr></table></figure>
-<p>iPad 横屏 1024x748（标准分辨率）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;apple-touch-startup-image&quot; sizes=&quot;1024x748&quot; href=&quot;/Default-Portrait-1024x748.png&quot; /&gt; &lt;!-- iPad 横屏 1024x748（标准分辨率） --&gt;</div></pre></td></tr></table></figure>
-<p>iPad 横屏 2048x1496（Retina）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;apple-touch-startup-image&quot; sizes=&quot;2048x1496&quot; href=&quot;/splash-screen-2048x1496.png&quot; /&gt; &lt;!-- iPad 横屏 2048x1496（Retina） --&gt;</div></pre></td></tr></table></figure>
-<p>iPhone 和 iPod touch 的启动画面是包含状态栏区域的。</p>
-<p>iPhone/iPod Touch 竖屏 320x480 (标准分辨率)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;apple-touch-startup-image&quot; href=&quot;/splash-screen-320x480.png&quot; /&gt; &lt;!-- iPhone/iPod Touch 竖屏 320x480 (标准分辨率) --&gt;</div></pre></td></tr></table></figure>
-<p>iPhone/iPod Touch 竖屏 640x960 (Retina)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;apple-touch-startup-image&quot; sizes=&quot;640x960&quot; href=&quot;/splash-screen-640x960.png&quot; /&gt; &lt;!-- iPhone/iPod Touch 竖屏 640x960 (Retina) --&gt;</div></pre></td></tr></table></figure>
-<p>iPhone 5/iPod Touch 5 竖屏 640x1136 (Retina)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;apple-touch-startup-image&quot; sizes=&quot;640x1136&quot; href=&quot;/splash-screen-640x1136.png&quot; /&gt; &lt;!-- iPhone 5/iPod Touch 5 竖屏 640x1136 (Retina) --&gt;</div></pre></td></tr></table></figure>
-<p>添加智能 App 广告条 Smart App Banner（iOS 6+ Safari）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;apple-itunes-app&quot; content=&quot;app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL&quot;&gt; &lt;!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） --&gt;</div></pre></td></tr></table></figure>
-<p>iPhone 6对应的图片大小是750×1294，iPhone 6 Plus 对应的是1242×2148 。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;apple-touch-startup-image&quot; href=&quot;launch6.png&quot; media=&quot;(device-width: 375px)&quot;&gt;</div><div class="line"></div><div class="line">&lt;link rel=&quot;apple-touch-startup-image&quot; href=&quot;launch6plus.png&quot; media=&quot;(device-width: 414px)&quot;&gt;</div></pre></td></tr></table></figure>
-<h3 id="Windows-8"><a href="#Windows-8" class="headerlink" title="Windows 8"></a>Windows 8</h3><p>Windows 8 磁贴颜色</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;msapplication-TileColor&quot; content=&quot;#000&quot;/&gt; &lt;!-- Windows 8 磁贴颜色 --&gt;</div></pre></td></tr></table></figure>
-<p>Windows 8 磁贴图标</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;msapplication-TileImage&quot; content=&quot;icon.png&quot;/&gt; &lt;!-- Windows 8 磁贴图标 --&gt;</div></pre></td></tr></table></figure>
-<h3 id="rss订阅"><a href="#rss订阅" class="headerlink" title="rss订阅"></a>rss订阅</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;RSS&quot; href=&quot;/rss.xml&quot; /&gt; &lt;!-- 添加 RSS 订阅 --&gt;</div></pre></td></tr></table></figure>
-<h3 id="favicon-icon"><a href="#favicon-icon" class="headerlink" title="favicon icon"></a>favicon icon</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/ico&quot; href=&quot;/favicon.ico&quot; /&gt; &lt;!-- 添加 favicon icon --&gt;</div></pre></td></tr></table></figure>
-<p>比较详细的 favicon 介绍可参考<a href="https://github.com/audreyr/favicon-cheat-sheet" target="_blank" rel="external">https://github.com/audreyr/favicon-cheat-sheet</a></p>
-<h3 id="移动端的meta"><a href="#移动端的meta" class="headerlink" title="移动端的meta"></a>移动端的meta</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, user-scalable=no&quot; /&gt;</div><div class="line">&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;</div><div class="line">&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot; /&gt;</div><div class="line">&lt;meta name=&quot;format-detection&quot;content=&quot;telephone=no, email=no&quot; /&gt;</div><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, user-scalable=no&quot; /&gt;</div><div class="line">&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&lt;!-- 删除苹果默认的工具栏和菜单栏 --&gt;</div><div class="line">&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot; /&gt;&lt;!-- 设置苹果工具栏颜色 --&gt;</div><div class="line">&lt;meta name=&quot;format-detection&quot; content=&quot;telphone=no, email=no&quot; /&gt;&lt;!-- 忽略页面中的数字识别为电话，忽略email识别 --&gt;</div><div class="line">&lt;!-- 启用360浏览器的极速模式(webkit) --&gt;</div><div class="line">&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;</div><div class="line">&lt;!-- 避免IE使用兼容模式 --&gt;</div><div class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</div><div class="line">&lt;!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 --&gt;</div><div class="line">&lt;meta name=&quot;HandheldFriendly&quot; content=&quot;true&quot;&gt;</div><div class="line">&lt;!-- 微软的老式浏览器 --&gt;</div><div class="line">&lt;meta name=&quot;MobileOptimized&quot; content=&quot;320&quot;&gt;</div><div class="line">&lt;!-- uc强制竖屏 --&gt;</div><div class="line">&lt;meta name=&quot;screen-orientation&quot; content=&quot;portrait&quot;&gt;</div><div class="line">&lt;!-- QQ强制竖屏 --&gt;</div><div class="line">&lt;meta name=&quot;x5-orientation&quot; content=&quot;portrait&quot;&gt;</div><div class="line">&lt;!-- UC强制全屏 --&gt;</div><div class="line">&lt;meta name=&quot;full-screen&quot; content=&quot;yes&quot;&gt;</div><div class="line">&lt;!-- QQ强制全屏 --&gt;</div><div class="line">&lt;meta name=&quot;x5-fullscreen&quot; content=&quot;true&quot;&gt;</div><div class="line">&lt;!-- UC应用模式 --&gt;</div><div class="line">&lt;meta name=&quot;browsermode&quot; content=&quot;application&quot;&gt;</div><div class="line">&lt;!-- QQ应用模式 --&gt;</div><div class="line">&lt;meta name=&quot;x5-page-mode&quot; content=&quot;app&quot;&gt;</div><div class="line">&lt;!-- windows phone 点击无高光 --&gt;</div><div class="line">&lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot;&gt;</div><div class="line">&lt;!-- 适应移动端end --&gt;</div></pre></td></tr></table></figure>
-<p>这是来自 <a href="http://weibo.com/toooobug" target="_blank" rel="external">toobug</a> 的分享总结。</p>
-<p>更多的 meta 标签参考</p>
-<ul>
-<li><a href="http://code.lancepollard.com/complete-list-of-html-meta-tags/" target="_blank" rel="external">COMPLETE LIST OF HTML META TAGS</a></li>
-<li><a href="http://www.iacquire.com/blog/18-meta-tags-every-webpage-should-have-in-2013" target="_blank" rel="external">18 Meta Tags Every Webpage Should Have in 2013</a></li>
-</ul>
-<p>参考文章：</p>
-<ul>
-<li><a href="https://github.com/yisibl/blog/issues/1" target="_blank" rel="external">常用的 HTML 头部标签</a></li>
-<li><a href="https://gist.github.com/paddingme/6182708733917ae36331" target="_blank" rel="external">html5_header</a></li>
-<li><a href="http://amazeui.org/css/" target="_blank" rel="external">amazeui css</a></li>
-<li><a href="http://www.douban.com/note/170560091/" target="_blank" rel="external">DOCTYPE</a></li>
-<li><a href="http://www.uisdc.com/ios8-ten-new-feature" target="_blank" rel="external">WEB 工程师和设计师必学的 10 个 IOS 8 新鲜改变</a></li>
-</ul>
+        <h2 id="面试题汇总"><a href="#面试题汇总" class="headerlink" title="面试题汇总"></a>面试题汇总</h2><p>这里汇总见过的面试题，所谓知己知彼百战不殆！熟悉别人才能做到更好。</p>
+<p><a href="https://lenshen.com/2017/08/27/alibaba-interview/" target="_blank" rel="external">阿里校招前端面经</a></p>
 
       
 
@@ -418,7 +294,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/html/[转]HTML head 头标签/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/08/28/interview/summary/">展开全文 >></a>
         </p>
       
 
@@ -448,45 +324,14 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-html/浏览器内核控制 meta标签" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-docker/docker-exec" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="浏览器内核控制-meta标签"><a href="#浏览器内核控制-meta标签" class="headerlink" title="浏览器内核控制 meta标签"></a>浏览器内核控制 meta标签</h1><p>国内的浏览器普遍是用的双核浏览器。但是页面一般在IE下呈现效果较弱，国内的360出了一个解决方案。具体<a href="http://se.360.cn/v6/help/meta.html" target="_blank" rel="external">查看详情</a></p>
-<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><p>在head标签中添加一行代码：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit|ie-comp|ie-stand"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>content的取值为webkit,ie-comp,ie-stand之一，区分大小写，分别代表用webkit内核，IE兼容内核，IE标准内核。<br>若页面需默认用极速核，增加标签：<meta name="renderer" content="webkit"><br>若页面需默认用ie兼容内核，增加标签：<meta name="renderer" content="ie-comp"><br>若页面需默认用ie标准内核，增加标签：<meta name="renderer" content="ie-stand"></p>
-<h3 id="各渲染内核的技术细节"><a href="#各渲染内核的技术细节" class="headerlink" title="各渲染内核的技术细节"></a>各渲染内核的技术细节</h3><table>
-<thead>
-<tr>
-<th>内核</th>
-<th>Webkit</th>
-<th>IE兼容</th>
-<th>IE标准</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>文档模式</td>
-<td>Chrome 21</td>
-<td>IE6/7</td>
-<td>IE9/IE10/IE11(取决于用户的IE)</td>
-</tr>
-<tr>
-<td>HTML5支持</td>
-<td>YES</td>
-<td>NO</td>
-<td>YES</td>
-</tr>
-<tr>
-<td>ActiveX控件支持</td>
-<td>NO</td>
-<td>YES</td>
-<td>YES</td>
-</tr>
-</tbody>
-</table>
+        <p>Docker学习（1）-进入Docker容器的命令</p>
+<h3 id="1-首先讲列出来docker当前的所有容器的命令"><a href="#1-首先讲列出来docker当前的所有容器的命令" class="headerlink" title="1.首先讲列出来docker当前的所有容器的命令"></a>1.首先讲列出来docker当前的所有容器的命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps -a</div></pre></td></tr></table></figure>
+<h3 id="2-进入Docker容器的命令"><a href="#2-进入Docker容器的命令" class="headerlink" title="2.进入Docker容器的命令"></a>2.进入Docker容器的命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker exec -it CONTAINER_NAME /bin/bash</div></pre></td></tr></table></figure>
 
       
 
@@ -499,7 +344,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/html/浏览器内核控制 meta标签/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/08/25/docker/docker-exec/">展开全文 >></a>
         </p>
       
 
@@ -529,320 +374,163 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-node/sequelize/Node开发——Sequelize-auto 快速生成数据库实体工具" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-node/querystring" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Node开发——Sequelize-auto-快速生成数据库实体工具"><a href="#Node开发——Sequelize-auto-快速生成数据库实体工具" class="headerlink" title="Node开发——Sequelize-auto 快速生成数据库实体工具"></a>Node开发——Sequelize-auto 快速生成数据库实体工具</h1><p>sequelize-auto 是一个快速生成实体的工具。github地址为：<a href="https://github.com/sequelize/sequelize-auto" target="_blank" rel="external">查看详细</a></p>
-<p>安装命令：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g sequelize-auto</div></pre></td></tr></table></figure>
-<h3 id="请确保安装前已经安装数据库："><a href="#请确保安装前已经安装数据库：" class="headerlink" title="请确保安装前已经安装数据库："></a>请确保安装前已经安装数据库：</h3><p>mysql数据库安装命令：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g mysql</div></pre></td></tr></table></figure>
-<p>Postgres数据库安装命令：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g pg pg-hstore</div></pre></td></tr></table></figure>
-<p>Sqlite3数据库安装命令：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g sqlite</div></pre></td></tr></table></figure>
-<p>MSSQL数据库安装命令：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g tedious</div></pre></td></tr></table></figure>
-<p>用法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">[node] sequelize-auto -h &lt;host&gt; -d &lt;database&gt; -u &lt;user&gt; -x [password] -p [port]  --dialect [dialect] -c [/path/to/config] -o [/path/to/models] -t [tableName] -C</div><div class="line"></div><div class="line">Options:</div><div class="line">  -h, --host        IP/Hostname for the database.   [required]</div><div class="line">  -d, --database    Database name.                  [required]</div><div class="line">  -u, --user        Username for database.</div><div class="line">  -x, --pass        Password for database.</div><div class="line">  -p, --port        Port number for database.</div><div class="line">  -c, --config      JSON file for Sequelize&apos;s constructor &quot;options&quot; flag object as defined here: https://sequelize.readthedocs.org/en/latest/api/sequelize/</div><div class="line">  -o, --output      What directory to place the models.</div><div class="line">  -e, --dialect     The dialect/engine that you&apos;re using: postgres, mysql, sqlite</div><div class="line">  -a, --additional  Path to a json file containing model definitions (for all tables) which are to be defined within a model&apos;s configuration parameter. For more info: https://sequelize.readthedocs.org/en/latest/docs/models-definition/#configuration</div><div class="line">  -t, --tables      Comma-separated names of tables to import</div><div class="line">  -C, --camel       Use camel case to name models and fields</div></pre></td></tr></table></figure>
-<p>生成数据库实体命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sequelize-auto -o &quot;./models&quot; -d sequelize_auto_test -h localhost -u my_username -p 5432 -x my_password -e postgres</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sequelize-auto -o &quot;./models&quot; -d easecom_sms -h 192.168.199.101 -u root -p 3306 -x heihei -e mysql</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/node/sequelize/Node开发——Sequelize-auto 快速生成数据库实体工具/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MongoDB/MongoDB 索引问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="MongoDB-索引问题"><a href="#MongoDB-索引问题" class="headerlink" title="MongoDB 索引问题"></a>MongoDB 索引问题</h1><p>mongoDB创建过的索引，即使你后来orm里去掉索引也没有用的，需要手动删除索引。</p>
-<p>今天为这个问题，排查了20分钟，不值得啊！！！</p>
-<p>经验教训。。。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/MongoDB/MongoDB 索引问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-js/ECMAScript 6 入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="ECMAScript-6-入门"><a href="#ECMAScript-6-入门" class="headerlink" title="ECMAScript 6 入门"></a>ECMAScript 6 入门</h1><h2 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h2><p>扩展运算符（spread）是三个点（<code>...</code>）。它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列。</p>
-<h2 id="name-属性"><a href="#name-属性" class="headerlink" title="name 属性"></a>name 属性</h2><p>函数的<code>name</code>属性，返回该函数的函数名。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">foo.name <span class="comment">// "foo"</span></div></pre></td></tr></table></figure>
-<p>如果将一个具名函数赋值给一个变量，则 ES5 和 ES6 的<code>name</code>属性都返回这个具名函数原本的名字。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> bar = <span class="function"><span class="keyword">function</span> <span class="title">baz</span>(<span class="params"></span>) </span>&#123;&#125;;</div><div class="line"></div><div class="line"><span class="comment">// ES5</span></div><div class="line">bar.name <span class="comment">// "baz"</span></div><div class="line"></div><div class="line"><span class="comment">// ES6</span></div><div class="line">bar.name <span class="comment">// "baz"</span></div></pre></td></tr></table></figure>
-<p><code>Function</code>构造函数返回的函数实例，<code>name</code>属性的值为<code>anonymous</code>。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="keyword">new</span> <span class="built_in">Function</span>).name <span class="comment">// "anonymous"</span></div></pre></td></tr></table></figure>
-<p><code>bind</code>返回的函数，<code>name</code>属性值会加上<code>bound</code>前缀。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">foo.bind(&#123;&#125;).name <span class="comment">// "bound foo"</span></div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;).bind(&#123;&#125;).name <span class="comment">// "bound "</span></div></pre></td></tr></table></figure>
-<h2 id="“函数绑定”（function-bind）运算符"><a href="#“函数绑定”（function-bind）运算符" class="headerlink" title="“函数绑定”（function bind）运算符::"></a>“函数绑定”（function bind）运算符::</h2><h2 id="Null-传导运算符"><a href="#Null-传导运算符" class="headerlink" title="Null 传导运算符"></a>Null 传导运算符</h2><p>引入了“Null 传导运算符”（null propagation operator）<code>?.</code>，简化上面的写法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> firstName = message?.body?.user?.firstName || <span class="string">'default'</span>;</div></pre></td></tr></table></figure>
-<p>上面代码有三个<code>?.</code>运算符，只要其中一个返回<code>null</code>或<code>undefined</code>，就不再往下运算，而是返回<code>undefined</code>。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/js/ECMAScript 6 入门/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-TypeScript/basic" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        //布尔类型
-var isDone = false;
-//数字
-var decLiteral = 6;
-//字符串
-// let name:string="bob";
-// name="smith";
-/**
- * 模板字符串
- * 它可以定义多行文本或内嵌表达式。
- * 这种字符串是被反引号包围（`）,并且以${expr}这种形式嵌入表达式
-*/
-var names = "Gene";
-var age = 37;
-var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years old next month.";
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/TypeScript/basic/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-js/Object.assign()" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Object-assign"><a href="#Object-assign" class="headerlink" title="Object.assign()"></a>Object.assign()</h1><blockquote>
-<p>Object.assign()方法可以把任意多个的源对象自身的可枚举属性拷贝给目标对象，然后返回目标对象。具体说明，可以参考<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign" target="_blank" rel="external">这里</a></p>
+        <h1 id="node-js系列-01-querystring查询字符串"><a href="#node-js系列-01-querystring查询字符串" class="headerlink" title="node.js系列(01)-querystring查询字符串"></a>node.js系列(01)-querystring查询字符串</h1><h2 id="querystring-查询字符串"><a href="#querystring-查询字符串" class="headerlink" title="querystring 查询字符串"></a>querystring 查询字符串</h2><p><code>querystring</code> 模块提供了一些实用工具，用于解析与格式化 URL 查询字符串。它可以通过以下方式被使用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> querystring = <span class="built_in">require</span>(<span class="string">'querystring'</span>);</div></pre></td></tr></table></figure>
+<h3 id="querystring-escape-str"><a href="#querystring-escape-str" class="headerlink" title="querystring.escape(str)"></a>querystring.escape(str)</h3><blockquote>
+<p>对URL字符串进行编码</p>
 </blockquote>
-<h3 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h3><blockquote>
-<p>Object.assign(target, …sources)</p>
-</blockquote>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
-<li><p><code>target</code></p>
-<p>目标对象。</p>
+<p>eg:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> strParams=<span class="string">'q=中文&amp;oq=中文&amp;aqs=chrome..69i57j69i61l3j69i65l2.5370j0j1&amp;sourceid=chrome&amp;ie=UTF-8'</span></div><div class="line"><span class="keyword">const</span> result=querystring.escape(strParams);</div><div class="line"><span class="comment">//q=%E4%B8%AD%E6%96%87&amp;oq=%E4%B8%AD%E6%96%87&amp;aqs=chrome..69i57j69i61l3j69i65l2.5370j0j1&amp;sourceid=chrome&amp;ie=UTF-8</span></div></pre></td></tr></table></figure>
+<h3 id="querystring-parse-str-sep-eq-options"><a href="#querystring-parse-str-sep-eq-options" class="headerlink" title="querystring.parse(str[, sep[, eq[, options]]])"></a>querystring.parse(str[, sep[, eq[, options]]])</h3><ul>
+<li><p><code>str</code> <string> 要解析的 URL 查询字符串。</string></p>
 </li>
-<li><p><code>sources</code></p>
-<p>任意多个源对象。</p>
+<li><p><code>sep</code> <string> 用于界定查询字符串中的键值对的子字符串。默认为 <code>&#39;&amp;&#39;</code>。</string></p>
+</li>
+<li><p><code>eq</code> <string> 用于界定查询字符串中的键与值的子字符串。默认为 <code>&#39;=&#39;</code>。</string></p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">options &lt;Object&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>decodeURIComponent</code> <function> 当解码查询字符串中百分号编码的字符时使用的函数。默认为 <code>querystring.unescape()</code>。</function></li>
+<li><code>maxKeys</code> <number> 指定要解析的键的最大数量。默认为 <code>1000</code>。指定为 <code>0</code> 则移除键数的限制。</number></li>
+</ul>
 </li>
 </ul>
-<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>目标对象会被返回。</p>
-<h3 id="复制一个-object"><a href="#复制一个-object" class="headerlink" title="复制一个 object"></a>复制一个 object</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;;</div><div class="line"><span class="keyword">var</span> copy = <span class="built_in">Object</span>.assign(&#123;&#125;, obj);</div><div class="line"><span class="built_in">console</span>.log(copy); <span class="comment">// &#123; a: 1 &#125;</span></div></pre></td></tr></table></figure>
-<h3 id="深度拷贝问题"><a href="#深度拷贝问题" class="headerlink" title="深度拷贝问题"></a>深度拷贝问题</h3><p>假如需要深度拷贝的话，仍旧需要使用别的而不是本方法。因为 <code>Object.assign() 拷贝的是在 source 里是</code>对象的属性的引用而不是对象本身。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> a = &#123; <span class="attr">b</span>: &#123;<span class="attr">c</span>:<span class="number">4</span>&#125; , <span class="attr">d</span>: &#123; <span class="attr">e</span>: &#123;<span class="attr">f</span>:<span class="number">1</span>&#125;&#125; &#125;</div><div class="line">  <span class="keyword">let</span> g = <span class="built_in">Object</span>.assign(&#123;&#125;,a)</div><div class="line">  <span class="keyword">let</span> h = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(a));</div><div class="line">  <span class="built_in">console</span>.log(g.d) <span class="comment">// &#123; e: &#123; f: 1 &#125; &#125;</span></div><div class="line">  g.d.e = <span class="number">32</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'g.d.e set to 32.'</span>) <span class="comment">// g.d.e set to 32.</span></div><div class="line">  <span class="built_in">console</span>.log(g) <span class="comment">// &#123; b: &#123; c: 4 &#125;, d: &#123; e: 32 &#125; &#125;</span></div><div class="line">  <span class="built_in">console</span>.log(a) <span class="comment">// &#123; b: &#123; c: 4 &#125;, d: &#123; e: 32 &#125; &#125;</span></div><div class="line">  <span class="built_in">console</span>.log(h) <span class="comment">// &#123; b: &#123; c: 4 &#125;, d: &#123; e: &#123; f: 1 &#125; &#125; &#125;</span></div><div class="line">  h.d.e = <span class="number">54</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'h.d.e set to 54.'</span>) <span class="comment">// h.d.e set to 54.</span></div><div class="line">  <span class="built_in">console</span>.log(g) <span class="comment">// &#123; b: &#123; c: 4 &#125;, d: &#123; e: 32 &#125; &#125;</span></div><div class="line">  <span class="built_in">console</span>.log(a) <span class="comment">// &#123; b: &#123; c: 4 &#125;, d: &#123; e: 32 &#125; &#125;</span></div><div class="line">  <span class="built_in">console</span>.log(h) <span class="comment">// &#123; b: &#123; c: 4 &#125;, d: &#123; e: 54 &#125; &#125;</span></div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
-<h3 id="合并-objects"><a href="#合并-objects" class="headerlink" title="合并 objects"></a>合并 objects</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o1 = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;;</div><div class="line"><span class="keyword">var</span> o2 = &#123; <span class="attr">b</span>: <span class="number">2</span> &#125;;</div><div class="line"><span class="keyword">var</span> o3 = &#123; <span class="attr">c</span>: <span class="number">3</span> &#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.assign(o1, o2, o3);</div><div class="line"><span class="built_in">console</span>.log(obj); <span class="comment">// &#123; a: 1, b: 2, c: 3 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(o1);  <span class="comment">// &#123; a: 1, b: 2, c: 3 &#125;, 注意目标对象自身也会改变。</span></div></pre></td></tr></table></figure>
-<h3 id="拷贝-symbol-类型的属性"><a href="#拷贝-symbol-类型的属性" class="headerlink" title="拷贝 symbol 类型的属性"></a>拷贝 symbol 类型的属性</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o1 = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;;</div><div class="line"><span class="keyword">var</span> o2 = &#123; [<span class="built_in">Symbol</span>(<span class="string">"foo"</span>)]: <span class="number">2</span> &#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.assign(&#123;&#125;, o1, o2);</div><div class="line"><span class="built_in">console</span>.log(obj); <span class="comment">// &#123; a: 1, [Symbol("foo")]: 2 &#125;</span></div></pre></td></tr></table></figure>
-<h3 id="继承属性和不可枚举属性是不能拷贝的"><a href="#继承属性和不可枚举属性是不能拷贝的" class="headerlink" title="继承属性和不可枚举属性是不能拷贝的"></a>继承属性和不可枚举属性是不能拷贝的</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.create(&#123;<span class="attr">foo</span>: <span class="number">1</span>&#125;, &#123; <span class="comment">// foo 是个继承属性。</span></div><div class="line">    bar: &#123;</div><div class="line">        <span class="attr">value</span>: <span class="number">2</span>  <span class="comment">// bar 是个不可枚举属性。</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">baz</span>: &#123;</div><div class="line">        <span class="attr">value</span>: <span class="number">3</span>,</div><div class="line">        <span class="attr">enumerable</span>: <span class="literal">true</span>  <span class="comment">// baz 是个自身可枚举属性。</span></div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> copy = <span class="built_in">Object</span>.assign(&#123;&#125;, obj);</div><div class="line"><span class="built_in">console</span>.log(copy); <span class="comment">// &#123; baz: 3 &#125;</span></div></pre></td></tr></table></figure>
-<h3 id="原始类型会被包装为-object"><a href="#原始类型会被包装为-object" class="headerlink" title="原始类型会被包装为 object"></a>原始类型会被包装为 object</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> v1 = <span class="string">"abc"</span>;</div><div class="line"><span class="keyword">var</span> v2 = <span class="literal">true</span>;</div><div class="line"><span class="keyword">var</span> v3 = <span class="number">10</span>;</div><div class="line"><span class="keyword">var</span> v4 = <span class="built_in">Symbol</span>(<span class="string">"foo"</span>)</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.assign(&#123;&#125;, v1, <span class="literal">null</span>, v2, <span class="literal">undefined</span>, v3, v4); </div><div class="line"><span class="comment">// 原始类型会被包装，null 和 undefined 会被忽略。</span></div><div class="line"><span class="comment">// 注意，只有字符串的包装对象才可能有自身可枚举属性。</span></div><div class="line"><span class="built_in">console</span>.log(obj); <span class="comment">// &#123; "0": "a", "1": "b", "2": "c" &#125;</span></div></pre></td></tr></table></figure>
-<h3 id="异常会打断接下来的拷贝任务"><a href="#异常会打断接下来的拷贝任务" class="headerlink" title="异常会打断接下来的拷贝任务"></a>异常会打断接下来的拷贝任务</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> target = <span class="built_in">Object</span>.defineProperty(&#123;&#125;, <span class="string">"foo"</span>, &#123;</div><div class="line">    <span class="attr">value</span>: <span class="number">1</span>,</div><div class="line">    <span class="attr">writable</span>: <span class="literal">false</span></div><div class="line">&#125;); <span class="comment">// target 的 foo 属性是个只读属性。</span></div><div class="line"></div><div class="line"><span class="built_in">Object</span>.assign(target, &#123;<span class="attr">bar</span>: <span class="number">2</span>&#125;, &#123;<span class="attr">foo2</span>: <span class="number">3</span>, <span class="attr">foo</span>: <span class="number">3</span>, <span class="attr">foo3</span>: <span class="number">3</span>&#125;, &#123;<span class="attr">baz</span>: <span class="number">4</span>&#125;);</div><div class="line"><span class="comment">// TypeError: "foo" is read-only</span></div><div class="line"><span class="comment">// 注意这个异常是在拷贝第二个源对象的第二个属性时发生的。</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(target.bar);  <span class="comment">// 2，说明第一个源对象拷贝成功了。</span></div><div class="line"><span class="built_in">console</span>.log(target.foo2); <span class="comment">// 3，说明第二个源对象的第一个属性也拷贝成功了。</span></div><div class="line"><span class="built_in">console</span>.log(target.foo);  <span class="comment">// 1，只读属性不能被覆盖，所以第二个源对象的第二个属性拷贝失败了。</span></div><div class="line"><span class="built_in">console</span>.log(target.foo3); <span class="comment">// undefined，异常之后 assign 方法就退出了，第三个属性是不会被拷贝到的。</span></div><div class="line"><span class="built_in">console</span>.log(target.baz);  <span class="comment">// undefined，第三个源对象更是不会被拷贝到的。</span></div></pre></td></tr></table></figure>
-<h3 id="拷贝访问器（accessor）"><a href="#拷贝访问器（accessor）" class="headerlink" title="拷贝访问器（accessor）"></a>拷贝访问器（accessor）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  <span class="attr">foo</span>: <span class="number">1</span>,</div><div class="line">  get bar() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="number">2</span>;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> copy = <span class="built_in">Object</span>.assign(&#123;&#125;, obj); </div><div class="line"><span class="comment">// &#123; foo: 1, bar: 2 &#125;</span></div><div class="line"><span class="comment">// copy.bar的值来自obj.bar的getter函数的返回值 </span></div><div class="line"><span class="built_in">console</span>.log(copy); </div><div class="line"></div><div class="line"><span class="comment">// 下面这个函数会拷贝所有自有属性的属性描述符</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">completeAssign</span>(<span class="params">target, ...sources</span>) </span>&#123;</div><div class="line">  sources.forEach(<span class="function"><span class="params">source</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">let</span> descriptors = <span class="built_in">Object</span>.keys(source).reduce(<span class="function">(<span class="params">descriptors, key</span>) =&gt;</span> &#123;</div><div class="line">      descriptors[key] = <span class="built_in">Object</span>.getOwnPropertyDescriptor(source, key);</div><div class="line">      <span class="keyword">return</span> descriptors;</div><div class="line">    &#125;, &#123;&#125;);</div><div class="line"></div><div class="line">    <span class="comment">// Object.assign 默认也会拷贝可枚举的Symbols</span></div><div class="line">    <span class="built_in">Object</span>.getOwnPropertySymbols(source).forEach(<span class="function"><span class="params">sym</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">let</span> descriptor = <span class="built_in">Object</span>.getOwnPropertyDescriptor(source, sym);</div><div class="line">      <span class="keyword">if</span> (descriptor.enumerable) &#123;</div><div class="line">        descriptors[sym] = descriptor;</div><div class="line">      &#125;</div><div class="line">    &#125;);</div><div class="line">    <span class="built_in">Object</span>.defineProperties(target, descriptors);</div><div class="line">  &#125;);</div><div class="line">  <span class="keyword">return</span> target;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> copy = completeAssign(&#123;&#125;, obj);</div><div class="line"><span class="comment">// &#123; foo:1, get bar() &#123; return 2 &#125; &#125;</span></div><div class="line"><span class="built_in">console</span>.log(copy);</div></pre></td></tr></table></figure>
-<h2 id="浏览器兼容性"><a href="#浏览器兼容性" class="headerlink" title="浏览器兼容性"></a>浏览器兼容性</h2><ul>
-<li>Desktop</li>
-</ul>
+<p><code>querystring.parse()</code> 方法能把一个 URL 查询字符串（<code>str</code>）解析成一个键值对的集合。</p>
+<p>e.g.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> strParams = <span class="string">'foo=bar&amp;abc=xyz&amp;abc=123'</span>;</div><div class="line"><span class="keyword">const</span> result = querystring.parse(strParams);</div></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  foo: 'bar',</div><div class="line">  abc: ['xyz', '123']</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/23/node/querystring/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-TCP:UDP常用端口汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>TCP/UDP常用端口汇总</p>
 <table>
 <thead>
 <tr>
-<th>Feature</th>
-<th>Chrome</th>
-<th>Firefox (Gecko)</th>
-<th>Internet Explorer</th>
-<th>Opera</th>
-<th>Safari</th>
-<th>Edge</th>
+<th>端口</th>
+<th>服务</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Basic support</td>
-<td>45</td>
-<td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/34" target="_blank" rel="external">34</a> (34)</td>
-<td>未实现</td>
-<td>32</td>
-<td>9</td>
-<td>(Yes)</td>
+<td>21</td>
+<td>FTP</td>
+<td>FTP服务器所开放的端口，用于上传、下载</td>
 </tr>
-</tbody>
-</table>
-<ul>
-<li>Mobile</li>
-</ul>
-<table>
-<thead>
 <tr>
-<th>Feature</th>
-<th>Android</th>
-<th>Chrome for Android</th>
-<th>Firefox Mobile (Gecko)</th>
-<th>IE Mobile</th>
-<th>Opera Mobile</th>
-<th>Safari Mobile</th>
+<td>22</td>
+<td>SSH</td>
+<td>22端口就是ssh端口，用于通过命令行模式远程连接Linux系统服务器</td>
 </tr>
-</thead>
-<tbody>
 <tr>
-<td>Basic support</td>
-<td>未实现</td>
-<td>45</td>
-<td>34.0 (34)</td>
-<td>未实现</td>
-<td>未实现</td>
-<td>(Yes)</td>
+<td>25</td>
+<td>SMTP</td>
+<td>SMTP服务器所开放的端口，用于发送邮件</td>
+</tr>
+<tr>
+<td>80</td>
+<td>HTTP</td>
+<td>用于网站服务例如IIS、Apache、Nginx等提供对外访问</td>
+</tr>
+<tr>
+<td>110</td>
+<td>POP3</td>
+<td>110端口是为POP3（邮件协议3）服务开放的</td>
+</tr>
+<tr>
+<td>137/138/139</td>
+<td>NETBIOS</td>
+<td>其中137、138是UDP端口，当通过网上邻居传输文件时用这个端口。而139端口：通过这个端口进入的连接试图获得NetBIOS/SMB服务。这个协议被用于windows文件和打印机共享和SAMBA</td>
+</tr>
+<tr>
+<td>143</td>
+<td>IMAP</td>
+<td>143端口主要是用于“Internet Message AccessProtocol”v2（Internet消息访问协议，简称IMAP），和POP3一样，是用于电子邮件的接收的协议</td>
+</tr>
+<tr>
+<td>443</td>
+<td>HTTPS</td>
+<td>网页浏览端口，能提供加密和通过安全端口传输的另一种HTTP</td>
+</tr>
+<tr>
+<td>1433</td>
+<td>SQL Server</td>
+<td>1433端口，是SQL Server默认的端口，SQL Server服务使用两个端口：TCP-1433、UDP-1434。其中1433用于供SQL Server对外提供服务，1434用于向请求者返回SQL Server使用了哪个TCP/IP端口</td>
+</tr>
+<tr>
+<td>3306</td>
+<td>MySQL</td>
+<td>3306端口，是MySQL数据库的默认端口，用于MySQL对外提供服务</td>
+</tr>
+<tr>
+<td>3389</td>
+<td>Windows Server Remote Desktop Services</td>
+<td>3389端口是Windows远程桌面的服务端口，可以通过这个端口，用”远程桌面”等连接工具来连接到远程的服务器</td>
+</tr>
+<tr>
+<td>8080</td>
+<td>代理端口</td>
+<td>8080端口同80端口，是被用于WWW代理服务的，可以实现网页浏览，经常在访问某个网站或使用代理服务器的时候，会加上“:8080”端口号。另外Apache Tomcat web server安装后，默认的服务端口就是8080</td>
+</tr>
+<tr>
+<td>27017</td>
+<td>MongoDB</td>
+<td><a href="http://docs.mongoing.com/manual-zh/reference/program/mongod.html#bin.mongod" target="_blank" rel="external"><code>mongod</code></a> 和 <a href="http://docs.mongoing.com/manual-zh/reference/program/mongos.html#bin.mongos" target="_blank" rel="external"><code>mongos</code></a> 实例的默认端口。你可以通过 <a href="http://docs.mongoing.com/manual-zh/reference/configuration-options.html#net.port" target="_blank" rel="external"><code>port</code></a>或 <em>–port</em> 改变该端口。</td>
+</tr>
+<tr>
+<td>6379</td>
+<td>Redis</td>
+<td>Redis默认端口。 6379在是手机按键上MERZ对应的号码，而MERZ取自意大利歌女Alessia Merz的名字。MERZ长期以来被Redis作者antirez及其朋友当作愚蠢的代名词。后来Redis作者在开发Redis时就选用了这个端口。</td>
 </tr>
 </tbody>
 </table>
@@ -858,7 +546,7 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/js/Object.assign()/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/08/23/TCP:UDP常用端口汇总/">展开全文 >></a>
         </p>
       
 
@@ -888,17 +576,39 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
 
 
   
-    <article id="post-js/公司react项目开发流程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Node js学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="公司react项目开发流程"><a href="#公司react项目开发流程" class="headerlink" title="公司react项目开发流程"></a>公司react项目开发流程</h1><h3 id="1-服务接口封装"><a href="#1-服务接口封装" class="headerlink" title="1.服务接口封装"></a>1.服务接口封装</h3><p>在目录services里，按照功能目录，在相应目录下创建相应的js,并写下相应的方法</p>
-<p>代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; request &#125; <span class="keyword">from</span> <span class="string">'../../utils'</span></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 所有</div><div class="line"> * @returns &#123;Promise.&lt;*&gt;&#125;</div><div class="line"> */</div><div class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">list</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> request(<span class="string">'role/list'</span>, &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'get'</span></div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="2-调用服务接口数据封装"><a href="#2-调用服务接口数据封装" class="headerlink" title="2.调用服务接口数据封装"></a>2.调用服务接口数据封装</h3><p>在models目录里，按照功能目录，在相应目录下创建相应的js，并写下相应的js代码。</p>
-<p>代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; request &#125; <span class="keyword">from</span> <span class="string">'../../utils'</span></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 所有</div><div class="line"> * @returns &#123;Promise.&lt;*&gt;&#125;</div><div class="line"> */</div><div class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">list</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> request(<span class="string">'role/list'</span>, &#123;</div><div class="line">    <span class="attr">method</span>: <span class="string">'get'</span></div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p>Node js学习</p>
+<p>网站</p>
+<p><a href="http://nodejs.cn/api/" target="_blank" rel="external">node 中文API文档</a></p>
+<p><a href="https://cnodejs.org/?tab=good" target="_blank" rel="external">cnode社区</a></p>
+<p><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014344991049250a2c80ec84cb4861bbd1d9b2c0c2850e000" target="_blank" rel="external">JavaScript简介（廖雪峰大神）</a></p>
+<p><a href="https://www.npmjs.com/" target="_blank" rel="external">TOP12 npm package</a></p>
+<p><a href="http://blog.fens.me/series-nodejs/" target="_blank" rel="external">从零开始学习Node.js系列文章</a></p>
+<p><a href="https://github.com/JacksonTian/fks" target="_blank" rel="external">前端技能汇总（阿里-朴灵大神）</a></p>
+<p><a href="https://yjhjstz.gitbooks.io/deep-into-node/content/" target="_blank" rel="external">《深入理解Node.js:核心思想和源码分析》</a></p>
+<p><a href="https://www.zhihu.com/topic/19569535" target="_blank" rel="external">知乎：Node.js专区</a></p>
+<p><a href="https://segmentfault.com/blogs" target="_blank" rel="external">segmentfault专栏文章</a></p>
+<blockquote>
+<p>2017.8.28 新增</p>
+</blockquote>
+<p><a href="https://wizardforcel.gitbooks.io/llthw/content/ex0.html" target="_blank" rel="external">笨方法学 Linux</a></p>
+<blockquote>
+<p>2017.8.29 新增</p>
+</blockquote>
+<p><a href="http://www.zaoduke.net/" target="_blank" rel="external">前端早读课</a></p>
+<p><a href="http://taobaofed.org/" target="_blank" rel="external">淘宝前端团队FED</a></p>
+<p><a href="https://aotu.io/" target="_blank" rel="external">凹凸实验室（京东用户体验中心）</a></p>
+<p><a href="https://75team.com/archives/" target="_blank" rel="external">360前端团队-奇舞团</a></p>
+<p><a href="http://fex.baidu.com/" target="_blank" rel="external">百度前端团队FEX</a></p>
+<p><a href="http://www.alloyteam.com/page/0/" target="_blank" rel="external">AlloyTeam腾讯全端团队</a></p>
+<blockquote>
+<p>2017.10.25 新增</p>
+</blockquote>
+<p><a href="http://cn.redux.js.org/index.html" target="_blank" rel="external">Redux中文文档</a></p>
 
       
 
@@ -911,7 +621,7 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/js/公司react项目开发流程/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/08/23/Node js学习/">展开全文 >></a>
         </p>
       
 
@@ -941,214 +651,13 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
 
 
   
-    <article id="post-js/【转】JavaScript代码优化指南" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-全栈知识汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="【转】JavaScript代码优化指南"><a href="#【转】JavaScript代码优化指南" class="headerlink" title="【转】JavaScript代码优化指南"></a>【转】JavaScript代码优化指南</h1><p>这是一篇转载自博客园的文章，文章原始出处：<a href="http://www.cnblogs.com/HCJJ/p/6218385.html">查看原始链接</a></p>
-<h3 id="1-将脚本放在页面的底部"><a href="#1-将脚本放在页面的底部" class="headerlink" title="1.将脚本放在页面的底部"></a>1.将脚本放在页面的底部</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>变量声明合并</p>
-<h3 id="2-变量声明合并"><a href="#2-变量声明合并" class="headerlink" title="2.变量声明合并"></a>2.变量声明合并</h3><blockquote>
-<p>将多条var语句合并为一条语句，建议将未赋值的变量放在最后面。</p>
-<p>并且为了代码的美观，可以将等号对齐。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//糟糕</span></div><div class="line"><span class="keyword">var</span> oBtn = <span class="built_in">document</span>.getElementById(<span class="string">'button'</span>);</div><div class="line"><span class="keyword">var</span> name = <span class="string">''</span>;</div><div class="line"><span class="keyword">var</span> index;</div><div class="line"><span class="keyword">var</span> oLis = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</div><div class="line"><span class="keyword">var</span> result = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="keyword">var</span> i;</div><div class="line"></div><div class="line"><span class="comment">//建议</span></div><div class="line"><span class="keyword">var</span> oLis   = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>),</div><div class="line">    oBtn   = <span class="built_in">document</span>.getElementById(<span class="string">'button'</span>),</div><div class="line">    result = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],</div><div class="line">    name   = <span class="string">''</span>,</div><div class="line">    index,</div><div class="line">    j;</div></pre></td></tr></table></figure>
-<h3 id="3-减少全局变量"><a href="#3-减少全局变量" class="headerlink" title="3.减少全局变量"></a>3.减少全局变量</h3><blockquote>
-<p>减少全局变量，并不是说不定义全局变量，而是我们可以定义一个对象，来保存我们定义的全局变量。</p>
-<p>我称这个对象为变量空间。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐</span></div><div class="line"><span class="keyword">var</span> global = <span class="string">'This is global Variant'</span>,</div><div class="line">   config = &#123;&#125;,</div><div class="line">   data = [];</div><div class="line"> </div><div class="line"><span class="comment">// 建议：</span></div><div class="line"><span class="keyword">var</span> varSpace = &#123;</div><div class="line">   <span class="attr">global</span>:<span class="string">'This is global Variant'</span>,</div><div class="line">   <span class="attr">config</span>:&#123;&#125;,</div><div class="line">   <span class="attr">data</span>:[]</div><div class="line"> &#125;;</div></pre></td></tr></table></figure>
-<h3 id="4-字面量方式"><a href="#4-字面量方式" class="headerlink" title="4.字面量方式"></a>4.字面量方式</h3><blockquote>
-<p>声明枚举类型的变量，应该采用字面量方式。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//糟糕的</span></div><div class="line">  <span class="keyword">var</span> object = <span class="keyword">new</span> <span class="built_in">Object</span>(),</div><div class="line">      array = <span class="keyword">new</span> <span class="built_in">Array</span>(),</div><div class="line">      pattrn = <span class="keyword">new</span> <span class="built_in">RegExp</span>();</div><div class="line"><span class="comment">//建议：</span></div><div class="line">  <span class="keyword">var</span> object = &#123;&#125;,</div><div class="line">      array = [],</div><div class="line">      pattrn = <span class="comment">//;</span></div></pre></td></tr></table></figure>
-<h5 id="5-缓存DOM"><a href="#5-缓存DOM" class="headerlink" title="5.缓存DOM"></a>5.缓存DOM</h5><blockquote>
-<p>DOM遍历是非常昂贵的，所以要尽量将会重用的DOM保存起来。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 糟糕</span></div><div class="line"><span class="keyword">var</span> height = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>).offsetHeight;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'box'</span>).style.background=<span class="string">"#f00"</span>;</div><div class="line"> </div><div class="line"><span class="comment">// 建议</span></div><div class="line"><span class="keyword">var</span> oBox = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>),</div><div class="line">    height = oBox.offsetHeight;</div><div class="line">oBox.style.background=<span class="string">"#f00"</span>;</div></pre></td></tr></table></figure>
-<h3 id="6-使用缓存的父元素来查询子元素"><a href="#6-使用缓存的父元素来查询子元素" class="headerlink" title="6.使用缓存的父元素来查询子元素"></a>6.使用缓存的父元素来查询子元素</h3><blockquote>
-<p>正如前面我们所说的DOM的操作与获取是非常昂贵的，所以对于获取一个DOM元素，首先我们应该检查它有没有已经被缓存了的父元素。如果存在的话，可以直接在父元素的基础上向内去查找。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 糟糕的</span></div><div class="line">    <span class="keyword">var</span> oBox = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>),</div><div class="line">        oLis = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</div><div class="line"> </div><div class="line"><span class="comment">// 建议</span></div><div class="line">    <span class="keyword">var</span> oBox = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>),</div><div class="line">        oLis = oBox.getElementsByTagName(<span class="string">'li'</span>);</div></pre></td></tr></table></figure>
-<h3 id="7-条件分支优化"><a href="#7-条件分支优化" class="headerlink" title="7.条件分支优化"></a>7.条件分支优化</h3><h4 id="7-1-选择接近"><a href="#7-1-选择接近" class="headerlink" title="7.1 选择接近"></a>7.1 选择接近</h4><blockquote>
-<p>​ 将条件分支，按可能性的顺序从高到低排列，可以减少JavaScript解释器对条件语句的探测次数。</p>
-</blockquote>
-<p>​    例如预计一个数在0~99的范围概率是50%，预计100-199的范围时15%在200-300的范围时30%，最后小于0的概率是5%。</p>
-<p>​    使用分支语句则可以这样组织代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(num&gt;=<span class="number">0</span> &amp;&amp; num&lt;<span class="number">100</span>)&#123;</div><div class="line">    <span class="comment">//...</span></div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(num &gt;=<span class="number">200</span> &amp;&amp; num &lt;= <span class="number">300</span>)&#123;</div><div class="line">    <span class="comment">//...</span></div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(num &gt;=<span class="number">100</span> &amp;&amp; num &lt; <span class="number">200</span>)&#123;</div><div class="line">    <span class="comment">//...</span></div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="comment">// 小于0</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>​    实际上，还可以进一步优化：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(num &gt;=<span class="number">0</span>)&#123;</div><div class="line">    <span class="keyword">if</span>(num &lt; <span class="number">100</span>)&#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(num &gt;= <span class="number">200</span> &amp;&amp; num &lt;=<span class="number">300</span>)&#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(num &gt;=<span class="number">100</span> &amp;&amp; num &lt; <span class="number">200</span>)&#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="comment">// 小于0</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="7-2缩短检测条件"><a href="#7-2缩短检测条件" class="headerlink" title="7.2缩短检测条件"></a>7.2缩短检测条件</h4><blockquote>
-<p>对检测的条件进行优化</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//字符串为空或非空</span></div><div class="line"></div><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="keyword">if</span> (name === <span class="string">''</span>) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (name !== <span class="string">''</span>) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    <span class="keyword">if</span> (!name) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (name) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line"><span class="comment">//数组非空</span></div><div class="line"></div><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="keyword">if</span> (collection.length &gt; <span class="number">0</span>) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    <span class="keyword">if</span> (collection.length) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line"><span class="comment">//布尔不成立</span></div><div class="line"></div><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="keyword">if</span> (notTrue === <span class="literal">false</span>) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    <span class="keyword">if</span> (!notTrue) &#123;</div><div class="line">        <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line"><span class="comment">//null 或 undefined</span></div><div class="line"></div><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="keyword">if</span> (noValue === <span class="literal">null</span> || <span class="keyword">typeof</span> noValue === <span class="string">'undefined'</span>) &#123;</div><div class="line">      <span class="comment">// ......</span></div><div class="line">    &#125;</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    <span class="keyword">if</span> (noValue == <span class="literal">null</span>) &#123;</div><div class="line">      <span class="comment">// ......</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<h4 id="7-3-三目运算符"><a href="#7-3-三目运算符" class="headerlink" title="7.3 三目运算符"></a>7.3 三目运算符</h4><blockquote>
-<p>使用三目运算符可以代替简单的双分支结构。</p>
-</blockquote>
-<p>例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(a &gt; b)&#123;</div><div class="line">    num = a</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    num = b</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>用三目运算符：  <code>num = a &gt; b ? a : b;</code></p>
-<p>这里我推荐简单的条件判断，也就是在条件的语句组中，语句并不多，例如下面这种情况，我就不建议使用三目运算符。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(a &gt; b)&#123;</div><div class="line">    num = a;</div><div class="line">    array.push(num);</div><div class="line">    string = array.join(<span class="string">''</span>);</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="7-4-当分支数量大于等于3时，采用switch语句"><a href="#7-4-当分支数量大于等于3时，采用switch语句" class="headerlink" title="7.4 当分支数量大于等于3时，采用switch语句"></a>7.4 当分支数量大于等于3时，采用switch语句</h4><blockquote>
-<p>测试表明，当分支数量大于3时，switch的分支执行效率要高与if分支。在IE中尤为明显，其性能可以提升50%左右。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 糟糕 ...</span></div><div class="line"><span class="keyword">if</span>(num == a)&#123;</div><div class="line"> </div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(num == b)&#123;</div><div class="line"> </div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(num == c)&#123;</div><div class="line"> </div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">     </div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="comment">// 推荐：</span></div><div class="line"><span class="keyword">switch</span>(num)&#123;</div><div class="line">        <span class="keyword">case</span> a:</div><div class="line">            ...</div><div class="line">            break;</div><div class="line">        <span class="keyword">case</span> b:</div><div class="line">            ...</div><div class="line">            break;</div><div class="line">        <span class="keyword">case</span> c:</div><div class="line">            ...</div><div class="line">            break;</div><div class="line">        <span class="keyword">default</span>:</div><div class="line">            ....</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<h3 id="8-循环优化"><a href="#8-循环优化" class="headerlink" title="8.循环优化"></a>8.循环优化</h3><h4 id="8-1-不在循环中声明变量。"><a href="#8-1-不在循环中声明变量。" class="headerlink" title="8.1 不在循环中声明变量。"></a>8.1 不在循环中声明变量。</h4><blockquote>
-<p>在循环中去声明变量或者是定义函数，会严重的消耗性能。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//糟糕：</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=data.length;i&lt;l;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(data[i] &gt; <span class="number">10</span>)&#123;</div><div class="line">            <span class="keyword">var</span> value = data[i]</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line"><span class="comment">//建议：</span></div><div class="line">    <span class="keyword">var</span> value ;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,i&lt;data.length;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(data[i] &gt; <span class="number">10</span>)&#123;</div><div class="line">            value = data[i]</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<h4 id="8-2-优化循环终止条件"><a href="#8-2-优化循环终止条件" class="headerlink" title="8.2 优化循环终止条件"></a>8.2 优化循环终止条件</h4><blockquote>
-<p>由于每次循环过程都会去计算终止条件，所以可以用一个变量来保存这个终止条件，减少重复性的计算，提高执行速度。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//糟糕的：</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;data.length;i++)&#123;<span class="comment">//...&#125;</span></div><div class="line"> </div><div class="line"><span class="comment">//建议：</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=data.length;i&lt;l;i++)&#123;<span class="comment">//...&#125;</span></div></pre></td></tr></table></figure>
-<h4 id="8-3-优化循环体"><a href="#8-3-优化循环体" class="headerlink" title="8.3 优化循环体"></a>8.3 优化循环体</h4><blockquote>
-<p>循环体是执行最多的，所以要确保其最大程度的优化。</p>
-</blockquote>
-<h4 id="8-4-for-in-循环的优势"><a href="#8-4-for-in-循环的优势" class="headerlink" title="8.4 for in 循环的优势"></a>8.4 for in 循环的优势</h4><blockquote>
-<p>for in 循环对比于普通的循环，它更加适合遍历对象，这是因为for in 循环不仅可以返回对象的value值，还可以返回对象之前的key.</p>
-</blockquote>
-<p>实例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>( key <span class="keyword">in</span> <span class="built_in">Object</span>)&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="built_in">Object</span>.hasOwnProperty(key))&#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 注： 参考《JavaScript 语言精粹》</span></div></pre></td></tr></table></figure>
-<h3 id="9-巧用-和-amp-amp-布尔运算符"><a href="#9-巧用-和-amp-amp-布尔运算符" class="headerlink" title="9.巧用 || 和&amp;&amp; 布尔运算符"></a>9.巧用 || 和&amp;&amp; 布尔运算符</h3><ul>
-<li>短路求值</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//糟糕的：</span></div><div class="line">    <span class="keyword">if</span>(!fn)&#123;</div><div class="line">        callback = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        callback = fn;</div><div class="line">    &#125;</div><div class="line"><span class="comment">//建议：</span></div><div class="line">    callback = fn || <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div></pre></td></tr></table></figure>
-<ul>
-<li>短路检测执行</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//糟糕的：</span></div><div class="line">    <span class="keyword">if</span>(name)&#123;</div><div class="line">        welcome();</div><div class="line">    &#125;</div><div class="line"><span class="comment">//建议：</span></div><div class="line">    name &amp;&amp; welcome();</div></pre></td></tr></table></figure>
-<h3 id="10-字符串优化"><a href="#10-字符串优化" class="headerlink" title="10.字符串优化"></a>10.字符串优化</h3><ul>
-<li>定界符</li>
-</ul>
-<blockquote>
-<p>统一使用单引号（’），不适用双引号（“）。这在创建HTML字符串非常有好处：</p>
-</blockquote>
-<p>实例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> msg = <span class="string">'This is some HTML &lt;div class="makes-sense"&gt;&lt;/div&gt;'</span>;</div></pre></td></tr></table></figure>
-<ul>
-<li>字符串拼接</li>
-</ul>
-<blockquote>
-<p>对于大量的字符串拼接的情况下，不建议使用+=进行拼接，而是建议先定义一个数组，然后不断的push,最后再使用join(‘’)进行字符串的拼接</p>
-</blockquote>
-<ul>
-<li>换一种角度来看待字符拼接</li>
-</ul>
-<blockquote>
-<p>当你遍历一个数组或对象时，不要总想着使用for语句，要有创造性，总能找到最好的办法，例如向下面这样。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arry = [<span class="string">'item1'</span>,<span class="string">'item2'</span>,<span class="string">'item3'</span>,<span class="string">'item4'</span>],</div><div class="line">    string = <span class="string">'&lt;ul&gt;&lt;li&gt;'</span>+ arry.join(<span class="string">'&lt;/li&gt;&lt;li&gt;'</span>)+<span class="string">'&lt;/li&gt;&lt;/ul&gt;'</span>;</div></pre></td></tr></table></figure>
-<ul>
-<li>String的隐式转换</li>
-</ul>
-<blockquote>
-<p>当有调用String对象的方法或属性时，JavaScript会进行一个隐式装箱操作，将字符串先转换成一个String对象。再去调用对应的方法。</p>
-</blockquote>
-<p>例如：</p>
-<p><code>&#39;hellow&#39;.length</code>  实际上进行了  <code>new String(&#39;hellow&#39;)</code>  -&gt;  <code>newString(&#39;hellow&#39;).length</code><br>所以，对于会用到String对象的方法或属性的字符串，我推荐通过 <code>new String()</code> 的方式来声明定义。</p>
-<h3 id="11-数组相关"><a href="#11-数组相关" class="headerlink" title="11.数组相关"></a>11.数组相关</h3><ul>
-<li><p>获取数组最后一个元素</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</div><div class="line">lastValue = array[array.length<span class="number">-1</span>];</div><div class="line">lastValue = array.slice(<span class="number">-1</span>);</div></pre></td></tr></table></figure>
-</li>
-<li><p>数组截断</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">array.length = <span class="number">0</span>;</div></pre></td></tr></table></figure>
-</li>
-<li><p>数组赛值</p>
-<blockquote>
-<p>对于按顺序增加数组元素，可以在循环中通过push依次添加。</p>
-</blockquote>
-<p>实例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> array = [];</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=data.length;i&lt;l;i++)&#123;</div><div class="line">    <span class="comment">// 糟糕</span></div><div class="line">    array[i] = i;</div><div class="line">    <span class="comment">// 推荐</span></div><div class="line">    array.push(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="12-函数相关"><a href="#12-函数相关" class="headerlink" title="12.函数相关"></a>12.函数相关</h3><p>​    <strong>12.1 作用域提升</strong></p>
-<blockquote>
-<p>在JavaScrpit中变量和方法定义会自动提升到执行之前。JavaScript只有function级的定义域，而无其他许多编程语言中的块定义域，所以使得你在某一个function内的某语句和循环体中定义了一个变量，此变量可作用于整个function内，而不仅仅是在此语句或循环体中，因为他们的声明被JavaScript自动提升了。</p>
-</blockquote>
-<p>原function</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">myname = <span class="string">"global"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sample</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   alert(myname);   <span class="comment">// "undefined"</span></div><div class="line">   <span class="keyword">var</span> myname = <span class="string">"local"</span>;</div><div class="line">   alert(myname);   <span class="comment">// "local"</span></div><div class="line">&#125;</div><div class="line">sample()</div></pre></td></tr></table></figure>
-<p>被js提升后</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">myname = <span class="string">"global"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sample</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">var</span> myname;        <span class="comment">//没有赋值</span></div><div class="line">   alert(myname);    <span class="comment">// "undefined"</span></div><div class="line">   myname = <span class="string">"local"</span>;<span class="comment">//此处赋值</span></div><div class="line">   alert(myname); <span class="comment">// "local"</span></div><div class="line">&#125;</div><div class="line">sample();</div></pre></td></tr></table></figure>
-<p>　　　　<strong>*</strong> 需要注意的是，虽然作用域内的变量被自动提升到最前进行声明，但是变量赋值的依然是代码中的位置。<br>　　 　　 正如你所看到的这段令人充满困惑与误解的代码导致了出人意料的结果。只有良好的声明习惯，也就是下一章节我们要提到的声明规则，才能尽可能的避免这类错误风险。</p>
-<p>　　　　  声明提前<br>　　　　  为避免上述的变量和方法定义被自动提升造成误解，把风险降到最低，我们应该手动地显示地去声明变量与方法。也就是说，所有的变量以及方法，应当定义在 function 内的首行。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 不推荐</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sample</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">var</span> first = <span class="number">0</span>;</div><div class="line">   <span class="keyword">var</span> last = <span class="number">1</span>;</div><div class="line">   <span class="keyword">if</span>(last &gt; first)&#123;</div><div class="line">        <span class="keyword">var</span> sum = first + last;</div><div class="line">   &#125;</div><div class="line">   <span class="keyword">var</span> count = sum;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="comment">// 推荐</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sample</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">var</span> first = <span class="number">0</span>,</div><div class="line">       last = <span class="number">1</span>,</div><div class="line">       sum = <span class="number">0</span>,</div><div class="line">       count = <span class="number">0</span>;</div><div class="line"> </div><div class="line">   <span class="keyword">if</span>(last &gt; first)&#123;</div><div class="line">        sum = first + last;</div><div class="line">   &#125;</div><div class="line">    count = sum;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>​    <strong>12.2 函数的声明</strong></p>
-<p>　　　　JS会自动将函数的声明上调到函数的执行之前。<br>　　　　切勿在语句块内声明函数，在 ECMAScript 5 的严格模式下，这是不合法的。函数声明应该在定义域的顶层。但在语句块内可将函数申明转化为函数表达式赋值给变量。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="keyword">if</span> (x) &#123;</div><div class="line">      <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">    &#125;</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    <span class="keyword">if</span> (x) &#123;</div><div class="line">      <span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<p>​    <strong>12.3 参数设计</strong></p>
-<p>函数的参数，建议控制在6个以内，应为过多的参数便会导致维护成本的提升。<br>对于需要多个参数的函数，建议将所有参数封装成一个对象options进行传输。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getData</span>(<span class="params">params1,params2,params3,params4...</span>)</span>&#123;<span class="comment">//...&#125;</span></div><div class="line"><span class="comment">//建议：</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getData</span>(<span class="params">options</span>)</span>&#123;<span class="comment">//...&#125;</span></div><div class="line">    getData(&#123;<span class="string">'prams1'</span>:<span class="string">''</span>,<span class="string">'params2'</span>:,....&#125;);</div></pre></td></tr></table></figure>
-<p>​    <strong>12.4 闭包与立执行函数</strong></p>
-<p>　　　　 <strong>·</strong> 全局命名空间污染与 IIFE　　　</p>
-<p>总是将代码包裹成一个 IIFE(Immediately-Invoked Function Expression)，用以创建独立隔绝的定义域。这一举措可防止全局命名空间被污染。<br>IIFE 还可确保你的代码不会轻易被其它全局命名空间里的代码所修改（i.e. 第三方库，window 引用，被覆盖的未定义的关键字等等）。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐</span></div><div class="line">    <span class="keyword">var</span> x = <span class="number">10</span>,</div><div class="line">        y = <span class="number">100</span>;</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">window</span>.x + <span class="string">' '</span> + <span class="built_in">window</span>.y);</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params">w</span>)</span>&#123;</div><div class="line"><span class="meta">      'use strict'</span>;</div><div class="line">      <span class="keyword">var</span> x = <span class="number">10</span>,</div><div class="line">          y = <span class="number">100</span>;</div><div class="line">        w.console.log((w.x === <span class="literal">undefined</span>) + <span class="string">' '</span> + (w.y === <span class="literal">undefined</span>));</div><div class="line">    &#125;(<span class="built_in">window</span>));</div></pre></td></tr></table></figure>
-<p><strong>·</strong> IIFE（立即执行的函数表达式）</p>
-<p>　　　　　　无论何时，想要创建一个新的封闭的定义域，那就用 IIFE。它不仅避免了干扰，也使得内存在执行完后立即释放。<br>　　　　　　所有脚本文件建议都从 IIFE 开始。<br>　　　　　　立即执行的函数表达式的执行括号应该写在外包括号内。虽然写在内还是写在外都是有效的，但写在内使得整个表达式看起来更像一个整体，因此推荐这么做。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐</span></div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)();</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;());</div></pre></td></tr></table></figure>
-<p>用下列写法来格式化你的 IIFE 代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">$, w, d</span>)</span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        w.alert(d.querySelectorAll(<span class="string">'div'</span>).length);</div><div class="line">    &#125;);</div><div class="line">&#125;(jQuery, <span class="built_in">window</span>, <span class="built_in">document</span>));</div></pre></td></tr></table></figure>
-<p>　　　　<strong>·</strong> 严格模式　　　　　　</p>
-<p>　　　　　　ECMAScript 5 严格模式可在整个脚本或独个方法内被激活。它对应不同的 javascript 语境会做更加严格的错误检查。严格模式也确保了 javascript 代码更加的健壮，运行的也更加快速。<br>　　　　　　严格模式会阻止使用在未来很可能被引入的预留关键字。<br>　　　　　　你应该在你的脚本中启用严格模式，最好是在独立的 IIFE 中应用它。避免在你的脚本第一行使用它而导致你的所有脚本都启动了严格模式，这有可能会引发一些第三方类库的问题。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐：</span></div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="comment">// some code</span></div><div class="line">    &#125;());</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="meta">        'use strict'</span>;</div><div class="line">        <span class="comment">// some code</span></div><div class="line">    &#125;());</div></pre></td></tr></table></figure>
-<h3 id="13-数据类型"><a href="#13-数据类型" class="headerlink" title="13. 数据类型"></a>13. 数据类型</h3><p>　　<strong>13.1 类型检测　</strong></p>
-<p>　　　　javaScript中数据类型，可以分为 值类型、枚举类型、null、undefined。<br>　　　　值类型可以通过typeof进行判断<br>　　　　枚举类型则可以通过 instanceof<br>　　　　而null、undefined则可以直接通过null进行判断。<br>　　　　示例：<br>　　　　　　值类型通过typeof直接进行检测</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// string</span></div><div class="line"><span class="keyword">typeof</span> variable --&gt;<span class="string">'string'</span></div><div class="line"> </div><div class="line"><span class="comment">// number</span></div><div class="line"><span class="keyword">typeof</span> variable --&gt; <span class="string">'number'</span></div><div class="line"> </div><div class="line"><span class="comment">// boolean</span></div><div class="line"><span class="keyword">typeof</span> variable --&gt; <span class="string">'boolean'</span></div><div class="line"> </div><div class="line"><span class="comment">// Function</span></div><div class="line"><span class="keyword">typeof</span> variable --&gt; <span class="string">'function'</span></div></pre></td></tr></table></figure>
-<p>​    枚举类型，通过以下方法是无法进行判断的</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//null</span></div><div class="line"><span class="keyword">typeof</span> variable --&gt; <span class="string">'object'</span></div><div class="line"><span class="comment">// object</span></div><div class="line"><span class="keyword">typeof</span> variable --&gt; <span class="string">'object'</span></div><div class="line"><span class="comment">// Date</span></div><div class="line"><span class="keyword">typeof</span> variable --&gt; <span class="string">'object'</span></div></pre></td></tr></table></figure>
-<p>　　　　　　对于枚举类型就要采用instanceof进行判断</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// RegExp</span></div><div class="line">variable <span class="keyword">instanceof</span> <span class="built_in">RegExp</span> --&gt; <span class="literal">true</span></div><div class="line"> </div><div class="line"><span class="comment">// Array</span></div><div class="line">variable <span class="keyword">instanceof</span> <span class="built_in">Array</span>  --&gt; <span class="literal">true</span></div></pre></td></tr></table></figure>
-<p>而 undefined 或 null 则统一采用 undefined进行判断。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// null or undefined</span></div><div class="line"> variable == <span class="literal">null</span>  --&gt; <span class="literal">true</span></div></pre></td></tr></table></figure>
-<p>　　　　更具体的关于JavaScript数据类型判断方法，可以参见我的另一篇博客：[<a href="http://www.cnblogs.com/HCJJ/p/6032236.html">浅玩JavaScript的数据类型判断</a>]</p>
-<p>　<strong>13.2 类型判断</strong></p>
-<p>　　　　总是使用 === 精确的比较操作符，避免在判断的过程中，由 JavaScript 的强制类型转换所造成的困扰。<br>　　　　如果你使用 === 操作符，那比较的双方必须是同一类型为前提的条件下才会有效。<br>　　　　在只使用 == 的情况下，JavaScript 所带来的强制类型转换使得判断结果跟踪变得复杂，下面的例子可以看出这样的结果有多怪了：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="meta">  'use strict'</span>;</div><div class="line">   </div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'0'</span> == <span class="number">0</span>); <span class="comment">// true</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">''</span> == <span class="literal">false</span>); <span class="comment">// true</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'1'</span> == <span class="literal">true</span>); <span class="comment">// true</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">undefined</span>); <span class="comment">// true</span></div><div class="line">   </div><div class="line">  <span class="keyword">var</span> x = &#123;</div><div class="line">    <span class="attr">valueOf</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> <span class="string">'X'</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">   </div><div class="line">  <span class="built_in">console</span>.log(x == <span class="string">'X'</span>);</div><div class="line">   </div><div class="line">&#125;());</div></pre></td></tr></table></figure>
-<p><strong>13.3 类型转换</strong></p>
-<p>　　　　<strong>· 字符转数值</strong>　　　　</p>
-<p>　　　　　　PS:这里针对的是字符串类型的数值。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐：</span></div><div class="line">     <span class="built_in">Number</span>(str);</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    variable*<span class="number">1</span>;</div><div class="line">    varIable<span class="number">-1</span>;</div><div class="line">    +variable;</div><div class="line"><span class="comment">//当字符串结尾包含非数字并期望忽略时，使用parseInt</span></div><div class="line">    <span class="built_in">parseInt</span>(variable)</div><div class="line"><span class="comment">//示例：</span></div><div class="line">    <span class="keyword">var</span> width = <span class="string">'200px'</span>;</div><div class="line">    <span class="built_in">parseInt</span>(width, <span class="number">10</span>);</div></pre></td></tr></table></figure>
-<p>　　　　<strong>· 小数转整数</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐：</span></div><div class="line">      <span class="built_in">parseInt</span>(variable)</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">      ~~variable</div><div class="line"><span class="comment">//备选:</span></div><div class="line">    <span class="built_in">Math</span>.ceil();</div><div class="line">    <span class="built_in">Math</span>.floor();</div></pre></td></tr></table></figure>
-<p>　　　　<strong>· 转换为布尔型</strong>　　</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="built_in">Boolean</span>(variable);</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    !variable</div><div class="line">    !!variable</div></pre></td></tr></table></figure>
-<p>　　　　<strong>· 转换为字符串</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//不推荐：</span></div><div class="line">    <span class="built_in">String</span>(variable);</div><div class="line">    variable.toString();</div><div class="line"><span class="comment">//推荐：</span></div><div class="line">    num + <span class="string">''</span>;</div></pre></td></tr></table></figure>
-<h3 id="14-DOM插入的优化"><a href="#14-DOM插入的优化" class="headerlink" title="14. DOM插入的优化"></a>14. DOM插入的优化</h3><ul>
-<li><strong>不在循环中插入DOM</strong></li>
-</ul>
-<p>　　　　更改页面的DOM结构基本上都会造成浏览器对页面的重新渲染，这所造成的代价是非常庞大的，如果还在循环中去操作DOM，这就更加不能容忍。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//糟糕的：</span></div><div class="line"> <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=arr.length;i&lt;l;i++)&#123;</div><div class="line">     <span class="keyword">var</span> oDiv = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</div><div class="line">     <span class="built_in">document</span>.body.appendChild(oDiv);</div><div class="line"> &#125;</div><div class="line"><span class="comment">//建议：</span></div><div class="line"> <span class="keyword">var</span> doc = <span class="built_in">document</span>.createDocumentFragment();</div><div class="line"> <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=arr.length;i&lt;l;i++)&#123;</div><div class="line">     <span class="keyword">var</span> oDiv = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</div><div class="line">      doc.appendChild(oDiv);</div><div class="line"> &#125;</div><div class="line"> <span class="built_in">document</span>.appendChild(doc);</div></pre></td></tr></table></figure>
-<ul>
-<li><strong>innerHTML</strong></li>
-</ul>
-<p>　　　　利用文档碎片节点适合更改基本的DOM块，但是对于大范围的DOM更改，使用innerHTML不仅更加简便，而且相比于标准的DOM操作方法，更加的高效。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> htmlStr = <span class="string">''</span>;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">50</span>;i++)&#123;</div><div class="line">     htmlStr += <span class="string">'&lt;div&gt;'</span>+i+<span class="string">'&lt;/div&gt;'</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">document</span>.body.innerHTML = htmlStr;</div></pre></td></tr></table></figure>
-<h3 id="15-事件代理"><a href="#15-事件代理" class="headerlink" title="15. 事件代理"></a>15. 事件代理</h3><p>　　事件代理是利用了事件的冒泡特性。我们可以为一个统一的父节点绑定事件，然后去进行目标子节点的事件处理。<br>　　事件代理可以减少相同事件类型的绑定次数，另外可以解决在JS生成DOM时，必须在生成之后才能绑定事件的问题。最后事件代理还可以解决事件处理程序与所触发事件的DOM对象之间的循环引用问题。<br>　　事件代理的实现很简单：　</p>
-<p>　　　　HTML 结构：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"son"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>​        JavaScript:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'box'</span>).onclick=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> ev = e || <span class="built_in">window</span>.event,</div><div class="line">        oSrc = ev.target || ev.srcElement;</div><div class="line"> </div><div class="line">    <span class="keyword">if</span>(oSrc.id.indexOf(<span class="string">'son'</span>))&#123;</div><div class="line">        alert(<span class="string">'此时进行#son元素的事件处理'</span>);</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="16-注意NodeList"><a href="#16-注意NodeList" class="headerlink" title="16. 注意NodeList"></a>16. 注意NodeList</h3><p>　　NodeList 是一组节点列表，它在形态上很接近数组，但并不是数组，通常我们称之为伪数组。<br>　　NodeList 的获取主要是通过以下的方法与属性。<br>　　　　· document.getElementsByTagName(‘’)<br>　　　　· 访问了HTML-DOM的快捷集合属性</p>
-<p>　　　　　　· document.images<br>　　　　　　· document.forms<br>　　　　　　· document.links</p>
-<p>　　　　· 获取了DOM的 childNodes 属性<br>　　　　· 获取了DOM的 attributes 属性<br>　　了解了NodeList,我们还需要知道的是该怎么最小化去访问NodeList次数以便于改进脚本的执行性能：<br>　　这里可以参考循环的优化方式，比如循环的终止条件：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=<span class="built_in">document</span>.forms.length;i&lt;l;i++)&#123;</div><div class="line">           <span class="comment">//....</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<h3 id="17-检查对象是否具有指定的属性与方法"><a href="#17-检查对象是否具有指定的属性与方法" class="headerlink" title="17. 检查对象是否具有指定的属性与方法"></a>17. 检查对象是否具有指定的属性与方法</h3><p>　　当你需要检测一些属性是否存在，避免运行未定义的函数或属性时，这个小技巧就显得很有用。<br>　　如果打算定制一些跨兼容的浏览器代码，你也可能会用到这个小技巧。<br>　　例如，你想使用document.querySelector() 来选择一个id，并且让它能兼容IE6浏览器，但是在IE6浏览器中这个函数是不存在的，那么使用这个操作符来检测这个函数是否存在就显得非常有用，如下面的示例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="string">'querySelector'</span> <span class="keyword">in</span> <span class="built_in">document</span>)&#123;</div><div class="line">    <span class="built_in">document</span>.querySelector(<span class="string">'#id'</span>);</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"id"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="18-松散耦合"><a href="#18-松散耦合" class="headerlink" title="18. 松散耦合"></a>18. 松散耦合</h3><p>　　我们强烈推荐前端的三层分离，结构层（HTML）、表现层（CSS）、行为层（JavaScript），但有时在工作中，我们又不能避免在我们的脚本中还附加了一些HTML或CSS代码。既然这个问题目前解决不了，那么我们就要想到以目前的方法，怎么进行最大的优化。</p>
-<ul>
-<li><strong>HTML &amp;&amp; JavaScript</strong></li>
-</ul>
-<p>　　　　当脚本中含有HTML代码时，以下方法可以根据自己的使用场合进行择优选择：　</p>
-<p>　　　　  · createElement ： 适合数量最少的DOM创建<br>　　　　  · 文档碎片          ： 适合成块的DOM更改。<br>　　　　  · innerHTML      ： 适合批量的DOM插入。</p>
-<ul>
-<li><strong>CSS &amp;&amp; JavaScript</strong></li>
-</ul>
-<p>　　　　 当脚本中含有CSS代码时，以下方法可以根据自己的使用场合进行择优选择：  </p>
-<p>　　　　　· style : 适合为DOM添加样式不多的情况下。<br>　　　　   · cssText ：适合为少量的DOM插入批量的样式。<br>　　　　   · className ：通过为DOM添加类名，而类名对应的具体样式内容，则存在一个CSS文件中，这是我更加推荐的。<br>　　　　　· <style> ： 如果你需要插入为很多的DOM插入批量的样式内容，那么通过JavaScript 创建一个 <style>标签，也不失是一个解决方案。</p>
-<h3 id="19-异常处理"><a href="#19-异常处理" class="headerlink" title="19. 异常处理"></a>19. 异常处理</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span>&#123;</div><div class="line">        <span class="comment">// 尝试运行</span></div><div class="line"> </div><div class="line">&#125;<span class="keyword">catch</span>(msg)&#123;</div><div class="line"> </div><div class="line">    <span class="keyword">throw</span> <span class="string">"Error name:"</span> + msg.name; <span class="comment">// throw会在控制台抛出异常信息，注意：throw会阻塞程序执行。建议使用console.log</span></div><div class="line">    <span class="keyword">throw</span> <span class="string">"Error message:"</span> + msg.message </div><div class="line"> </div><div class="line">    <span class="comment">/*  Error.Name 的常见错误信息：</div><div class="line"> </div><div class="line">        1. EvalError：eval_r()的使用与定义不一致</div><div class="line">        2. RangeError：数值越界</div><div class="line">        3. ReferenceError：非法或不能识别的引用数值</div><div class="line">        4. SyntaxError：发生语法解析错误</div><div class="line">        5. TypeError：操作数类型错误</div><div class="line">        6. URIError：URI处理函数使用不当</div><div class="line"> </div><div class="line">    */</span></div><div class="line"> </div><div class="line">&#125;<span class="keyword">finally</span>&#123;</div><div class="line">    <span class="comment">// finally 最终不论是运行成功还是没有运行成功都会执行。</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</style></p>
+        <p>全栈知识汇总</p>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h3 id="测试请求工具-autocannon"><a href="#测试请求工具-autocannon" class="headerlink" title="测试请求工具-autocannon"></a>测试请求工具-autocannon</h3>
       
 
       
@@ -1160,7 +669,145 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/js/【转】JavaScript代码优化指南/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/08/19/全栈知识汇总/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/23/hello-world/">Hello World</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/23/hello-world/" class="archive-article-date">
+  	<time datetime="2017-07-23T08:55:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/23/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-js/ES6 Array map用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ES6-Array-map用法"><a href="#ES6-Array-map用法" class="headerlink" title="ES6 Array map用法"></a>ES6 Array map用法</h2><p>map() 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用三个参数</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</div><div class="line"></div><div class="line"><span class="keyword">let</span> arr = numbers.map(<span class="function">(<span class="params">currentValue, index, array</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`currentValue = `</span>, currentValue);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`index = `</span>, index);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`array= `</span>, array);</div><div class="line">    <span class="keyword">return</span> currentValue * <span class="number">2</span>;</div><div class="line">&#125;, numbers);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">`arr `</span>, arr);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">let</span> numbers = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">15</span>];</div><div class="line"><span class="keyword">let</span> doubles = numbers.map(<span class="function">(<span class="params">x</span>) =&gt;</span> &#123;</div><div class="line">   <span class="keyword">return</span> x * <span class="number">2</span>;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// doubles is now [2, 10, 20, 30]</span></div><div class="line"><span class="comment">// numbers is still [1, 5, 10, 15]</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">let</span> numbers = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>];</div><div class="line"><span class="keyword">let</span> roots = numbers.map(<span class="built_in">Math</span>.sqrt);</div><div class="line"></div><div class="line"><span class="comment">// roots is now [1, 2, 3]</span></div><div class="line"><span class="comment">// numbers is still [1, 4, 9]</span></div></pre></td></tr></table></figure>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt; <span class="keyword">let</span> array = arr.map(<span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">currentValue, index, array</span>) </span>&#123; </div><div class="line">&gt;     <span class="comment">// Return element for new_array </span></div><div class="line">&gt; &#125;[, thisArg])</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p><code>callback</code></p>
+<ul>
+<li><p><code>currentValue</code></p>
+<p><code>callback</code> 的第一个参数，数组中正在处理的当前元素。</p>
+</li>
+<li><p><code>index</code></p>
+<p><code>callback</code> 的第二个参数，数组中正在处理的当前元素的索引。</p>
+</li>
+<li><p><code>array</code></p>
+<p><code>callback</code> 的第三个参数，<code>map</code> 方法被调用的数组。</p>
+</li>
+</ul>
+<p><code>thisArg</code></p>
+<p>可选的。执行 <code>callback</code> 函数时 使用的<code>this</code> 值。</p>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>一个新数组，每个元素都是回调函数的结果。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/17/js/ES6 Array map用法/">展开全文 >></a>
         </p>
       
 
@@ -1192,7 +839,7 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
