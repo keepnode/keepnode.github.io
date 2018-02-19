@@ -169,84 +169,31 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-TypeScript/index" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-js/ES6 Array map用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <script src="greeter3.js"></script>
-</body>
-</html>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/TypeScript/index/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-tools/webstorm/【转】webstorm进行javascript的debug" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="【转】webstorm进行javascript的debug"><a href="#【转】webstorm进行javascript的debug" class="headerlink" title="【转】webstorm进行javascript的debug"></a>【转】webstorm进行javascript的debug</h1><p>今天才发现webstorm真是神器！</p>
-<p>以前老是喜欢vs code，现在发现webstorm才是真方便啊！！！</p>
-<p>原文出处：<a href="http://blog.csdn.net/yangyuhan156/article/details/48899439" target="_blank" rel="external">查看原文</a></p>
-<p>目前我们开发中<a href="http://lib.csdn.net/base/javascript" target="_blank" rel="external">JavaScript</a>的debug一般都是用chrome和firefox的开发者工具来进行debug，这些工具使用起来一般，操作不是很爽，不能像我们写<a href="http://lib.csdn.net/base/javase" target="_blank" rel="external">Java</a>后台一样，打个断点用IDE看那么方便， 其实webstorm支持了我们在代码上打断点，然后就可以在编辑器里debug自己的js代码，废话不说看一下怎么配置。</p>
+        <h2 id="ES6-Array-map用法"><a href="#ES6-Array-map用法" class="headerlink" title="ES6 Array map用法"></a>ES6 Array map用法</h2><p>map() 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用三个参数</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</div><div class="line"></div><div class="line"><span class="keyword">let</span> arr = numbers.map(<span class="function">(<span class="params">currentValue, index, array</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`currentValue = `</span>, currentValue);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`index = `</span>, index);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`array= `</span>, array);</div><div class="line">    <span class="keyword">return</span> currentValue * <span class="number">2</span>;</div><div class="line">&#125;, numbers);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">`arr `</span>, arr);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">let</span> numbers = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">15</span>];</div><div class="line"><span class="keyword">let</span> doubles = numbers.map(<span class="function">(<span class="params">x</span>) =&gt;</span> &#123;</div><div class="line">   <span class="keyword">return</span> x * <span class="number">2</span>;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// doubles is now [2, 10, 20, 30]</span></div><div class="line"><span class="comment">// numbers is still [1, 5, 10, 15]</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">let</span> numbers = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>];</div><div class="line"><span class="keyword">let</span> roots = numbers.map(<span class="built_in">Math</span>.sqrt);</div><div class="line"></div><div class="line"><span class="comment">// roots is now [1, 2, 3]</span></div><div class="line"><span class="comment">// numbers is still [1, 4, 9]</span></div></pre></td></tr></table></figure>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt; <span class="keyword">let</span> array = arr.map(<span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">currentValue, index, array</span>) </span>&#123; </div><div class="line">&gt;     <span class="comment">// Return element for new_array </span></div><div class="line">&gt; &#125;[, thisArg])</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p><code>callback</code></p>
 <ul>
-<li><p>首先要安装插件，要安装的是chrome的插件，这里说一下，目前我就研究了chrome的，其他的浏览器不知道可行不。<br>下面给插件的地址：<br><a href="https://chrome.google.com/webstore/detail/hmhgeddbohgjknpmjagkdomcpobmllji" target="_blank" rel="external">https://chrome.google.com/webstore/detail/hmhgeddbohgjknpmjagkdomcpobmllji</a><br>如果要下载的话需要上外网才可以。。国内墙太坑了！</p>
-<p>看到下图JB的图标表示你安装成功了。<br><img src="http://img.blog.csdn.net/20151004200204785" alt="看到这个图标，表示你安装成功了"><br>然后需要右键点击图标，选择配置，进入配置页面，下面就到关键了。<br><img src="http://img.blog.csdn.net/20151004200506569" alt="这里写图片描述"><br>注意port的input框，这个端口号是根据你的webstorm来的，这个默认我这边是63343，如果不知道的可以不配置，如果不配置到后面webstorm会提示你的。</p>
+<li><p><code>currentValue</code></p>
+<p><code>callback</code> 的第一个参数，数组中正在处理的当前元素。</p>
 </li>
-<li><p>这样插件就配置完了，下面就是配置webstorm了，直接上图：<br><img src="http://img.blog.csdn.net/20151004201000321" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20151004201119059" alt="这里写图片描述"><br>上面是步骤，先点击配置，然后在配置页面点击增加，然后添加javascript debug，下面给两个配置的样例。</p>
-<p><img src="http://img.blog.csdn.net/20151004201329391" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20151004201421829" alt="这里写图片描述"></p>
-<p>上面两个，一个是我本地服务的地址，这个就相当于我正常用浏览器打开我的本地服务。还有一个是karma的debug的服务地址。两个区别是Remote URL的配置，我猜测，这个Remote URL 如果不配置是和你的URL是一样的。因为Karma的文件都是加了个base目录，所以这里要加上base。</p>
-<p>简单讲一下我对Remote URL的理解，感觉是给根目录定一个url，里面的文件，加上自己相对于根目录的地址，在浏览器中就可以找到的。</p>
-<p>这些配置好了，就可以直接debug了。<br><img src="http://img.blog.csdn.net/20151004202129703" alt="这里写图片描述"><br>确定是你的配置文件，然后点击按钮来debug，如果上一个插件的端口号你没有配置，运行的时候就会报错，并且把端口号告诉你。<br><img src="http://img.blog.csdn.net/20151004202346596" alt="这里写图片描述"><br>就是图中这样，然后你把这个端口号配置到插件port那里就可以了</p>
+<li><p><code>index</code></p>
+<p><code>callback</code> 的第二个参数，数组中正在处理的当前元素的索引。</p>
 </li>
-<li><p>下面看一下运行结果。<br><img src="http://img.blog.csdn.net/20151004202930871" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20151004202948665" alt="这里写图片描述"><br>打开网页的时候，看到了正在debugging的提示，断点到了自动跳转到webstorm的debug工具里，感觉棒棒的。有一点这个断点一定要在debug按钮点击之前打好，如果debug在运行了，就打不上了，这是个比较坑的地方。</p>
+<li><p><code>array</code></p>
+<p><code>callback</code> 的第三个参数，<code>map</code> 方法被调用的数组。</p>
 </li>
 </ul>
+<p><code>thisArg</code></p>
+<p>可选的。执行 <code>callback</code> 函数时 使用的<code>this</code> 值。</p>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>一个新数组，每个元素都是回调函数的结果。</p>
 
       
 
@@ -259,7 +206,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/tools/webstorm/【转】webstorm进行javascript的debug/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/17/js/ES6 Array map用法/">展开全文 >></a>
         </p>
       
 
@@ -310,159 +257,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/07/16/MongoDB/MongoDB 索引问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-html/浏览器内核控制 meta标签" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="浏览器内核控制-meta标签"><a href="#浏览器内核控制-meta标签" class="headerlink" title="浏览器内核控制 meta标签"></a>浏览器内核控制 meta标签</h1><p>国内的浏览器普遍是用的双核浏览器。但是页面一般在IE下呈现效果较弱，国内的360出了一个解决方案。具体<a href="http://se.360.cn/v6/help/meta.html" target="_blank" rel="external">查看详情</a></p>
-<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><p>在head标签中添加一行代码：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit|ie-comp|ie-stand"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>content的取值为webkit,ie-comp,ie-stand之一，区分大小写，分别代表用webkit内核，IE兼容内核，IE标准内核。<br>若页面需默认用极速核，增加标签：<meta name="renderer" content="webkit"><br>若页面需默认用ie兼容内核，增加标签：<meta name="renderer" content="ie-comp"><br>若页面需默认用ie标准内核，增加标签：<meta name="renderer" content="ie-stand"></p>
-<h3 id="各渲染内核的技术细节"><a href="#各渲染内核的技术细节" class="headerlink" title="各渲染内核的技术细节"></a>各渲染内核的技术细节</h3><table>
-<thead>
-<tr>
-<th>内核</th>
-<th>Webkit</th>
-<th>IE兼容</th>
-<th>IE标准</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>文档模式</td>
-<td>Chrome 21</td>
-<td>IE6/7</td>
-<td>IE9/IE10/IE11(取决于用户的IE)</td>
-</tr>
-<tr>
-<td>HTML5支持</td>
-<td>YES</td>
-<td>NO</td>
-<td>YES</td>
-</tr>
-<tr>
-<td>ActiveX控件支持</td>
-<td>NO</td>
-<td>YES</td>
-<td>YES</td>
-</tr>
-</tbody>
-</table>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/html/浏览器内核控制 meta标签/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-html/[转]patch和put方法的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="【转】patch和put方法的区别"><a href="#【转】patch和put方法的区别" class="headerlink" title="【转】patch和put方法的区别"></a>【转】patch和put方法的区别</h1><p>今天看了下项目中使用到patch，于是把patch的相关用法学习了下。找到一篇好文章转载记录下。</p>
-<p>原文出处：<a href="https://segmentfault.com/q/1010000005685904" target="_blank" rel="external">查看详情</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PATCH方法是新引入的，是对PUT方法的补充，用来对已知资源进行局部更新</div></pre></td></tr></table></figure>
-<p><strong>问题：</strong><br>什么是局部更新？</p>
-<p>比如我在一个restful的编辑页面，进行更新操作，用put和PATCH都能成功，可是不太理解什么叫局部。</p>
-<p><strong>解答：</strong></p>
-<p><code>patch</code>方法用来更新局部资源，这句话我们该如何理解？</p>
-<p>假设我们有一个<code>UserInfo</code>，里面有<code>userId</code>， <code>userName</code>， <code>userGender</code>等10个字段。可你的编辑功能因为需求，在某个特别的页面里只能修改<code>userName</code>，这时候的更新怎么做？</p>
-<p>人们通常(为徒省事)把一个包含了修改后<code>userName</code>的完整<code>userInfo</code>对象传给后端，做完整更新。但仔细想想，这种做法感觉有点二，而且真心浪费带宽(纯技术上讲，你不关心带宽那是你土豪)。</p>
-<p>于是<code>patch</code>诞生，只传一个<code>userName</code>到指定资源去，表示该请求是一个局部更新，后端仅更新接收到的字段。</p>
-<p>而<code>put</code>虽然也是更新资源，但要求前端提供的一定是一个完整的资源对象，理论上说，如果你用了<code>put</code>，但却没有提供完整的<code>UserInfo</code>，那么缺了的那些字段应该被清空</p>
-<p>补充:</p>
-<p>最后再补充一句，<code>restful</code>只是标准，标准的意思是如果在大家都依此行事的话，沟通成本会很低，开发效率就高。但并非强制(也没人强制得了)，所以你说在你的程序里把方法名从<code>put</code>改成<code>patch</code>没有任何影响，那是自然，因为你的后端程序并没有按照标准对两个方法做不同处理，她的表现自然是一样的</p>
-<p><strong>补充：</strong></p>
-<p>补充一下，PATCH 与 PUT 属性上的一个重要区别还在于：PUT 是幂等的，而 PATCH 不是幂等的。幂等是一个数学和计算机学概念，在计算机范畴内表示一个操作执行任意次对系统的影响跟一次是相同。</p>
-<p>在HTTP/1.1规范中幂等性的定义是:</p>
-<blockquote>
-<p>Methods can also have the property of “idempotence” in that (aside from error or expiration issues) the side-effects of N &gt; 0 identical requests is the same as for a single request.</p>
-</blockquote>
-<p>如：POST 方法不是幂等的，若反复执行多次对应的每一次都会创建一个新资源。如果请求超时，则需要回答这一问题：资源是否已经在服务端创建了？能否再重试一次或检查资源列表？而对于幂等方法不存在这一个问题，我们可以放心地多次请求。</p>
-<p>参考文献：</p>
-<ol>
-<li><a href="http://www.cnblogs.com/weidagang2046/archive/2011/06/04/idempotence.html">理解 HTTP 幂等性</a></li>
-<li><a href="http://sofish.github.io/restcookbook/http%20methods/idempotency" target="_blank" rel="external">Restful 手册</a></li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/html/[转]patch和put方法的区别/">展开全文 >></a>
         </p>
       
 
@@ -761,6 +555,211 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
 
 
   
+    <article id="post-html/[转]patch和put方法的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="【转】patch和put方法的区别"><a href="#【转】patch和put方法的区别" class="headerlink" title="【转】patch和put方法的区别"></a>【转】patch和put方法的区别</h1><p>今天看了下项目中使用到patch，于是把patch的相关用法学习了下。找到一篇好文章转载记录下。</p>
+<p>原文出处：<a href="https://segmentfault.com/q/1010000005685904" target="_blank" rel="external">查看详情</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PATCH方法是新引入的，是对PUT方法的补充，用来对已知资源进行局部更新</div></pre></td></tr></table></figure>
+<p><strong>问题：</strong><br>什么是局部更新？</p>
+<p>比如我在一个restful的编辑页面，进行更新操作，用put和PATCH都能成功，可是不太理解什么叫局部。</p>
+<p><strong>解答：</strong></p>
+<p><code>patch</code>方法用来更新局部资源，这句话我们该如何理解？</p>
+<p>假设我们有一个<code>UserInfo</code>，里面有<code>userId</code>， <code>userName</code>， <code>userGender</code>等10个字段。可你的编辑功能因为需求，在某个特别的页面里只能修改<code>userName</code>，这时候的更新怎么做？</p>
+<p>人们通常(为徒省事)把一个包含了修改后<code>userName</code>的完整<code>userInfo</code>对象传给后端，做完整更新。但仔细想想，这种做法感觉有点二，而且真心浪费带宽(纯技术上讲，你不关心带宽那是你土豪)。</p>
+<p>于是<code>patch</code>诞生，只传一个<code>userName</code>到指定资源去，表示该请求是一个局部更新，后端仅更新接收到的字段。</p>
+<p>而<code>put</code>虽然也是更新资源，但要求前端提供的一定是一个完整的资源对象，理论上说，如果你用了<code>put</code>，但却没有提供完整的<code>UserInfo</code>，那么缺了的那些字段应该被清空</p>
+<p>补充:</p>
+<p>最后再补充一句，<code>restful</code>只是标准，标准的意思是如果在大家都依此行事的话，沟通成本会很低，开发效率就高。但并非强制(也没人强制得了)，所以你说在你的程序里把方法名从<code>put</code>改成<code>patch</code>没有任何影响，那是自然，因为你的后端程序并没有按照标准对两个方法做不同处理，她的表现自然是一样的</p>
+<p><strong>补充：</strong></p>
+<p>补充一下，PATCH 与 PUT 属性上的一个重要区别还在于：PUT 是幂等的，而 PATCH 不是幂等的。幂等是一个数学和计算机学概念，在计算机范畴内表示一个操作执行任意次对系统的影响跟一次是相同。</p>
+<p>在HTTP/1.1规范中幂等性的定义是:</p>
+<blockquote>
+<p>Methods can also have the property of “idempotence” in that (aside from error or expiration issues) the side-effects of N &gt; 0 identical requests is the same as for a single request.</p>
+</blockquote>
+<p>如：POST 方法不是幂等的，若反复执行多次对应的每一次都会创建一个新资源。如果请求超时，则需要回答这一问题：资源是否已经在服务端创建了？能否再重试一次或检查资源列表？而对于幂等方法不存在这一个问题，我们可以放心地多次请求。</p>
+<p>参考文献：</p>
+<ol>
+<li><a href="http://www.cnblogs.com/weidagang2046/archive/2011/06/04/idempotence.html">理解 HTTP 幂等性</a></li>
+<li><a href="http://sofish.github.io/restcookbook/http%20methods/idempotency" target="_blank" rel="external">Restful 手册</a></li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/html/[转]patch和put方法的区别/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-html/浏览器内核控制 meta标签" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="浏览器内核控制-meta标签"><a href="#浏览器内核控制-meta标签" class="headerlink" title="浏览器内核控制 meta标签"></a>浏览器内核控制 meta标签</h1><p>国内的浏览器普遍是用的双核浏览器。但是页面一般在IE下呈现效果较弱，国内的360出了一个解决方案。具体<a href="http://se.360.cn/v6/help/meta.html" target="_blank" rel="external">查看详情</a></p>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><p>在head标签中添加一行代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit|ie-comp|ie-stand"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>content的取值为webkit,ie-comp,ie-stand之一，区分大小写，分别代表用webkit内核，IE兼容内核，IE标准内核。<br>若页面需默认用极速核，增加标签：<meta name="renderer" content="webkit"><br>若页面需默认用ie兼容内核，增加标签：<meta name="renderer" content="ie-comp"><br>若页面需默认用ie标准内核，增加标签：<meta name="renderer" content="ie-stand"></p>
+<h3 id="各渲染内核的技术细节"><a href="#各渲染内核的技术细节" class="headerlink" title="各渲染内核的技术细节"></a>各渲染内核的技术细节</h3><table>
+<thead>
+<tr>
+<th>内核</th>
+<th>Webkit</th>
+<th>IE兼容</th>
+<th>IE标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文档模式</td>
+<td>Chrome 21</td>
+<td>IE6/7</td>
+<td>IE9/IE10/IE11(取决于用户的IE)</td>
+</tr>
+<tr>
+<td>HTML5支持</td>
+<td>YES</td>
+<td>NO</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>ActiveX控件支持</td>
+<td>NO</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+</tbody>
+</table>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/html/浏览器内核控制 meta标签/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-TypeScript/greeter2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        function greeter(person) {
+    return "Hello," + person.firstName + " " + person.lastName;
+}
+var user = { firstName: "嘿嘿", lastName: "李四" };
+document.body.innerHTML = greeter(user);
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-js/ECMAScript 6 入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -791,6 +790,68 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/07/16/js/ECMAScript 6 入门/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-TypeScript/greeter3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        //类
+var Student = (function () {
+    function Student(firstName, middleInitial, lastName) {
+        this.firstName = firstName;
+        this.middleInitial = middleInitial;
+        this.lastName = lastName;
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
+    return Student;
+}());
+function greeter(person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+var user = new Student("Jane", "M.", "User");
+document.body.innerHTML = greeter(user);
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter3/">展开全文 >></a>
         </p>
       
 
@@ -945,58 +1006,6 @@ var sentence = "Hello,my name is " + names + ".I'll be " + (age + 1) + " years o
 
 
   
-    <article id="post-TypeScript/greeter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        function greeter(person) {
-    return "Hello, " + person;
-}
-var user = "NeoLu";
-document.body.innerHTML = greeter(user);
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/16/TypeScript/greeter/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
@@ -1011,7 +1020,7 @@ document.body.innerHTML = greeter(user);
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 NeoLu
+    		&copy; 2018 NeoLu
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
